@@ -17,11 +17,11 @@ defaults:
     type: work
   values:
     layout: work
-    client:
-    project link:
-    brief text:
+    client: 
+    project link: 
+    brief text: 
     services:
-    -
+    - 
 exclude:
 - Gruntfile.js
 - Gemfile
