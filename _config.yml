@@ -11,3 +11,11 @@ collections:
   work:
     title: Work
     output: true
+exclude:
+- Gruntfile.js
+- Gemfile
+- Gemfile.lock
+- package.json
+- README*
+- node_modules
+- ".gitignore"
