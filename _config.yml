@@ -19,3 +19,6 @@ exclude:
 - README*
 - node_modules
 - ".gitignore"
+gems:
+- jekyll-seo-tag
+- jekyll-sitemap
