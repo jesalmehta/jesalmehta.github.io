@@ -11,6 +11,17 @@ collections:
   work:
     title: Work
     output: true
+defaults:
+- scope:
+    path: ''
+    type: work
+  values:
+    layout: work
+    client:
+    project link:
+    brief text:
+    services:
+    -
 exclude:
 - Gruntfile.js
 - Gemfile
