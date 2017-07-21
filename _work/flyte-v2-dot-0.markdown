@@ -1,8 +1,9 @@
 ---
 title: Flyte v2.0
 date: 2017-07-22 00:17:00 +05:30
-client: Renata Lighting
-brief text: A series of USB lights for kids
+Client: Renata Lighting
+Project link: 
+Brief text: A series of USB lights for kids
 year: 2014
 ---
 
