@@ -20,12 +20,13 @@ defaults:
     type: work
   values:
     layout: work
-    client: 
-    project link: 
-    brief text: 
+    thumbnail:
+    client:
+    project link:
+    brief text:
     services:
-    - 
-    year: 
+    -
+    year:
 exclude:
 - Gruntfile.js
 - Gemfile
