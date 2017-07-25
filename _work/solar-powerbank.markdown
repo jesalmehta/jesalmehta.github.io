@@ -19,5 +19,6 @@ year: 2013
 'Brief :': A powerbank for Renata Lighting's existing and future lamps
 ---
 
+![solyte final v3.276-28867e.jpg](/uploads/solyte%20final%20v3.276-28867e.jpg)
 
-![solyte final v3.276-28867e.jpg](/uploads/solyte%20final%20v3.276-28867e.jpg)![solyte final v3.276_2.jpg](/uploads/solyte%20final%20v3.276_2.jpg)
+![solyte final v3.276_2.jpg](/uploads/solyte%20final%20v3.276_2.jpg)
