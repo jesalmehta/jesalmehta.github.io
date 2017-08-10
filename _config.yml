@@ -23,13 +23,21 @@ defaults:
     type: work
   values:
     layout: project
-    thumbnail: 
-    client: 
-    project link: 
-    brief text: 
+    thumbnail:
+    client:
+    project link:
+    description:
     services:
-    - 
-    year: 
+    -
+    year:
+defaults:
+- scope:
+    path: ''
+    type: explorations
+  values:
+    layout: project
+    thumbnail:
+    description:
 permalink: pretty
 exclude:
 - Gruntfile.js
