@@ -19,14 +19,15 @@ defaults:
     path: ''
     type: work
   values:
-    layout: work
-    thumbnail: 
-    client: 
-    project link: 
-    brief text: 
+    layout: project
+    thumbnail:
+    client:
+    project link:
+    brief text:
     services:
-    - 
-    year: 
+    -
+    year:
+permalink: pretty
 exclude:
 - Gruntfile.js
 - Gemfile
@@ -38,3 +39,6 @@ exclude:
 gems:
 - jekyll-seo-tag
 - jekyll-sitemap
+sass:
+  sass_dir: styles/
+  style: compressed
