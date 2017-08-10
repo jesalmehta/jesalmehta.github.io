@@ -20,24 +20,11 @@ collections:
 defaults:
 - scope:
     path: ''
-    type: work
-  values:
-    layout: project
-    thumbnail:
-    client:
-    project link:
-    description:
-    services:
-    -
-    year:
-defaults:
-- scope:
-    path: ''
     type: explorations
   values:
     layout: project
-    thumbnail:
-    description:
+    thumbnail: 
+    description: 
 permalink: pretty
 exclude:
 - Gruntfile.js
