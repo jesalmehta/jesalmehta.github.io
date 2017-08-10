@@ -2,6 +2,9 @@
 title: Jesal Mehta
 timezone: Asia/Kolkata
 collections:
+  explorations:
+    title: Explorations
+    output: true
   posts:
     title: Posts
     output: true
@@ -20,13 +23,13 @@ defaults:
     type: work
   values:
     layout: project
-    thumbnail:
-    client:
-    project link:
-    brief text:
+    thumbnail: 
+    client: 
+    project link: 
+    brief text: 
     services:
-    -
-    year:
+    - 
+    year: 
 permalink: pretty
 exclude:
 - Gruntfile.js
