@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+<section class="text-center ">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10 col-md-8">
+        <h2>Work</h2>
+        <p class="lead">
+          Stack's visual style is simple yet distinct, making it an ideal starting point for your project whether it be a basic marketing site, or multi-page company presence.
+        </p>
+      </div>
+    </div>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="masonry">
+          <div class="row">
+            <div class="masonry__container">
+              {% for project in site.work %}
+              <div class="masonry__item col-md-4 col-sm-6 col-xs-12">
+                <div class="project-thumb hover-element border--round hover--active">
+                  <a href="#">
+                    <div class="hover-element__initial">
+                      <div class="background-image-holder">
+                        <img alt="background" src="{{ project.thumbnail }}" />
+                      </div>
+                    </div>
+                    <div class="hover-element__reveal" data-scrim-top="5">
+                      <div class="project-thumb__title">
+                        <h4>{{ project.title }}</h4>
+                        <span>{{ project.categories | join: ' &amp; ' }}</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              {% endfor %}
+              <!--end item-->
+            </div>
+            <!--end of masonry container-->
+          </div>
+          <!--end row-->
+        </div>
+        <!--end masonry-->
+      </div>
+    </div>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>

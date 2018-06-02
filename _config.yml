@@ -1,0 +1,42 @@
+---
+title: Jesal Mehta
+timezone: Asia/Kolkata
+collections:
+  explorations:
+    title: Explorations
+    output: true
+  posts:
+    title: Posts
+    output: true
+  services:
+    title: Services
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+  work:
+    title: Work
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: explorations
+  values:
+    layout: project
+    thumbnail: 
+    description: 
+permalink: pretty
+exclude:
+- Gruntfile.js
+- Gemfile
+- Gemfile.lock
+- package.json
+- README*
+- node_modules
+- ".gitignore"
+gems:
+- jekyll-seo-tag
+- jekyll-sitemap
+sass:
+  sass_dir: styles/
+  style: compressed
