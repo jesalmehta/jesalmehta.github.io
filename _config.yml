@@ -25,6 +25,14 @@ defaults:
     layout: project
     thumbnail: 
     description: 
+- scope:
+    path: ''
+    type: work
+  values:
+    layout: project
+    square featured image: 
+    client: 
+    year: 
 permalink: pretty
 exclude:
 - Gruntfile.js
@@ -34,7 +42,7 @@ exclude:
 - README*
 - node_modules
 - ".gitignore"
-gems:
+plugins:
 - jekyll-seo-tag
 - jekyll-sitemap
 sass:
