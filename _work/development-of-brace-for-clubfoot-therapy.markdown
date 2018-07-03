@@ -22,6 +22,3 @@ Grasshopper
 Status :
 The resulting cycle time per brace has gone from 30 hours of highly skilled labour to 15 mins of data operator work.
 The product is now under large-scale beta-testing.
-
-
- 
