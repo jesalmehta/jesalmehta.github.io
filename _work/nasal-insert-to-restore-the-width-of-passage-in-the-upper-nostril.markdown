@@ -13,6 +13,10 @@ Flexing mechanism suitable for insertion into nostril
 Patient comfort in terms of usage (insertion and removal) as well as allowing comfortable breathing while inserted
 Requisite dynamic force applied to passage - too little would collapse it while too much would damage tissue 
 Material safety
+![2012_0428_162133 edit2.jpg](/uploads/2012_0428_162133%20edit2.jpg)
+![Clutch ext.150.jpg](/uploads/Clutch%20ext.150.jpg)
+![Clip ext.152.jpg](/uploads/Clip%20ext.152.jpg)
+![2012_0426_171713 crop lite.jpg](/uploads/2012_0426_171713%20crop%20lite.jpg)
 
 Toolset :
 3D modelling, 3D printing
