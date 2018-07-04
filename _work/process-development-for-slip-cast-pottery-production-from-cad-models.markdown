@@ -12,7 +12,9 @@ Areas of work:
 Mold and mother-mold design
 Generative design
 Study of the effects of various parameters on casting in alginate, plaster and clay
-
+![IMG_20171221_170109316 edit vert.jpg](/uploads/IMG_20171221_170109316%20edit%20vert.jpg)
+![IMG_20171218_215636122 edit lite.jpg](/uploads/IMG_20171218_215636122%20edit%20lite.jpg)
+![IMG_20171128_035409890 lite.jpg](/uploads/IMG_20171128_035409890%20lite.jpg)
 Toolset :
 Fusion 360 and Grasshopper for modelling
 3D printing
