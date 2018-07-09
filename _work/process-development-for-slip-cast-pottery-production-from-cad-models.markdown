@@ -15,6 +15,7 @@ Study of the effects of various parameters on casting in alginate, plaster and c
 ![IMG_20171221_170109316 edit vert.jpg](/uploads/IMG_20171221_170109316%20edit%20vert.jpg)
 ![IMG_20171218_215636122 edit lite.jpg](/uploads/IMG_20171218_215636122%20edit%20lite.jpg)
 ![IMG_20171128_035409890 lite.jpg](/uploads/IMG_20171128_035409890%20lite.jpg)
+![Trial 2.2x - Component addition attempt v3_2.jpg](/uploads/Trial%202.2x%20-%20Component%20addition%20attempt%20v3_2.jpg)
 Toolset :
 Fusion 360 and Grasshopper for modelling
 3D printing
