@@ -5,7 +5,7 @@ categories:
 - Lighting
 tags:
 - injection molding
-square featured image: "/uploads/FlatLyte-thumb.jpg"
+square featured image: "/uploads/2018_0706_043302.jpg"
 client: Renata Lighting
 year: 2016
 brief text: LED USB Table Lamp
