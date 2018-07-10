@@ -26,4 +26,4 @@ Status :
 Phase 1 : Proof of concept delivered
 Refinement iterations pending
 
-
+![voro blunt vase render.5.jpg](/uploads/voro%20blunt%20vase%20render.5.jpg)
