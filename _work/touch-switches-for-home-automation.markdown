@@ -1,6 +1,7 @@
 ---
 title: Touch switches for Home Automation
 date: 2018-07-03 22:27:00 +05:30
+square featured image: "/uploads/basic%20render.13-Edit%20glow.jpg"
 client: Nuos
 year: 2017-2018
 ---
@@ -25,3 +26,5 @@ CorelDraw, Lasercutting
 
 Status :
 In market and deployed on-site. 
+
+![Legrand.9.jpg](/uploads/Legrand.9.jpg)![Legrand.8.jpg](/uploads/Legrand.8.jpg)
