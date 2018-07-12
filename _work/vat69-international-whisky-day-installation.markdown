@@ -1,6 +1,7 @@
 ---
 title: VAT69 International Whisky Day installation
 date: 2018-07-03 22:43:00 +05:30
+position: 4
 square featured image: "/uploads/I02%20-%20HG%20FB%20edit.jpg"
 client: Homegrown.in
 year: 2017

@@ -1,6 +1,7 @@
 ---
 title: Process development for Slip Cast pottery production from CAD models
 date: 2018-07-03 14:53:00 +05:30
+position: 0
 square featured image: "/uploads/IMG_20171221_170210510%20edit.jpg"
 client: Bhumi Pottery
 year: 2017-2018

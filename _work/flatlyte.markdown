@@ -5,6 +5,7 @@ categories:
 - Lighting
 tags:
 - injection molding
+position: 6
 square featured image: "/uploads/2018_0706_043302.jpg"
 client: Renata Lighting
 year: 2016
