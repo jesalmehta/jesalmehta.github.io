@@ -1,7 +1,7 @@
 ---
 title: Ceiling unit for Pendant Lights
 date: 2017-07-22 01:11:00 +05:30
-position: 11
+position: 12
 square featured image: "/uploads/Ceiling-Unit-thumb.jpg"
 client: Renata Lighting
 year: 2014
