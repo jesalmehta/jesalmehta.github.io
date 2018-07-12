@@ -8,7 +8,7 @@ tags:
 - injection molding
 - 2k molding
 - USB
-position: 9
+position: 7
 square featured image: "/uploads/2018_0706_041441.jpg"
 client: Renata Lighting
 year: 2013
