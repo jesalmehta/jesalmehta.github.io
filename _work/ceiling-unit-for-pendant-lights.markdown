@@ -10,3 +10,5 @@ brief text: |
 ---
 
 ![untitled.432.jpg](/uploads/untitled.432.jpg)![untitled.431.jpg](/uploads/untitled.431.jpg)
+
+![2018_0706_042621.jpg](/uploads/2018_0706_042621.jpg)
