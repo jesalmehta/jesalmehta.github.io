@@ -1,6 +1,7 @@
 ---
 title: Nasal insert to restore the width of passage in the upper nostril
 date: 2018-07-03 23:49:00 +05:30
+position: 14
 square featured image: "/uploads/2012_0426_171725%20crop%20lite.jpg"
 client: Patient for Dr Kumkum Khadalia, Plastic surgeon
 year: 2012

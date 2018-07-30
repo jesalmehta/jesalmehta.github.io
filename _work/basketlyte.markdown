@@ -5,6 +5,7 @@ categories:
 - Lighting
 tags:
 - LED
+position: 5
 square featured image: "/uploads/BasketLyte-thumb.jpg"
 client: Renata Lighting
 year: 2015

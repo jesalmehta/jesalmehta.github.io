@@ -1,6 +1,7 @@
 ---
 title: Flyte v2.0
 date: 2017-07-22 00:17:00 +05:30
+position: 11
 square featured image: "/uploads/Flyte-2-thumb.jpg"
 year: 2014
 Client: Renata Lighting

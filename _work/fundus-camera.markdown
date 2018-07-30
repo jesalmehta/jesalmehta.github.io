@@ -1,6 +1,8 @@
 ---
 title: Fundus Camera
 date: 2018-07-03 22:55:00 +05:30
+position: 3
+square featured image: "/uploads/2016_0322_182613-Edit.jpg"
 client: Dr Rohit Modi & Maker's Asylum
 year: 2016
 ---
@@ -24,3 +26,4 @@ Status :
 Proof of concept and further refinements successful.
 Client handover complete.
 
+![2016_0404_110510.jpg](/uploads/2016_0404_110510.jpg)
