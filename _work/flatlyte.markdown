@@ -12,4 +12,5 @@ year: 2016
 brief text: LED USB Table Lamp
 ---
 
-![SNAG_21-07-2017_22.51.51.png](/uploads/SNAG_21-07-2017_22.51.51.png)![SNAG_21-07-2017_22.53.16.png](/uploads/SNAG_21-07-2017_22.53.16.png)
+![flatlyte render.31.jpg](/uploads/flatlyte%20render.31.jpg)![flatlyte render.37.jpg](/uploads/flatlyte%20render.37.jpg)
+![flatlyte render.34.jpg](/uploads/flatlyte%20render.34.jpg)
