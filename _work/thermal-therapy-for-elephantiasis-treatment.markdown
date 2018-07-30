@@ -2,6 +2,7 @@
 title: Thermal Therapy for Elephantiasis Treatment
 date: 2018-07-04 00:23:00 +05:30
 position: 13
+square featured image: "/uploads/2013_0504_155208.jpg"
 ---
 
 Brief : Develop heat treatment device based on existing therapy device but with improvements on ease of use, portability, manufacturability and cost of production
