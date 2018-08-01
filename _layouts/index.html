@@ -23,7 +23,8 @@ layout: default
         <div class="masonry">
           <div class="row">
             <div class="masonry__container">
-              {% for project in site.work %}
+              {% assign sorted_projects = site.work | sort: "position" %}
+              {% for project in sorted_projects %}
               <div class="masonry__item col-md-4 col-sm-6 col-xs-12">
                 <div class="project-thumb hover-element border--round hover--active">
                   <a href="#">
