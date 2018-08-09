@@ -1,0 +1,87 @@
+---
+layout: default
+---
+
+<div class="main-container">
+  <section class="imagebg parallax" data-overlay="4">
+    <div class="background-image-holder">
+      <img alt="background" src="{{ page['wide featured image'] }}" />
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>{{ page.client }}</h1>
+          <ol class="breadcrumbs">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/work">Work</a>
+            </li>
+            <li>{{ page.client }}</li>
+          </ol>
+        </div>
+      </div>
+      <!--end of row-->
+    </div>
+    <!--end of container-->
+  </section>
+  <section>
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-md-3 col-lg-2">
+          <div class="text-block">
+            <span class="h5">Client:</span>
+            <span>{{ page.client }}</span>
+          </div>
+          <div class="text-block">
+            <span class="h5">Project Year:</span>
+            <span>
+                            {{ page.year }}
+                        </span>
+          </div>
+        </div>
+        <div class="col-md-5 col-lg-5">
+          <div class="text-block">
+            <span class="h5">Brief:</span>
+            <p>
+              {{ page.content }}
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3">
+          <div class="text-block">
+            <span class="h5">Services rendered:</span>
+            <ul class="bullets">
+              {% for service in page.services %}
+              <li>{{ service }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--end of row-->
+    </div>
+    <!--end of container-->
+  </section>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul>
+            {% for image_object in page.images %}
+            <li>
+              <figure>
+                <img src="{{ image_object.image }}" />
+                <figcaption>{{ image_object.caption }}</figcaption>
+              </figure>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <!--end of row-->
+    </div>
+    <!--end of container-->
+  </section>
+</div>

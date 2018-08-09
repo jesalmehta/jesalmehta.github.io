@@ -1,9 +1,12 @@
 
-var mr = (function ($, window, document){
+window.mr = window.mr || {};
+
+mr = (function (mr, $, window, document){
     "use strict";
 
-    var mr         = {},
-        components = {documentReady: [],documentReadyDeferred: [], windowLoad: [], windowLoadDeferred: []};
+    mr = mr || {};
+
+    var components = {documentReady: [],documentReadyDeferred: [], windowLoad: [], windowLoadDeferred: []};
 
     mr.status = {documentReadyRan: false, windowLoadPending: false};
 
@@ -11,7 +14,7 @@ var mr = (function ($, window, document){
     $(window).on("load", windowLoad);
 
     function documentReady(context){
-
+        
         context = typeof context === typeof undefined ? $ : context;
         components.documentReady.concat(components.documentReadyDeferred).forEach(function(component){
             component(context);
@@ -49,7 +52,7 @@ var mr = (function ($, window, document){
     mr.windowLoad    = windowLoad;
 
     return mr;
-}(jQuery, window, document));
+}(window.mr, jQuery, window, document));
 
 
 //////////////// Utility Functions
@@ -57,8 +60,8 @@ mr = (function (mr, $, window, document){
     "use strict";
     mr.util = {};
 
-    mr.util.requestAnimationFrame    = window.requestAnimationFrame ||
-                                       window.mozRequestAnimationFrame ||
+    mr.util.requestAnimationFrame    = window.requestAnimationFrame || 
+                                       window.mozRequestAnimationFrame || 
                                        window.webkitRequestAnimationFrame ||
                                        window.msRequestAnimationFrame;
 
@@ -111,17 +114,17 @@ mr = (function (mr, $, window, document){
           if (keyA > keyB) return order2;
           return 0;
         });
-
+        
         // Append back into place
         $parentElement.empty();
         $(items).each(function(i, itm){
           $parentElement.append(itm);
         });
     };
-
+    
     // Set data-src attribute of element from src to be restored later
     mr.util.idleSrc = function(context, selector){
-
+        
             selector  = (typeof selector !== typeof undefined) ? selector : '';
             var elems = context.is(selector+'[src]') ? context : context.find(selector+'[src]');
 
@@ -136,14 +139,14 @@ mr = (function (mr, $, window, document){
             }
 
             // Clear the src attribute
-            elem.attr('src', '');
-
+            elem.attr('src', '');    
+            
         });
     };
 
     // Set src attribute of element from its data-src where it was temporarily stored earlier
     mr.util.activateIdleSrc = function(context, selector){
-
+        
         selector     = (typeof selector !== typeof undefined) ? selector : '';
         var elems    = context.is(selector+'[data-src]') ? context : context.find(selector+'[data-src]');
 
@@ -168,7 +171,7 @@ mr = (function (mr, $, window, document){
     // Take a text value in either px (eg. 150px) or vh (eg. 65vh) and return a number in pixels.
     mr.util.parsePixels = function(text){
         var windowHeight = $(window).height(), value;
-
+        
         // Text text against regular expression for px value.
         if(/^[1-9]{1}[0-9]*[p][x]$/.test(text)){
             return parseInt(text.replace('px', ''),10);
@@ -184,10 +187,10 @@ mr = (function (mr, $, window, document){
         }
     };
 
-    mr.util.removeHash = function() {
+    mr.util.removeHash = function() { 
         // Removes hash from URL bar without reloading and without losing search query
         history.pushState("", document.title, window.location.pathname + window.location.search);
-    };
+    }
 
     mr.components.documentReady.push(mr.util.documentReady);
     mr.components.windowLoad.push(mr.util.windowLoad);
@@ -216,39 +219,39 @@ mr = (function (mr, $, window, document){
 mr = (function (mr, $, window, document){
     "use strict";
 
-
+    
     mr.scroll           = {};
-    var raf             = window.requestAnimationFrame ||
-                          window.mozRequestAnimationFrame ||
+    var raf             = window.requestAnimationFrame || 
+                          window.mozRequestAnimationFrame || 
                           window.webkitRequestAnimationFrame ||
                           window.msRequestAnimationFrame;
     mr.scroll.listeners = [];
     mr.scroll.busy      = false;
     mr.scroll.y         = 0;
     mr.scroll.x         = 0;
-
+    
     var documentReady = function($){
 
         //////////////// Capture Scroll Event and fire scroll function
-        jQuery(window).off('scroll.mr');
+        jQuery(window).off('scroll.mr');    
         jQuery(window).on('scroll.mr', function(evt) {
                 if(mr.scroll.busy === false){
-
+                    
                     mr.scroll.busy = true;
-                    raf(function(evt){
+                    raf(function(evt){  
                         mr.scroll.update(evt);
                     });
-
+                    
                 }
                 if(evt.stopPropagation){
                     evt.stopPropagation();
                 }
         });
-
+        
     };
 
     mr.scroll.update = function(event){
-
+        
         // Loop through all mr scroll listeners
         var parallax = typeof window.mr_parallax !== typeof undefined ? true : false;
         mr.scroll.y = (parallax ? mr_parallax.mr_getScrollPosition() : window.pageYOffset);
@@ -263,7 +266,7 @@ mr = (function (mr, $, window, document){
                mr.scroll.listeners[i](event);
             }
         }
-
+        
     };
 
     mr.scroll.documentReady = documentReady;
@@ -311,9 +314,9 @@ mr = (function (mr, $, window, document){
                     //console.log('Error - Scrollpoint not found.');
                     return false;
                 }
-            }
+            }   
         });
-
+        
         if(mr.scroll.classModifiers.rules.length){
             return true;
         }else{
@@ -326,12 +329,12 @@ mr = (function (mr, $, window, document){
             scrollRules   = mr.scroll.classModifiers.rules,
             l             = scrollRules.length,
             currentRule;
-
-        // Given the current scrollPoint, check for necessary changes
+        
+        // Given the current scrollPoint, check for necessary changes 
         while(l--) {
-
+            
             currentRule = scrollRules[l];
-
+            
             if(currentScroll > currentRule.scrollPoint && !currentRule.hasClass){
                 // Set local copy and glogal copy at the same time;
                 currentRule.element.classList.add(currentRule.toggleClass);
@@ -358,7 +361,7 @@ mr = (function (mr, $, window, document){
         // Each element has data-scroll-class with a formatted value to represent class to add/remove at a particular scroll point.
         $('[data-scroll-class]').each(function(){
             var element  = $(this);
-
+                
             // Test the rules to be added to an array of rules.
             if(!mr.scroll.classModifiers.parseScrollRules(element)){
                 console.log('Error parsing scroll rules on: '+element);
@@ -368,7 +371,7 @@ mr = (function (mr, $, window, document){
         // For 'position fixed' elements, give them a max-width for correct fixing behaviour
         fixedElementSizes();
         $(window).on('resize', fixedElementSizes);
-
+        
         // If there are valid scroll rules add classModifiers update function to the scroll event processing queue.
         if(mr.scroll.classModifiers.rules.length){
             mr.scroll.listeners.push(mr.scroll.classModifiers.update);
@@ -376,9 +379,9 @@ mr = (function (mr, $, window, document){
     };
 
     mr.components.documentReady.push(documentReady);
-    mr.scroll.classModifiers.documentReady = documentReady;
+    mr.scroll.classModifiers.documentReady = documentReady;    
 
-
+    
 
     return mr;
 
@@ -389,9 +392,8 @@ mr = (function (mr, $, window, document){
 mr = (function (mr, $, window, document){
     "use strict";
 
-    mr.accordions = {};
-
-
+    mr.accordions = mr.accordions || {};
+    
     mr.accordions.documentReady = function($){
         $('.accordion__title').on('click', function(){
             mr.accordions.activatePanel($(this));
@@ -403,34 +405,46 @@ mr = (function (mr, $, window, document){
             accordion.css('min-height',minHeight);
         });
 
-        if(window.location.hash !== ''){
-             mr.accordions.activatePanelById(window.location.hash, true);
+        if(window.location.hash !== '' && window.location.hash !== '#' && window.location.hash.match(/#\/.*/) === null){
+            if($('.accordion > li > .accordion__title'+window.location.hash).length){
+                 mr.accordions.activatePanelById(window.location.hash, true);
+            }
         }
 
-        $('a[href^="#"]').on('click', function(){
-             mr.accordions.activatePanelById($(this).attr('href'), true);
+        jQuery(document).on('click', 'a[href^="#"]:not(a[href="#"])', function(){
+             
+             if($('.accordion > li > .accordion__title'+$(this).attr('href')).length){
+                mr.accordions.activatePanelById($(this).attr('href'), true);
+             }
         });
     };
 
-
+    
 
     mr.accordions.activatePanel = function(panel, forceOpen){
+        
         var $panel    = $(panel),
             accordion = $panel.closest('.accordion'),
             li        = $panel.closest('li'),
             openEvent = document.createEvent('Event'),
             closeEvent = document.createEvent('Event');
-
+            
             openEvent.initEvent('panelOpened.accordions.mr', true, true);
             closeEvent.initEvent('panelClosed.accordions.mr', true, true);
+        
+
 
         if(li.hasClass('active')){
+            
             if(forceOpen !== true){
+                
                 li.removeClass('active');
                 $panel.trigger('panelClosed.accordions.mr').get(0).dispatchEvent(closeEvent);
             }
         }else{
+            
             if(accordion.hasClass('accordion--oneopen')){
+                
                 var wasActive = accordion.find('li.active');
                 if(wasActive.length){
                     wasActive.removeClass('active');
@@ -438,8 +452,9 @@ mr = (function (mr, $, window, document){
                 }
                 li.addClass('active');
                 li.trigger('panelOpened.accordions.mr').get(0).dispatchEvent(openEvent);
-
+                
             }else{
+                
                 if(!li.is('.active')){
                     li.trigger('panelOpened.accordions.mr').get(0).dispatchEvent(openEvent);
                 }
@@ -450,13 +465,14 @@ mr = (function (mr, $, window, document){
 
     mr.accordions.activatePanelById = function(id, forceOpen){
         var panel;
-
-        if(id !== '' && id !== '#'){
+       
+        if(id !== '' && id !== '#' && id.match(/#\/.*/) === null){
             panel = $('.accordion > li > .accordion__title#'+id.replace('#', ''));
             if(panel.length){
                 $('html, body').stop(true).animate({
                     scrollTop: (panel.offset().top - 50)
                 }, 1200);
+                
                 mr.accordions.activatePanel(panel, forceOpen);
             }
         }
@@ -472,17 +488,15 @@ mr = (function (mr, $, window, document){
 mr = (function (mr, $, window, document){
     "use strict";
 
-    var documentReady = function($){
+    mr.alerts = mr.alerts || {};
+    
+    mr.alerts.documentReady = function($){
         $('.alert__close').on('click touchstart', function(){
             jQuery(this).closest('.alert').addClass('alert--dismissed');
         });
     };
 
-    mr.alerts = {
-        documentReady : documentReady
-    };
-
-    mr.components.documentReady.push(documentReady);
+    mr.components.documentReady.push(mr.alerts.documentReady);
     return mr;
 
 }(mr, jQuery, window, document));
@@ -491,22 +505,20 @@ mr = (function (mr, $, window, document){
 //////////////// Backgrounds
 mr = (function (mr, $, window, document){
     "use strict";
-
-    var documentReady = function($){
-
+    
+    mr.backgrounds = mr.backgrounds || {};
+    
+    mr.backgrounds.documentReady = function($){
+        
         //////////////// Append .background-image-holder <img>'s as CSS backgrounds
 
-      $('.background-image-holder').each(function() {
-          var imgSrc = $(this).children('img').attr('src');
-          $(this).css('background', 'url("' + imgSrc + '")').css('background-position', 'initial').css('opacity','1');
-      });
+	    $('.background-image-holder').each(function() {
+	        var imgSrc = $(this).children('img').attr('src');
+	        $(this).css('background', 'url("' + imgSrc + '")').css('background-position', 'initial').css('opacity','1');
+	    });
     };
 
-    mr.backgrounds = {
-        documentReady : documentReady
-    };
-
-    mr.components.documentReady.push(documentReady);
+    mr.components.documentReady.push(mr.backgrounds.documentReady);
     return mr;
 
 }(mr, jQuery, window, document));
@@ -514,8 +526,10 @@ mr = (function (mr, $, window, document){
 //////////////// Bars
 mr = (function (mr, $, window, document){
     "use strict";
-
-    var documentReady = function($){
+    
+    mr.bars = mr.bars || {};
+    
+    mr.bars.documentReady = function($){
         $('.nav-container .bar[data-scroll-class*="fixed"]:not(.bar--absolute)').each(function(){
             var bar = $(this),
                 barHeight = bar.outerHeight(true);
@@ -523,11 +537,7 @@ mr = (function (mr, $, window, document){
         });
     };
 
-    mr.bars = {
-        documentReady : documentReady
-    };
-
-    mr.components.documentReady.push(documentReady);
+    mr.components.documentReady.push(mr.bars.documentReady);
     return mr;
 
 }(mr, jQuery, window, document));
@@ -535,7 +545,7 @@ mr = (function (mr, $, window, document){
 //////////////// Cookies
 mr = (function (mr, $, window, document){
     "use strict";
-
+    
     mr.cookies = {
 
         getItem: function (sKey) {
@@ -584,21 +594,23 @@ mr = (function (mr, $, window, document){
 //////////////// Countdown
 mr = (function (mr, $, window, document){
     "use strict";
+    
+    mr.countdown = mr.countdown || {};
+    mr.countdown.options = mr.countdown.options || {};
 
-    var documentReady = function($){
+    mr.countdown.documentReady = function($){
 
         $('.countdown[data-date]').each(function(){
             var element      = $(this),
                 date         = element.attr('data-date'),
-                daysText     = "days",
+                daysText     = typeof element.attr('data-days-text') !== typeof undefined ? '%D '+element.attr('data-days-text')+' %H:%M:%S': '%D days %H:%M:%S',
+                daysText     = typeof mr.countdown.options.format !== typeof undefined ? mr.countdown.options.format : daysText,
+                dateFormat   = typeof element.attr('data-date-format') !== typeof undefined ? element.attr('data-date-format'): daysText,
+                
                 fallback;
 
             if(typeof element.attr('data-date-fallback') !== typeof undefined){
-                fallback = element.attr('data-date-fallback');
-            }
-
-            if(typeof element.attr('data-days-text') !== typeof undefined){
-                daysText = element.attr('data-days-text');
+                fallback = element.attr('data-date-fallback') || "Timer Done";
             }
 
             element.countdown(date, function(event) {
@@ -606,19 +618,15 @@ mr = (function (mr, $, window, document){
                     element.text(fallback);
                 }else{
                     element.text(
-                      event.strftime('%D '+daysText+' %H:%M:%S')
+                      event.strftime(dateFormat)
                     );
                 }
             });
         });
-
+        
     };
 
-    mr.countdown = {
-      documentReady : documentReady
-    };
-
-    mr.components.documentReadyDeferred.push(documentReady);
+    mr.components.documentReadyDeferred.push(mr.countdown.documentReady);
     return mr;
 
 }(mr, jQuery, window, document));
@@ -626,14 +634,18 @@ mr = (function (mr, $, window, document){
 //////////////// Datepicker
 mr = (function (mr, $, window, document){
     "use strict";
+    
+    mr.datepicker = mr.datepicker || {};
 
-    var documentReady = function($){
+    var options = mr.datepicker.options || {};
+    
+    mr.datepicker.documentReady = function($){
         if($('.datepicker').length){
-            $('.datepicker').pickadate();
+            $('.datepicker').pickadate(options);
         }
     };
 
-    mr.components.documentReadyDeferred.push(documentReady);
+    mr.components.documentReadyDeferred.push(mr.datepicker.documentReady);
     return mr;
 
 }(mr, jQuery, window, document));
@@ -641,10 +653,12 @@ mr = (function (mr, $, window, document){
 //////////////// Dropdowns
 mr = (function (mr, $, window, document){
     "use strict";
-    mr.dropdowns = {};
-    mr.dropdowns.done = false;
+    
+    mr.dropdowns = mr.dropdowns || {};
 
-    var documentReady = function($){
+    mr.dropdowns.done = false;
+    
+    mr.dropdowns.documentReady = function($){
 
         var rtl = false;
 
@@ -653,7 +667,7 @@ mr = (function (mr, $, window, document){
         }
 
         if(!mr.dropdowns.done){
-            jQuery(document).on('click','body:not(.dropdowns--hover) .dropdown:not(.dropdown--hover), body.dropdowns--hover .dropdown.dropdown--click',function(event){
+            jQuery(document).on('click','body:not(.dropdowns--hover) .dropdown, body.dropdowns--hover .dropdown.dropdown--click',function(event){
                 var dropdown = jQuery(this);
                 if(jQuery(event.target).is('.dropdown--active > .dropdown__trigger')){
                     dropdown.siblings().removeClass('dropdown--active').find('.dropdown').removeClass('dropdown--active');
@@ -677,41 +691,41 @@ mr = (function (mr, $, window, document){
             // Append a container to the body for measuring purposes
             jQuery('body').append('<div class="container containerMeasure" style="opacity:0;pointer-events:none;"></div>');
 
-
-
+            
+        
 
             // Menu dropdown positioning
             if(rtl === false){
-                repositionDropdowns($);
-                jQuery(window).on('resize', function(){repositionDropdowns($);});
+                mr.dropdowns.repositionDropdowns($);
+                jQuery(window).on('resize', function(){mr.dropdowns.repositionDropdowns($);});
             }else{
-                repositionDropdownsRtl($);
-                jQuery(window).on('resize', function(){repositionDropdownsRtl($);});
+                mr.dropdowns.repositionDropdownsRtl($);
+                jQuery(window).on('resize', function(){mr.dropdowns.repositionDropdownsRtl($);});
             }
 
             mr.dropdowns.done = true;
         }
     };
 
-    function repositionDropdowns($){
+    mr.dropdowns.repositionDropdowns = function($){
         $('.dropdown__container').each(function(){
             var container, containerOffset, masterOffset, menuItem, content;
 
                 jQuery(this).css('left', '');
 
-                container       = jQuery(this);
+                container       = jQuery(this);  
                 containerOffset = container.offset().left;
                 masterOffset    = jQuery('.containerMeasure').offset().left;
                 menuItem        = container.closest('.dropdown').offset().left;
                 content         = null;
-
+                
                 container.css('left',((-containerOffset)+(masterOffset)));
 
-                if(container.find('.dropdown__content:not([class*="md-12"])').length){
+                if(container.find('.dropdown__content:not([class*="lg-12"])').length){
                     content = container.find('.dropdown__content');
                     content.css('left', ((menuItem)-(masterOffset)));
                 }
-
+                
         });
         $('.dropdown__content').each(function(){
             var dropdown, offset, width, offsetRight, winWidth, leftCorrect;
@@ -728,15 +742,15 @@ mr = (function (mr, $, window, document){
             }
 
         });
-    }
+    };
 
-    function repositionDropdownsRtl($){
+    mr.dropdowns.repositionDropdownsRtl = function($){
 
         var windowWidth = jQuery(window).width();
 
         $('.dropdown__container').each(function(){
             var container, containerOffset, masterOffset, menuItem, content;
-
+ 
                 jQuery(this).css('left', '');
 
                 container   = jQuery(this);
@@ -744,10 +758,10 @@ mr = (function (mr, $, window, document){
                 masterOffset    = jQuery('.containerMeasure').offset().left;
                 menuItem        = windowWidth - (container.closest('.dropdown').offset().left + container.closest('.dropdown').outerWidth(true));
                 content         = null;
-
+                
                 container.css('right',((-containerOffset)+(masterOffset)));
 
-                if(container.find('.dropdown__content:not([class*="md-12"])').length){
+                if(container.find('.dropdown__content:not([class*="lg-12"])').length){
                     content = container.find('.dropdown__content');
                     content.css('right', ((menuItem)-(masterOffset)));
                 }
@@ -767,12 +781,10 @@ mr = (function (mr, $, window, document){
             }
 
         });
-    }
+    };
+    
 
-    mr.dropdowns.documentReady = documentReady;
-
-
-    mr.components.documentReady.push(documentReady);
+    mr.components.documentReady.push(mr.dropdowns.documentReady);
     return mr;
 
 }(mr, jQuery, window, document));
@@ -781,13 +793,13 @@ mr = (function (mr, $, window, document){
 
 mr = (function (mr, $, window, document){
     "use strict";
-
-    mr.forms = {};
+    
+    mr.forms                 = mr.forms || {};
     mr.forms.captcha         = {};
     mr.forms.captcha.widgets = [];
     mr.forms.captcha.done    = false;
 
-    var documentReady = function($){
+    mr.forms.documentReady = function($){
 
         mr.forms.captcha.widgets = [];
 
@@ -839,7 +851,7 @@ mr = (function (mr, $, window, document){
             $(this).siblings('input').trigger('click');
             return false;
         });
-
+        
         //////////////// Handle Form Submit
 
         $('form.form-email, form[action*="list-manage.com"], form[action*="createsend.com"]').attr('novalidate', true).off('submit').on('submit', mr.forms.submit);
@@ -872,11 +884,11 @@ mr = (function (mr, $, window, document){
                 // Create a captcha div and insert it before the submit button.
                 $insertBefore = $thisForm.find('button[type=submit]').closest('[class*="col-"]');
                 $captchaDiv   = jQuery('<div>').addClass('recaptcha');
-                $column       = jQuery('<div>').addClass('col-xs-12').append($captchaDiv);
+                $column       = jQuery('<div>').addClass('col-12').append($captchaDiv);
                 $column.insertBefore($insertBefore);
             }
 
-
+       
             // Add the widget div to the widgets array
             widgetObject = {
                 element:    $captchaDiv.get(0),
@@ -885,7 +897,7 @@ mr = (function (mr, $, window, document){
                 size:       widgetSize,
             };
 
-
+          
 
             mr.forms.captcha.widgets.push(widgetObject);
 
@@ -900,7 +912,7 @@ mr = (function (mr, $, window, document){
                 }
             }else{
                 if(typeof grecaptcha !== typeof undefined){
-                    mr.forms.captcha.renderWidgets();
+                    mr.forms.captcha.renderWidgets();    
                 }
             }
 
@@ -908,12 +920,7 @@ mr = (function (mr, $, window, document){
 
 
     };
-
-    mr.forms.documentReady = documentReady;
-
-
-
-
+    
     mr.forms.submit = function(e){
         // return false so form submits through jQuery rather than reloading page.
         if (e.preventDefault) e.preventDefault();
@@ -945,17 +952,17 @@ mr = (function (mr, $, window, document){
             if (typeof originalError !== typeof undefined && originalError !== false) {
                 formError.html(originalError);
             }
-
+            
             // validateFields returns 1 on error;
             if (mr.forms.validateFields(thisForm) !== 1) {
-
+               
                 thisForm.removeClass('attempted-submit');
 
                 // Hide the error if one was shown
                 formError.fadeOut(200);
                 // Create a new loading spinner in the submit button.
                 submitButton.addClass('btn--loading');
-
+                
                 try{
                     $.ajax({
                         url: thisForm.attr('action'),
@@ -969,7 +976,7 @@ mr = (function (mr, $, window, document){
                             // Request was a success, what was the response?
 
                             if (data.result !== "success" && data.Status !== 200) {
-
+                                
                                 // Got an error from Mail Chimp or Campaign Monitor
 
                                 // Keep the current error text in a data attribute on the form
@@ -980,9 +987,9 @@ mr = (function (mr, $, window, document){
 
                                 submitButton.removeClass('btn--loading');
                             } else {
-
+                                
                                 // Got success from Mail Chimp or Campaign Monitor
-
+                                
                                 submitButton.removeClass('btn--loading');
 
                                 successRedirect = thisForm.attr('data-success-redirect');
@@ -1006,9 +1013,9 @@ mr = (function (mr, $, window, document){
 
                     submitButton.removeClass('btn--loading');
                 }
+            
 
-
-
+                
             } else {
                 // There was a validation error - show the default form error message
                 mr.forms.showFormError(formSuccess, formError, 1000, 5000, 500);
@@ -1029,7 +1036,7 @@ mr = (function (mr, $, window, document){
 
                 // Hide the error if one was shown
                 formError.fadeOut(200);
-
+                
                 // Create a new loading spinner in the submit button.
                 submitButton.addClass('btn--loading');
 
@@ -1079,7 +1086,7 @@ mr = (function (mr, $, window, document){
         }
         return false;
     };
-
+    
     mr.forms.validateFields = function(form) {
         var body = $(body),
             error = false,
@@ -1132,7 +1139,7 @@ mr = (function (mr, $, window, document){
         // Validate recaptcha
         if(form.find('div.recaptcha').length && typeof form.attr('data-recaptcha-sitekey') !== typeof undefined){
             thisElement = $(form.find('div.recaptcha'));
-
+    
             if(grecaptcha.getResponse(form.data('recaptchaWidgetID')) !== ""){
                 thisElement.removeClass('field-error');
             }else{
@@ -1144,9 +1151,9 @@ mr = (function (mr, $, window, document){
         if (!form.find('.field-error').length) {
             body.find('.form-error').fadeOut(1000);
         }else{
-
+            
             var firstError = $(form).find('.field-error:first');
-
+            
             if(firstError.length){
                 $('html, body').stop(true).animate({
                     scrollTop: (firstError.offset().top - 100)
@@ -1160,7 +1167,7 @@ mr = (function (mr, $, window, document){
     };
 
     mr.forms.showFormSuccess = function(formSuccess, formError, fadeOutError, wait, fadeOutSuccess){
-
+        
         formSuccess.stop(true).fadeIn(fadeOutError);
 
         formError.stop(true).fadeOut(fadeOutError);
@@ -1170,7 +1177,7 @@ mr = (function (mr, $, window, document){
     };
 
     mr.forms.showFormError = function(formSuccess, formError, fadeOutSuccess, wait, fadeOutError){
-
+        
         formError.stop(true).fadeIn(fadeOutSuccess);
 
         formSuccess.stop(true).fadeOut(fadeOutSuccess);
@@ -1198,7 +1205,7 @@ mr = (function (mr, $, window, document){
 
     mr.forms.captcha.renderWidgets = function(){
         mr.forms.captcha.widgets.forEach(function(widget){
-            if(widget.element.innerHTML === ''){
+            if(widget.element.innerHTML.replace(/[\s\xA0]+/g,'') === ''){
                 widget.id = grecaptcha.render(widget.element, {
                     'sitekey' : mr.forms.captcha.sitekey,
                     'theme' : widget.theme,
@@ -1220,7 +1227,7 @@ mr = (function (mr, $, window, document){
         jQuery('div.recaptcha.field-error').removeClass('field-error');
     };
 
-    mr.components.documentReadyDeferred.push(documentReady);
+    mr.components.documentReadyDeferred.push(mr.forms.documentReady);
     return mr;
 
 }(mr, jQuery, window, document));
@@ -1228,61 +1235,74 @@ mr = (function (mr, $, window, document){
 //////////////// Granim
 mr = (function (mr, $, window, document){
     "use strict";
+    
+    mr.granim = mr.granim || {};
 
-    var documentReady = function($){
-      $('[data-gradient-bg]').each(function(index,element){
-        var granimParent = $(this),
-          granimID 	 = 'granim-'+index+'',
-        colours 	 = granimParent.attr('data-gradient-bg'),
-        pairs        = [],
-        tempPair     = [],
-        count,
-        passes,
-        i;
+    mr.granim.documentReady = function($){
+    	$('[data-gradient-bg]').each(function(index,element){
+    		var granimParent = $(this),
+    			granimID 	 = 'granim-'+index+'',
+				colours 	 = granimParent.attr('data-gradient-bg'),
+				pairs        = [],
+				tempPair     = [],
+                ao           = {},
+				count,
+				passes,
+				i,
+                themeDefaults,
+                
+                options;
 
-      // Canvas element forms the gradient background
-      granimParent.prepend('<canvas id="'+granimID+'"></canvas>');
+			// Canvas element forms the gradient background
+			granimParent.prepend('<canvas id="'+granimID+'"></canvas>');
 
             // Regular expression to match comma separated list of hex colour values
             passes = /^(#[0-9|a-f|A-F]{6}){1}([ ]*,[ ]*#[0-9|a-f|A-F]{6})*$/.test(colours);
 
             if(passes === true){
-              colours = colours.replace(' ','');
-              colours = colours.split(',');
-              count = colours.length;
-              // If number of colours is odd - duplicate last colour to make even array
-              if(count%2 !== 0){
-                colours.push(colours[count-1]);
-              }
-              for(i = 0; i < (count/2); i++){
+            	colours = colours.replace(' ','');
+            	colours = colours.split(',');
+            	count = colours.length;
+            	// If number of colours is odd - duplicate last colour to make even array
+            	if(count%2 !== 0){
+            		colours.push(colours[count-1]);
+            	}
+            	for(i = 0; i < (count/2); i++){
                     tempPair = [];
                     tempPair.push(colours.shift());
                     tempPair.push(colours.shift());
                     pairs.push(tempPair);
-              }
+            	}
+                
+                // attribute overrides - allows per-gradient override of global options.
+                ao.states = {
+                    "default-state": {
+                        gradients: pairs
+                    }
+                }
             }
 
-        var granimElement = $(this);
-        var granimInstance = new Granim({
-          element: '#'+granimID,
-          name: 'basic-gradient',
-          direction: 'left-right',
-          opacity: [1, 1],
-          isPausedWhenNotInView: true,
-          states : {
-              "default-state": {
-                  gradients: pairs
-              }
-          }
-      });
-      });
+            themeDefaults = {
+                element: '#'+granimID,
+                name: 'basic-gradient',
+                direction: 'left-right',
+                opacity: [1, 1],
+                isPausedWhenNotInView: true,
+                states : {
+                    "default-state": {
+                        gradients: pairs
+                    }
+                }
+            };
+            
+            options = jQuery.extend({}, themeDefaults, mr.granim.options, ao);
+            $(this).data('gradientOptions', options);
+    		var granimElement = $(this);
+    		var granimInstance = new Granim(options);
+    	});        
     };
 
-    mr.granim = {
-      documentReady : documentReady
-    };
-
-    mr.components.documentReadyDeferred.push(documentReady);
+    mr.components.documentReadyDeferred.push(mr.granim.documentReady);
     return mr;
 
 }(mr, jQuery, window, document));
@@ -1290,9 +1310,13 @@ mr = (function (mr, $, window, document){
 //////////////// Instagram
 mr = (function (mr, $, window, document){
     "use strict";
+    
+    mr.instagram = mr.instagram || {};
 
-    var documentReady = function($){
+    mr.instagram.documentReady = function($){
 
+        var themeDefaults, options, ao = {};
+        
         if($('.instafeed').length){
 
             // Replace with your own Access Token and Client ID
@@ -1311,29 +1335,31 @@ mr = (function (mr, $, window, document){
             jQuery.fn.spectragram.accessData = {
                 accessToken: token,
                 clientID: client
-            };
+            };  
         }
 
         $('.instafeed').each(function(){
             var feed   = $(this),
                 feedID = feed.attr('data-user-name'),
                 fetchNumber = 12;
-            if(typeof feed.attr('data-amount') !== typeof undefined){
-                fetchNumber = parseInt(feed.attr('data-amount'), 10);
-            }
+            
+            themeDefaults = {
+                query: 'mediumrarethemes',
+                max: 12
+            };
+
+            // Attribute Overrides taken from data attributes allow for per-feed customization
+            ao.max = feed.attr('data-amount')
+            ao.query = feed.attr('data-user-name');
+
+            options = jQuery.extend({}, themeDefaults, mr.instagram.options, ao);
+
             feed.append('<ul></ul>');
-            feed.children('ul').spectragram('getUserFeed', {
-                query: feedID,
-                max: fetchNumber
-            });
+            feed.children('ul').spectragram('getUserFeed', options);
         });
     };
 
-    mr.instagram = {
-        documentReady : documentReady
-    };
-
-    mr.components.documentReadyDeferred.push(documentReady);
+    mr.components.documentReadyDeferred.push(mr.instagram.documentReady);
     return mr;
 
 }(mr, jQuery, window, document));
@@ -1341,25 +1367,25 @@ mr = (function (mr, $, window, document){
 //////////////// Maps
 mr = (function (mr, $, window, document){
     "use strict";
+    
+    mr.maps = mr.maps || {};
+    mr.maps.options = mr.maps.options || {};
 
-    mr.maps = {};
-
-    var documentReady = function($){
+    mr.maps.documentReady = function($){
         // Interact with Map once the user has clicked (to prevent scrolling the page = zooming the map
 
         $('.map-holder').on('click', function() {
             $(this).addClass('interact');
         }).removeClass('interact');
-
+        
         var mapsOnPage = $('.map-container[data-maps-api-key]');
         if(mapsOnPage.length){
             mapsOnPage.addClass('gmaps-active');
             mr.maps.initAPI($);
             mr.maps.init();
         }
-
+        
     };
-    mr.maps.documentReady = documentReady;
 
     mr.maps.initAPI = function($){
         // Load Google MAP API JS with callback to initialise when fully loaded
@@ -1367,14 +1393,14 @@ mr = (function (mr, $, window, document){
             if($('[data-maps-api-key]').length){
                 var script = document.createElement('script');
                 var apiKey = $('[data-maps-api-key]:first').attr('data-maps-api-key');
-                apiKey = typeof apiKey !== typeof undefined ? apiKey : '';
+                apiKey = typeof apiKey !== typeof undefined ? apiKey : ''; 
                 if(apiKey !== ''){
                     script.type = 'text/javascript';
                     script.src = 'https://maps.googleapis.com/maps/api/js?key='+apiKey+'&callback=mr.maps.init';
                     script.className = 'gMapsAPI';
-                    document.body.appendChild(script);
+                    document.body.appendChild(script);  
                 }
-            }
+            } 
         }
     };
 
@@ -1382,12 +1408,13 @@ mr = (function (mr, $, window, document){
         if(typeof window.google !== "undefined"){
             if(typeof window.google.maps !== "undefined"){
 
+                mr.maps.instances = [];
+
+                
                 jQuery('.gmaps-active').each(function(){
                     var mapElement      = this,
                         mapInstance     = jQuery(this),
-                        mapJSON         = typeof mapInstance.attr('data-map-style') !== typeof undefined ? mapInstance.attr('data-map-style'): false,
-                        mapStyle        = JSON.parse(mapJSON) || [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}],
-                        zoomLevel       = (typeof mapInstance.attr('data-map-zoom') !== typeof undefined && mapInstance.attr('data-map-zoom') !== "") ? mapInstance.attr('data-map-zoom') * 1: 17,
+                        isDraggable     = jQuery(document).width() > 766 ? true : false,
                         showZoomControl = typeof mapInstance.attr('data-zoom-controls') !== typeof undefined ? true : false,
                         zoomControlPos  = typeof mapInstance.attr('data-zoom-controls') !== typeof undefined ? mapInstance.attr('data-zoom-controls'): false,
                         latlong         = typeof mapInstance.attr('data-latlong') !== typeof undefined ? mapInstance.attr('data-latlong') : false,
@@ -1395,58 +1422,69 @@ mr = (function (mr, $, window, document){
                         longitude       = latlong ? 1 * latlong.substr(latlong.indexOf(",") + 1) : false,
                         geocoder        = new google.maps.Geocoder(),
                         address         = typeof mapInstance.attr('data-address') !== typeof undefined ? mapInstance.attr('data-address').split(';'): [""],
-                        markerImage     = typeof mapInstance.attr('data-marker-image') !== typeof undefined ? mapInstance.attr('data-marker-image'): 'img/mapmarker.png',
-                        markerTitle     = "We Are Here",
-                        isDraggable     = jQuery(document).width() > 766 ? true : false,
-                        map, marker,
-                        mapOptions = {
-                            draggable: isDraggable,
-                            scrollwheel: false,
-                            zoom: zoomLevel,
-                            disableDefaultUI: true,
-                            zoomControl: showZoomControl,
-                            zoomControlOptions: zoomControlPos !== false ? {position: google.maps.ControlPosition[zoomControlPos]} : null,
-                            styles: mapStyle
-                        };
-                        console.log(mapOptions);
+                        map, marker, markerDefaults,mapDefaults,mapOptions, markerOptions, mapAo = {}, markerAo = {}, mapCreatedEvent;
 
-                    if(typeof mapInstance.attr('data-marker-title') !== typeof undefined && mapInstance.attr('data-marker-title') !== "" )
-                    {
-                        markerTitle = mapInstance.attr('data-marker-title');
-                    }
+                        mapCreatedEvent    = document.createEvent('Event');
+                        mapCreatedEvent.initEvent('mapCreated.maps.mr', true, true);
+
+                        
+                    
+
+                    mapDefaults = {
+                        disableDefaultUI: true,
+                        draggable: isDraggable,
+                        scrollwheel: false,
+                        styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}],
+                        zoom: 17,
+                        zoomControl: false,    
+                    };
+
+                    // Attribute overrides - allows data attributes on the map to override global options
+                    mapAo.styles             = typeof mapInstance.attr('data-map-style') !== typeof undefined ? JSON.parse(mapInstance.attr('data-map-style')): undefined;
+                    mapAo.zoom               = mapInstance.attr('data-map-zoom') ? parseInt(mapInstance.attr('data-map-zoom'),10) : undefined;
+                    mapAo.zoomControlOptions = zoomControlPos !== false ? {position: google.maps.ControlPosition[zoomControlPos]} : undefined;
+
+                    markerDefaults = {
+                        icon: {url:( typeof mr_variant !== typeof undefined ? '../': '' )+'img/mapmarker.png', scaledSize: new google.maps.Size(50,50)},
+                        title: 'We Are Here',
+                        optimised: false
+                    };
+
+                    markerAo.icon = typeof mapInstance.attr('data-marker-image') !== typeof undefined ? mapInstance.attr('data-marker-image'): undefined;
+                    markerAo.title = mapInstance.attr('data-marker-title');
+
+                    mapOptions = jQuery.extend({}, mapDefaults, mr.maps.options.map, mapAo);
+                    markerOptions = jQuery.extend({}, markerDefaults, mr.maps.options.marker, markerAo);
+                    
 
                     if(address !== undefined && address[0] !== ""){
                             geocoder.geocode( { 'address': address[0].replace('[nomarker]','')}, function(results, status) {
                                 if (status === google.maps.GeocoderStatus.OK) {
-                                var map = new google.maps.Map(mapElement, mapOptions);
-                                map.setCenter(results[0].geometry.location);
+                                map = new google.maps.Map(mapElement, mapOptions);
 
+
+                                mr.maps.instances.push(map);
+                                jQuery(mapElement).trigger('mapCreated.maps.mr').get(0).dispatchEvent(mapCreatedEvent);
+                                map.setCenter(results[0].geometry.location);
+                                
                                 address.forEach(function(address){
                                     var markerGeoCoder;
 
-                                    markerImage = {url: typeof window.mr_variant === typeof undefined ? typeof markerImage !== "object" ? markerImage: markerImage.url : '../img/mapmarker.png', scaledSize: new google.maps.Size(50,50)};
-
                                     if(/(\-?\d+(\.\d+)?),\s*(\-?\d+(\.\d+)?)/.test(address) ){
                                         var latlong = address.split(','),
-                                        marker = new google.maps.Marker({
+                                        marker = new google.maps.Marker(jQuery.extend({}, markerOptions, {
                                                         position: { lat: 1*latlong[0], lng: 1*latlong[1] },
                                                         map: map,
-                                                        icon: markerImage,
-                                                        title: markerTitle,
-                                                        optimised: false
-                                                    });
+                                                    }));
                                     }
                                     else if(address.indexOf('[nomarker]') < 0){
                                         markerGeoCoder = new google.maps.Geocoder();
                                         markerGeoCoder.geocode( { 'address': address.replace('[nomarker]','')}, function(results, status) {
                                             if (status === google.maps.GeocoderStatus.OK) {
-                                                marker = new google.maps.Marker({
+                                                marker = new google.maps.Marker(jQuery.extend({}, markerOptions, {
                                                     map: map,
-                                                    icon: markerImage,
-                                                    title: markerTitle,
                                                     position: results[0].geometry.location,
-                                                    optimised: false
-                                                });
+                                                }));
                                             }
                                             else{
                                                 console.log('Map marker error: '+status);
@@ -1461,23 +1499,26 @@ mr = (function (mr, $, window, document){
                         });
                     }
                     else if(typeof latitude !== typeof undefined && latitude !== "" && latitude !== false && typeof longitude !== typeof undefined && longitude !== "" && longitude !== false ){
+                        
                         mapOptions.center   = { lat: latitude, lng: longitude};
-                        map                 = new google.maps.Map(mapInstance, mapOptions);
-                        marker              = new google.maps.Marker({
+                        map                 = new google.maps.Map(mapElement, mapOptions); 
+                        marker              = new google.maps.Marker(jQuery.extend({}, markerOptions, {
                                                     position: { lat: latitude, lng: longitude },
-                                                    map: map,
-                                                    icon: markerImage,
-                                                    title: markerTitle
-                                                });
+                                                    map: map }));
+                        mr.maps.instances.push(map);
+                        jQuery(mapElement).trigger('mapCreated.maps.mr').get(0).dispatchEvent(mapCreatedEvent);
+
 
                     }
 
-                });
+                    
+
+                }); 
             }
         }
     };
 
-    mr.components.documentReady.push(documentReady);
+    mr.components.documentReady.push(mr.maps.documentReady);
     return mr;
 
 }(mr, jQuery, window, document));
@@ -1486,8 +1527,10 @@ mr = (function (mr, $, window, document){
 //////////////// Masonry
 mr = (function (mr, $, window, document){
     "use strict";
+    
+    mr.masonry = mr.masonry || {};
 
-    var documentReady = function($){
+    mr.masonry.documentReady = function($){
 
         mr.masonry.updateFilters();
 
@@ -1508,17 +1551,26 @@ mr = (function (mr, $, window, document){
                 }
             });
             masonryContainer.isotope({ filter: filterValue });
-
+            
         });
-
+        
     };
 
-    var windowLoad = function(){
+    mr.masonry.windowLoad = function(){
 
         $('.masonry').each(function(){
             var masonry       = $(this).find('.masonry__container'),
                 masonryParent = $(this),
-                defaultFilter = '*';
+                defaultFilter = '*',
+                themeDefaults, ao = {};
+
+            themeDefaults = {
+                itemSelector: '.masonry__item',
+                filter: '*',
+                masonry: {
+                  columnWidth: '.masonry__item'
+                }
+            };
 
             // Check for a default filter attribute
             if(masonryParent.is('[data-default-filter]')){
@@ -1528,6 +1580,9 @@ mr = (function (mr, $, window, document){
                 masonryParent.find('li[data-masonry-filter="'+masonryParent.attr("data-default-filter").toLowerCase()+'"]').addClass('active');
             }
 
+            // Use data attributes to override the default settings and provide a per-masonry customisation where necessary.
+            ao.filter = defaultFilter !== '*' ? defaultFilter : undefined;
+
             masonry.on('layoutComplete',function(){
                 masonry.addClass('masonry--active');
                 if(typeof mr_parallax !== typeof undefined){
@@ -1535,30 +1590,19 @@ mr = (function (mr, $, window, document){
                 }
             });
 
-            masonry.isotope({
-              itemSelector: '.masonry__item',
-              filter: defaultFilter,
-              masonry: {
-                columnWidth: '.masonry__item'
-              }
-            });
+            
+            masonry.isotope(jQuery.extend({}, themeDefaults, mr.masonry.options, ao));
 
         });
-    };
-
-
-    mr.masonry = {
-        documentReady : documentReady,
-        windowLoad : windowLoad
     };
 
     mr.masonry.updateFilters = function(masonry){
 
         // If no argument is supplied, just apply the update to all masonry sets on the page.
         masonry = typeof masonry !== typeof undefined ? masonry : '.masonry';
-
+        
         var $masonry = $(masonry);
-
+        
         $masonry.each(function(){
             var $masonry         = $(this),
                 masonryContainer = $masonry.find('.masonry__container'),
@@ -1566,12 +1610,12 @@ mr = (function (mr, $, window, document){
                 // data-filter-all-text can be used to set the word for "all"
                 filterAllText    = typeof filters.attr('data-filter-all-text') !== typeof undefined ? filters.attr('data-filter-all-text') : "All",
                 filtersList;
-
+            
             // Ensure we are working with a .masonry element
             if($masonry.is('.masonry')){
                 // If a filterable masonry item exists
                 if(masonryContainer.find('.masonry__item[data-masonry-filter]').length){
-
+                    
                     // Create empty ul for filters
                     filtersList = filters.find('> ul');
 
@@ -1588,10 +1632,10 @@ mr = (function (mr, $, window, document){
 
                         // If not undefined or empty
                         if(typeof filterString !== typeof undefined && filterString !== ""){
-                            // Split tags from string into array
+                            // Split tags from string into array 
                             filtersArray = filterString.split(',');
                         }
-                        jQuery(filtersArray).each(function(index, tag){
+                        $(filtersArray).each(function(index, tag){
 
                             // Slugify the tag
 
@@ -1604,9 +1648,21 @@ mr = (function (mr, $, window, document){
                             // If this tag does not appear in the list already, add it
                             if(!filtersList.find('[data-masonry-filter="'+slug+'"]').length){
                                 filtersList.append('<li data-masonry-filter="'+slug+'">'+tag+'</li>');
-
+                                
                             }
-                        });
+                        }); 
+                    });
+                    
+                    // Remove any unnused filter options in list
+                    filtersList.find('[data-masonry-filter]').each(function(){
+                        var $this  = $(this),
+                            filter = $this.text();
+                        
+                        if($(this).attr('data-masonry-filter') !== "*"){
+                            if(!$masonry.find('.masonry__item[data-masonry-filter*="'+filter+'"]').length){
+                                $this.remove();
+                            }
+                        }
                     });
 
                     mr.util.sortChildrenByText($(this).find('.masonry__filters ul'));
@@ -1624,12 +1680,12 @@ mr = (function (mr, $, window, document){
     };
 
     mr.masonry.updateLayout = function(masonry){
-
+        
         // If no argument is supplied, just apply the update to all masonry sets on the page.
         masonry = typeof masonry !== typeof undefined ? masonry : '.masonry';
 
         var $masonry = $(masonry);
-
+        
 
         $masonry.each(function(){
             var collection       = $(this),
@@ -1640,14 +1696,14 @@ mr = (function (mr, $, window, document){
                 if(newItems.length){
                     masonryContainer.isotope('appended', newItems).isotope( 'layout');
                 }
-
+                
                 masonryContainer.isotope('layout');
             }
         });
     };
 
-    mr.components.documentReady.push(documentReady);
-    mr.components.windowLoad.push(windowLoad);
+    mr.components.documentReady.push(mr.masonry.documentReady);
+    mr.components.windowLoad.push(mr.masonry.windowLoad);
     return mr;
 
 }(mr, jQuery, window, document));
@@ -1656,10 +1712,10 @@ mr = (function (mr, $, window, document){
 //////////////// Modals
 mr = (function (mr, $, window, document){
     "use strict";
+    
+    mr.modals = mr.modals || {};
 
-    mr.modals = {};
-
-    var documentReady = function($){
+    mr.modals.documentReady = function($){
         var allPageModals = "<div class=\"all-page-modals\"></div>",
             mainContainer = $('div.main-container');
 
@@ -1679,14 +1735,14 @@ mr = (function (mr, $, window, document){
             var modal        = $(this),
                 $window      = $(window),
                 modalContent = modal.find('.modal-content');
-
-
+                
+            
             if(!modal.find('.modal-close').length){
                 modal.find('.modal-content').append('<div class="modal-close modal-close-cross"></div>');
             }
 
             // Set modal height
-
+            
             if(modalContent.attr('data-width') !== undefined){
                 var modalWidth = modalContent.attr('data-width').substr(0,modalContent.attr('data-width').indexOf('%')) * 1;
                 modalContent.css('width',modalWidth + '%');
@@ -1707,39 +1763,39 @@ mr = (function (mr, $, window, document){
             var modal = modalInstance.find('.modal-container');
             var modalContent = modalInstance.find('.modal-content');
             var trigger = modalInstance.find('.modal-trigger');
-
+            
             // Link modal with modal-id attribute
-
+            
             trigger.attr('data-modal-index',index);
             modal.attr('data-modal-index',index);
-
+            
             // Set unique id for multiple triggers
-
+            
             if(typeof modal.attr('data-modal-id') !== typeof undefined){
                 trigger.attr('data-modal-id', modal.attr('data-modal-id'));
             }
+            
 
-
-            // Attach the modal to the body
+            // Attach the modal to the body            
             modal = modal.detach();
             mr.modals.allModalsContainer.append(modal);
         });
-
+        
 
         $('.modal-trigger').on('click', function(){
 
             var modalTrigger = $(this);
             var uniqueID, targetModal;
             // Determine if the modal id is set by user or is set programatically
-
+   
             if(typeof modalTrigger.attr('data-modal-id') !== typeof undefined){
                 uniqueID = modalTrigger.attr('data-modal-id');
-                targetModal = mr.modals.allModalsContainer.find('.modal-container[data-modal-id="'+uniqueID+'"]');
+                targetModal = mr.modals.allModalsContainer.find('.modal-container[data-modal-id="'+uniqueID+'"]');    
             }else{
                 uniqueID = $(this).attr('data-modal-index');
                 targetModal = mr.modals.allModalsContainer.find('.modal-container[data-modal-index="'+uniqueID+'"]');
             }
-
+            
             mr.util.activateIdleSrc(targetModal, 'iframe');
             mr.modals.autoplayVideo(targetModal);
 
@@ -1756,7 +1812,7 @@ mr = (function (mr, $, window, document){
             }
         });
 
-        $('.modal-container').on('click', function(e) {
+        $('.modal-container:not(.modal--prevent-close)').on('click', function(e) { 
             if( e.target !== this ) return;
             mr.modals.closeActiveModal();
         });
@@ -1786,8 +1842,8 @@ mr = (function (mr, $, window, document){
                 delay = 0;
 
             if(modal.attr('data-delay')){
-                delay = parseInt(modal.attr('data-delay'), 10) || 0;
-            }
+                delay = parseInt(modal.attr('data-delay'), 10) || 0;  
+            } 
 
             // If a valid selector is found, attach leave event to show modal.
             if($(exitSelector).length){
@@ -1813,42 +1869,44 @@ mr = (function (mr, $, window, document){
             if($('[data-modal-id="'+modalID+'"]').length){
                 mr.modals.closeActiveModal();
                 mr.modals.showModal($('[data-modal-id="'+modalID+'"]'));
-            }
+            }  
         }
 
         jQuery(document).on('click','a[href^="#"]', function(){
             var modalID = $(this).attr('href').replace('#', '');
-            mr.modals.closeActiveModal();
-            setTimeout(mr.modals.showModal, 500,'[data-modal-id="'+modalID+'"]', 0);
+            if($('[data-modal-id="'+modalID+'"]').length){    
+                mr.modals.closeActiveModal();
+                setTimeout(mr.modals.showModal, 500,'[data-modal-id="'+modalID+'"]', 0);
+            }
         });
 
         // Make modal scrollable
         jQuery(document).on('wheel mousewheel scroll','.modal-content, .modal-content .scrollable', function(evt){
             if(evt.preventDefault){evt.preventDefault();}
             if(evt.stopPropagation){evt.stopPropagation();}
-            this.scrollTop += (evt.originalEvent.deltaY);
+            this.scrollTop += (evt.originalEvent.deltaY); 
         });
     };
     ////////////////
     //////////////// End documentReady
     ////////////////
 
-    mr.modals.documentReady = documentReady;
-
     mr.modals.showModal = function(modal, millisecondsDelay){
+        
+        var delay = (typeof millisecondsDelay !== typeof undefined) ? (1*millisecondsDelay) : 0, $modal = $(modal);
+            
+        if($modal.length){
+            setTimeout(function(){
+                var openEvent = document.createEvent('Event');
+                openEvent.initEvent('modalOpened.modals.mr', true, true);
+                $(modal).addClass('modal-active').trigger('modalOpened.modals.mr').get(0).dispatchEvent(openEvent);
 
-        var delay = (typeof millisecondsDelay !== typeof undefined) ? (1*millisecondsDelay) : 0;
-
-        setTimeout(function(){
-            var openEvent = document.createEvent('Event');
-            openEvent.initEvent('modalOpened.modals.mr', true, true);
-            $(modal).addClass('modal-active').trigger('modalOpened.modals.mr').get(0).dispatchEvent(openEvent);
-
-        },delay);
+            },delay);
+        }
     };
 
     mr.modals.closeActiveModal = function(){
-        var modal      = jQuery('body div.modal-active'),
+        var modal      = jQuery('body div.modal-active'), 
             closeEvent = document.createEvent('Event');
 
         mr.util.idleSrc(modal, 'iframe');
@@ -1877,7 +1935,7 @@ mr = (function (mr, $, window, document){
         }
     };
 
-    mr.components.documentReady.push(documentReady);
+    mr.components.documentReady.push(mr.modals.documentReady);
     return mr;
 
 }(mr, jQuery, window, document));
@@ -1885,36 +1943,36 @@ mr = (function (mr, $, window, document){
 //////////////// Newsletter Providers
 mr = (function (mr, $, window, document){
     "use strict";
+    
+    mr.newsletters = mr.newsletters || {};
 
-    mr.newsletters = {};
-
-    var documentReady = function($){
-
-    var form,checkbox,label,id,parent,radio;
-
+    mr.newsletters.documentReady = function($){
+  
+  	var form,checkbox,label,id,parent,radio;
+    
     // Treat Campaign Monitor forms
     $('form[action*="createsend.com"]').each(function(){
-      form = $(this);
+    	form = $(this);
 
         // Override browser validation and allow us to use our own
         form.attr('novalidate', 'novalidate');
 
-      // Give each text input a placeholder value
+    	// Give each text input a placeholder value
 
-      if(!form.is('.form--no-placeholders')){
+    	if(!form.is('.form--no-placeholders')){
             form.find('input:not([checkbox]):not([radio])').each(function(){
                 var $input = $(this);
                 if(typeof $input.attr('placeholder') !== typeof undefined){
                     if($input.attr('placeholder') === ""){
                         if($input.siblings('label').length){
                             $input.attr('placeholder', $input.siblings('label').first().text());
-                            if(form.is('.form--no-labels')){
+                            if(form.is('.form--no-labels')){   
                                 $input.siblings('label').first().remove();
                             }
                         }
                     }
                 }else if($input.siblings('label').length){
-                    $input.attr('placeholder', $input.siblings('label').first().text());
+                    $input.attr('placeholder', $input.siblings('label').first().text()); 
                     if(form.is('.form--no-labels')){
                         $input.siblings('label').first().remove();
                     }
@@ -1928,37 +1986,37 @@ mr = (function (mr, $, window, document){
         }
 
 
-      // Wrap select elements in template code
+    	// Wrap select elements in template code
 
-      form.find('select').wrap('<div class="input-select"></div>');
+    	form.find('select').wrap('<div class="input-select"></div>');
 
-      // Wrap radios elements in template code
+    	// Wrap radios elements in template code
 
-      form.find('input[type="radio"]').wrap('<div class="input-radio"></div>');
+    	form.find('input[type="radio"]').wrap('<div class="input-radio"></div>');
 
-      // Wrap checkbox elements in template code
+    	// Wrap checkbox elements in template code
 
-      form.find('input[type="checkbox"]').each(function(){
-        checkbox = $(this);
-        id = checkbox.attr('id');
-        label = form.find('label[for='+id+']');
+    	form.find('input[type="checkbox"]').each(function(){
+    		checkbox = $(this);
+    		id = checkbox.attr('id');
+    		label = form.find('label[for='+id+']');
             if(!label.length){
                 label = $('<label for="'+id+'"></label>');
             }
+    		
+    		checkbox.before('<div class="input-checkbox" data-id="'+id+'"></div>');
+    		$('.input-checkbox[data-id="'+id+'"]').prepend(checkbox);
+    		$('.input-checkbox[data-id="'+id+'"]').prepend(label);
+    	});
 
-        checkbox.before('<div class="input-checkbox" data-id="'+id+'"></div>');
-        $('.input-checkbox[data-id="'+id+'"]').prepend(checkbox);
-        $('.input-checkbox[data-id="'+id+'"]').prepend(label);
-      });
-
-      form.find('button[type="submit"]').each(function(){
+    	form.find('button[type="submit"]').each(function(){
             var button = $(this);
             button.addClass('btn');
             if(button.parent().is('p')){
                 button.unwrap();
             }
         });
-
+        
         form.find('[required]').attr('required', 'required').addClass('validate-required');
 
         form.addClass('form--active');
@@ -1970,31 +2028,31 @@ mr = (function (mr, $, window, document){
 
     // Treat MailChimp forms
     $('form[action*="list-manage.com"]').each(function(){
-      form = $(this);
+    	form = $(this);
 
         // Override browser validation and allow us to use our own
         form.attr('novalidate', 'novalidate');
 
-      // Give each text input a placeholder value
+    	// Give each text input a placeholder value
         if(!form.is('.form--no-placeholders')){
-          form.find('input:not([checkbox]):not([radio])').each(function(){
-            var $input = $(this);
+        	form.find('input:not([checkbox]):not([radio])').each(function(){
+        		var $input = $(this);
                 if(typeof $input.attr('placeholder') !== typeof undefined){
                     if($input.attr('placeholder') === ""){
                         if($input.siblings('label').length){
                             $input.attr('placeholder', $input.siblings('label').first().text());
-                            if(form.is('.form--no-labels')){
+                            if(form.is('.form--no-labels')){   
                                 $input.siblings('label').first().remove();
                             }
                         }
                     }
                 }else if($input.siblings('label').length){
-                    $input.attr('placeholder', $input.siblings('label').first().text());
+                    $input.attr('placeholder', $input.siblings('label').first().text()); 
                     if(form.is('.form--no-labels')){
                         $input.siblings('label').first().remove();
                     }
                 }
-          });
+        	});
         }else{
             form.find('input[placeholder]').removeAttr('placeholder');
         }
@@ -2008,45 +2066,45 @@ mr = (function (mr, $, window, document){
             });
         }
 
-      // Wrap select elements in template code
+    	// Wrap select elements in template code
 
-      form.find('select').wrap('<div class="input-select"></div>');
+    	form.find('select').wrap('<div class="input-select"></div>');
 
-      // Wrap checboxes elements in template code
+    	// Wrap checboxes elements in template code
 
-      form.find('input[type="checkbox"]').each(function(){
-        checkbox = jQuery(this);
-        parent = checkbox.parent();
-        label = parent.find('label');
+    	form.find('input[type="checkbox"]').each(function(){
+    		checkbox = jQuery(this);
+    		parent = checkbox.parent();
+    		label = parent.find('label');
             if(!label.length){
                 label = jQuery('<label>');
             }
-        checkbox.before('<div class="input-checkbox"></div>');
-        parent.find('.input-checkbox').append(checkbox);
-        parent.find('.input-checkbox').append(label);
-      });
+    		checkbox.before('<div class="input-checkbox"></div>');
+    		parent.find('.input-checkbox').append(checkbox);
+    		parent.find('.input-checkbox').append(label);
+    	});
 
-      // Wrap radio elements in template code
+    	// Wrap radio elements in template code
 
-      form.find('input[type="radio"]').each(function(){
-        radio = jQuery(this);
-        parent = radio.closest('li');
-        label = parent.find('label');
+    	form.find('input[type="radio"]').each(function(){
+    		radio = jQuery(this);
+    		parent = radio.closest('li');
+    		label = parent.find('label');
             if(!label.length){
                 label = jQuery('<label>');
             }
-        radio.before('<div class="input-radio"></div>');
-        parent.find('.input-radio').prepend(radio);
-        parent.find('.input-radio').prepend(label);
-      });
+    		radio.before('<div class="input-radio"></div>');
+    		parent.find('.input-radio').prepend(radio);
+    		parent.find('.input-radio').prepend(label);
+    	});
 
         // Convert MailChimp input[type="submit"] to div.button
 
         form.find('input[type="submit"]').each(function(){
             var submit = $(this);
-
+            
             var newButton = jQuery('<button/>').attr('type','submit').attr('class', submit.attr('class')).addClass('btn').text(submit.attr('value'));
-
+            
             if(submit.parent().is('div.clear')){
                 submit.unwrap();
             }
@@ -2076,18 +2134,13 @@ mr = (function (mr, $, window, document){
 
         mr.newsletters.prepareAjaxAction(form);
 
+    }); 
 
+	// Reinitialize the forms so interactions work as they should
 
-
-    });
-
-  // Reinitialize the forms so interactions work as they should
-
-  mr.forms.documentReady(mr.setContext('form.form--active'));
-
+	mr.forms.documentReady(mr.setContext('form.form--active'));
+		
   };
-
-  mr.newsletters.documentReady = documentReady;
 
   mr.newsletters.prepareAjaxAction = function(form){
         var action = $(form).attr('action');
@@ -2112,7 +2165,7 @@ mr = (function (mr, $, window, document){
 
 
 
-  mr.components.documentReady.push(documentReady);
+  mr.components.documentReady.push(mr.newsletters.documentReady);
   return mr;
 
 }(mr, jQuery, window, document));
@@ -2120,18 +2173,18 @@ mr = (function (mr, $, window, document){
 //////////////// Notifications
 mr = (function (mr, $, window, document){
     "use strict";
+    
+    mr.notifications = mr.notifications || {};
 
-    mr.notifications = {};
-
-    var documentReady = function($){
-
+    mr.notifications.documentReady = function($){
+        
         $('.notification').each(function(){
             var notification = $(this);
             if(!notification.find('.notification-close').length){
                 notification.append('<div class="notification-close-cross notification-close"></div>');
             }
         });
-
+    
 
         $('.notification[data-autoshow]').each(function(){
             var notification = $(this);
@@ -2170,16 +2223,15 @@ mr = (function (mr, $, window, document){
             var notificationLink = jQuery(this).closest('.notification').attr('data-notification-link');
             mr.notifications.closeNotification(notificationLink);
         });
-
+    
     };
 
-    mr.notifications.documentReady = documentReady;
 
     mr.notifications.showNotification = function(notification, millisecondsDelay){
         var $notification = jQuery(notification),
             delay         = (typeof millisecondsDelay !== typeof undefined) ? (1*millisecondsDelay) : 0,
             openEvent     = document.createEvent('Event');
-
+            
         setTimeout(function(){
             openEvent.initEvent('notificationOpened.notifications.mr', true, true);
             $notification.addClass('notification--reveal').trigger('notificationOpened.notifications.mr').get(0).dispatchEvent(openEvent);
@@ -2187,11 +2239,11 @@ mr = (function (mr, $, window, document){
             if($notification.find('input').length){
                 $notification.find('input').first().focus();
             }
-
+            
 
 
         },delay);
-        // If notification has autohide attribute, set a timeout
+        // If notification has autohide attribute, set a timeout 
         // for the autohide time plus the original delay time in case notification was called
         // on page load
         if(notification.is('[data-autohide]')){
@@ -2205,12 +2257,12 @@ mr = (function (mr, $, window, document){
     mr.notifications.closeNotification = function(notification){
         var $notification = jQuery(notification),
             closeEvent    = document.createEvent('Event');
-        notification = $notification.is('.notification') ?
+        notification = $notification.is('.notification') ? 
                        $notification :
-                       $notification.is('.notification-close') ?
-                       $notification.closest('.notification') :
+                       $notification.is('.notification-close') ? 
+                       $notification.closest('.notification') : 
                        $('.notification[data-notification-link="'+notification+'"]');
-
+        
         closeEvent.initEvent('notificationClosed.notifications.mr', true, true);
         notification.addClass('notification--dismissed').trigger('notificationClosed.notifications.mr').get(0).dispatchEvent(closeEvent);
         notification.closest('nav').removeClass('notification--reveal');
@@ -2221,7 +2273,7 @@ mr = (function (mr, $, window, document){
         }
     };
 
-    mr.components.documentReady.push(documentReady);
+    mr.components.documentReady.push(mr.notifications.documentReady);
     return mr;
 
 }(mr, jQuery, window, document));
@@ -2229,12 +2281,12 @@ mr = (function (mr, $, window, document){
 //////////////// Parallax
 mr = (function (mr, $, window, document){
     "use strict";
+    
+    mr.parallax = mr.parallax || {};
 
-    mr.parallax = {};
-
-    var documentReady = function($){
-
-        var $window      = $(window);
+    mr.parallax.documentReady = function($){
+        
+        var $window      = $(window); 
         var windowWidth  = $window.width();
         var windowHeight = $window.height();
         var navHeight    = $('nav').outerHeight(true);
@@ -2248,11 +2300,8 @@ mr = (function (mr, $, window, document){
                 parallaxHeroImage.css('height', windowHeight + navHeight);
             }
         }
-    };
-
-
-    mr.parallax.documentReady = documentReady;
-
+    };     
+    
     mr.parallax.update = function(){
         if(typeof mr_parallax !== typeof undefined){
             mr_parallax.profileParallaxElements();
@@ -2260,7 +2309,7 @@ mr = (function (mr, $, window, document){
         }
     };
 
-    mr.components.documentReady.push(documentReady);
+    mr.components.documentReady.push(mr.parallax.documentReady);
     return mr;
 
 }(mr, jQuery, window, document));
@@ -2268,8 +2317,10 @@ mr = (function (mr, $, window, document){
 //////////////// Progress Horizontal (bars)
 mr = (function (mr, $, window, document){
     "use strict";
+    
+    mr.progressHorizontal = mr.progressHorizontal || {};
 
-    var documentReady = function($){
+    mr.progressHorizontal.documentReady = function($){
 
         var progressBars = [];
 
@@ -2295,174 +2346,175 @@ mr = (function (mr, $, window, document){
         });
     };
 
-    mr.progressHorizontal = {
-        documentReady : documentReady
-    };
-
-    mr.components.documentReady.push(documentReady);
+    mr.components.documentReady.push(mr.progressHorizontal.documentReady);
     return mr;
 
 }(mr, jQuery, window, document));
 
 //////////////// EasyPiecharts
 mr = (function (mr, $, window, document){
-    "use strict";
+	  "use strict";
 
-    mr.easypiecharts = {};
-    mr.easypiecharts.pies = [];
+		mr.easypiecharts = mr.easypiecharts || {};
+		mr.easypiecharts.pies = [];
+		mr.easypiecharts.options = mr.easypiecharts.options || {};
 
-    var documentReady = function($){
+		mr.easypiecharts.documentReady = function($){
 
-      mr.easypiecharts.init = function(){
+		  	$('.radial').each(function(){
+		  		var chart              = jQuery(this),
+		  			  value              = 0,
+		  			  color              = '#000000',
+		  			  time               = 2000,
+		  			  pieSize            = 110,
+		  			  barWidth           = 3,
+		  			  defaults           = {},
+		  			  attributeOverrides = {},
+		  			  options;
 
-        mr.easypiecharts.pies = [];
+		  		defaults = {
+		  			animate: ({duration: time, enabled: true}),
+		  			barColor: color,
+		  			scaleColor: false,
+		  			size: pieSize,
+		  			lineWidth: barWidth
+		  		};
 
-        $('.radial').each(function(){
-          var pieObject  = {},
-            currentPie = jQuery(this);
+		  		if(typeof mr.easypiecharts.options.size !== typeof undefined){
+            pieSize = mr.easypiecharts.options.size;
+		  		}
+		  		if(typeof chart.attr('data-timing') !== typeof undefined){
+		  			attributeOverrides.animate = {duration: parseInt(chart.attr('data-timing'), 10), enabled: true};
+		  		}
+		  		if(typeof chart.attr('data-color') !== typeof undefined){
+		  			attributeOverrides.barColor = chart.attr('data-color');
+		  		}
+		  		if(typeof chart.attr('data-size') !== typeof undefined){
+		  			pieSize = attributeOverrides.size = parseInt(chart.attr('data-size'), 10);
+		  		}
+		  		if(typeof chart.attr('data-bar-width') !== typeof undefined){
+		  			attributeOverrides.lineWidth = parseInt(chart.attr('data-bar-width'), 10);
+		  		}
 
-            pieObject.element = currentPie;
-            pieObject.value = parseInt(currentPie.attr('data-value'),10);
-            pieObject.top = currentPie.offset().top;
-            pieObject.height = currentPie.height()/2;
-            pieObject.active = false;
-            mr.easypiecharts.pies.push(pieObject);
-        });
-      };
+		  		chart.css('height',pieSize).css('width',pieSize);
 
-      mr.easypiecharts.activate = function(){
-        mr.easypiecharts.pies.forEach(function(pie){
-          if(Math.round((mr.scroll.y + mr.window.height)) >= Math.round(pie.top+pie.height)){
-            if(pie.active === false){
+          
 
-                      pie.element.data('easyPieChart').enableAnimation();
-                      pie.element.data('easyPieChart').update(pie.value);
-                      pie.element.addClass('radial--active');
-                      pie.active = true;
-            }
-                }
-            });
-      };
+		  		if(typeof mr.easypiecharts.options === 'object'){
+            options = jQuery.extend({}, defaults, mr.easypiecharts.options, attributeOverrides);
+		  		}
 
-        $('.radial').each(function(){
-          var chart    = jQuery(this),
-            value    = 0,
-            color    = '#000000',
-            time     = 2000,
-            pieSize  = 110,
-            barWidth = 3;
+		  		chart.easyPieChart(options);
+		  		chart.data('easyPieChart').update(0);
+		  	});
 
-          if(typeof chart.attr('data-timing') !== typeof undefined){
-            time = chart.attr('data-timing')*1;
-          }
-          if(typeof chart.attr('data-color') !== typeof undefined){
-            color = chart.attr('data-color');
-          }
-          if(typeof chart.attr('data-size') !== typeof undefined){
-            pieSize = chart.attr('data-size');
-          }
-          if(typeof chart.attr('data-bar-width') !== typeof undefined){
-            barWidth = chart.attr('data-bar-width');
-          }
-          chart.css('height',pieSize).css('width',pieSize);
+		  	if($('.radial').length){
+		  		mr.easypiecharts.init();
+		  		mr.easypiecharts.activate();
+		  		mr.scroll.listeners.push(mr.easypiecharts.activate);
+		  	}
 
-          chart.easyPieChart({
-            animate: ({duration: time, enabled: true}),
-            barColor: color,
-            scaleColor: false,
-            size: pieSize,
-            lineWidth: barWidth
-          });
-          chart.data('easyPieChart').update(0);
-        });
+	  };
 
-        if($('.radial').length){
-          mr.easypiecharts.init();
-          mr.easypiecharts.activate();
-          mr.scroll.listeners.push(mr.easypiecharts.activate);
-        }
+	  mr.easypiecharts.init = function(){
 
-    };
+			mr.easypiecharts.pies = [];
+          
+			$('.radial').each(function(){
+			  var pieObject  = {},
+				  currentPie = jQuery(this);
 
-    mr.easypiecharts.documentReady = documentReady;
+				  pieObject.element = currentPie;
+				  pieObject.value = parseInt(currentPie.attr('data-value'),10);
+				  pieObject.top = currentPie.offset().top;
+				  pieObject.height = currentPie.height()/2;
+				  pieObject.active = false;
+				  mr.easypiecharts.pies.push(pieObject);
+			});
+		};
 
-    mr.components.documentReadyDeferred.push(documentReady);
-    return mr;
+		mr.easypiecharts.activate = function(){
+			mr.easypiecharts.pies.forEach(function(pie){
+				if(Math.round((mr.scroll.y + mr.window.height)) >= Math.round(pie.top+pie.height)){
+					if(pie.active === false){
+						
+	                	pie.element.data('easyPieChart').enableAnimation();
+	                	pie.element.data('easyPieChart').update(pie.value);
+	                	pie.element.addClass('radial--active');
+	                	pie.active = true;
+					}
+	            }
+        	});
+		};
+
+	  mr.components.documentReadyDeferred.push(mr.easypiecharts.documentReady);
+	  return mr;
 
 }(mr, jQuery, window, document));
 
 //////////////// Flickity
 mr = (function (mr, $, window, document){
     "use strict";
+    
+    mr.sliders = mr.sliders || {};
 
-    mr.sliders = {};
-    mr.sliders.draggable = true;
-
-    var documentReady = function($){
+    mr.sliders.documentReady = function($){
 
         $('.slider').each(function(index){
-
+            
             var slider = $(this);
             var sliderInitializer = slider.find('ul.slides');
             sliderInitializer.find('>li').addClass('slide');
             var childnum = sliderInitializer.find('li').length;
-            var arrows = false;
-            var paging = false;
-            var timing = 7000;
-            var autoplay = true;
-            var draggable = mr.sliders.draggable;
-            if(slider.attr('data-arrows') === 'true'){
-                arrows = true;
-            }else{
-                arrows = false;
-            }
-            if(slider.attr('data-autoplay') === 'false'){
-                autoplay = false;
-            }else{
-                autoplay = true;
-            }
-            if(slider.attr('data-paging') === 'true' && sliderInitializer.find('li').length > 1){
-                paging = true;
-            }else{
-                paging = false;
-            }
-            if(slider.attr('data-timing')){
-                timing = slider.attr('data-timing')*1;
-            }
-            // Set data attribute to inidicate the number of children in the slider
-            slider.attr('data-children',childnum);
-
-            if(childnum < 2){
-                draggable = false;
-            }
-
-            $(sliderInitializer).flickity({
+            
+            var themeDefaults = {
                 cellSelector: '.slide',
                 cellAlign: 'left',
                 wrapAround: true,
-                pageDots: paging,
-                prevNextButtons: arrows,
-                autoPlay: timing,
-                draggable: draggable,
-                imagesLoaded: true
-            });
+                pageDots: false,
+                prevNextButtons: false,
+                autoPlay: true,
+                draggable: (childnum < 2 ? false: true),
+                imagesLoaded: true,
+                accessibility: true,
+                rightToLeft: false,
+                initialIndex: 0,
+                freeScroll: false
+            }; 
+
+            // Attribute Overrides - options that are overridden by data attributes on the slider element
+            var ao = {};
+            ao.pageDots = (slider.attr('data-paging') === 'true' && sliderInitializer.find('li').length > 1) ? true : undefined;
+            ao.prevNextButtons = slider.attr('data-arrows') === 'true'? true: undefined;
+            ao.draggable = slider.attr('data-draggable') === 'false'? false : undefined;
+            ao.autoPlay = slider.attr('data-autoplay') === 'false'? false: (slider.attr('data-timing') ? parseInt(slider.attr('data-timing'), 10): undefined);
+            ao.accessibility = slider.attr('data-accessibility') === 'false'? false : undefined;
+            ao.rightToLeft = slider.attr('data-rtl') === 'true'? true : undefined;
+            ao.initialIndex = slider.attr('data-initial') ? parseInt(slider.attr('data-initial'), 10) : undefined;
+            ao.freeScroll = slider.attr('data-freescroll') === "true" ? true: undefined;
+
+            // Set data attribute to inidicate the number of children in the slider
+            slider.attr('data-children',childnum);
+
+            
+            $(this).data('sliderOptions', jQuery.extend({}, themeDefaults, mr.sliders.options, ao));
+
+            $(sliderInitializer).flickity($(this).data('sliderOptions'));
 
             $(sliderInitializer).on( 'scroll.flickity', function( event, progress ) {
               if(slider.find('.is-selected').hasClass('controls--dark')){
                 slider.addClass('controls--dark');
               }else{
-                slider.removeClass('controls--dark');
+                slider.removeClass('controls--dark'); 
               }
             });
         });
 
-        mr.parallax.update();
-
+        if(mr.parallax.update){ mr.parallax.update(); }
+        
     };
 
-    mr.sliders.documentReady = documentReady;
-
-    mr.components.documentReadyDeferred.push(documentReady);
+    mr.components.documentReadyDeferred.push(mr.sliders.documentReady);
     return mr;
 
 }(mr, jQuery, window, document));
@@ -2470,23 +2522,23 @@ mr = (function (mr, $, window, document){
 //////////////// Smoothscroll
 mr = (function (mr, $, window, document){
     "use strict";
-
-    mr.smoothscroll = {};
+    
+    mr.smoothscroll = mr.smoothscroll || {};
     mr.smoothscroll.sections = [];
-
+    
     mr.smoothscroll.init = function(){
         mr.smoothscroll.sections = [];
 
-
+       
 
         $('a.inner-link').each(function(){
             var sectionObject = {},
                 link          = $(this),
                 href          = link.attr('href'),
                 validLink     = new RegExp('^#[^\r\n\t\f\v\#\.]+$','gm');
-
+                            
             if(validLink.test(href)){
-
+                
                 if($('section'+href).length){
 
                     sectionObject.id     = href;
@@ -2519,9 +2571,17 @@ mr = (function (mr, $, window, document){
 
     mr.scroll.listeners.push(mr.smoothscroll.highlight);
 
-    var documentReady = function($){
+    mr.smoothscroll.documentReady = function($){
         // Smooth scroll to inner links
-        var innerLinks = $('a.inner-link');
+        var innerLinks = $('a.inner-link'), offset, themeDefaults, ao = {};
+
+        themeDefaults = {
+            selector: '.inner-link',
+            selectorHeader: null,
+            speed: 750,
+            easing: 'easeInOutCubic',
+            offset: 0
+        };
 
         if(innerLinks.length){
             innerLinks.each(function(index){
@@ -2535,25 +2595,19 @@ mr = (function (mr, $, window, document){
             mr.smoothscroll.init();
             $(window).on('resize', mr.smoothscroll.init);
 
-            var offset = 0;
+            offset = 0;
             if($('body[data-smooth-scroll-offset]').length){
                 offset = $('body').attr('data-smooth-scroll-offset');
                 offset = offset*1;
             }
 
-            smoothScroll.init({
-                selector: '.inner-link',
-                selectorHeader: null,
-                speed: 750,
-                easing: 'easeInOutCubic',
-                offset: offset
-            });
+            ao.offset = offset !== 0 ? offset: undefined; 
+            
+            smoothScroll.init(jQuery.extend({}, themeDefaults, mr.smoothscroll.options, ao));
         }
     };
 
-    mr.smoothscroll.documentReady = documentReady;
-
-    mr.components.documentReady.push(documentReady);
+    mr.components.documentReady.push(mr.smoothscroll.documentReady);
     mr.components.windowLoad.push(mr.smoothscroll.init);
     return mr;
 
@@ -2563,9 +2617,9 @@ mr = (function (mr, $, window, document){
 mr = (function (mr, $, window, document){
     "use strict";
 
-    mr.tabs = {};
-
-    var documentReady = function($){
+    mr.tabs = mr.tabs || {};
+    
+    mr.tabs.documentReady = function($){
         $('.tabs').each(function(){
             var tabs = $(this);
             tabs.after('<ul class="tabs-content">');
@@ -2577,7 +2631,7 @@ mr = (function (mr, $, window, document){
                 currentTab.closest('.tabs-container').find('.tabs-content').append(tabContentClone);
             });
         });
-
+        
         $('.tabs > li').on('click', function(){
             var clickedTab = $(this), hash;
             mr.tabs.activateTab(clickedTab);
@@ -2623,11 +2677,11 @@ mr = (function (mr, $, window, document){
 
         tabContainer.find('> .tabs > li').removeClass('active');
         tabContainer.find('> .tabs-content > li').removeClass('active');
-
+        
         clickedTab.addClass('active').trigger('tabOpened.tabs.mr').get(0).dispatchEvent(openEvent);
         activeContent.addClass('active');
 
-
+        
 
         // If there is an <iframe> element in the tab, reload its content when the tab is made active.
         iframe = activeContent.find('iframe');
@@ -2639,13 +2693,14 @@ mr = (function (mr, $, window, document){
 
 
     mr.tabs.activateTabById = function(id){
-        if(id !== '' && id !== '#'){
-            $('.tabs > li#'+id.replace('#', '')).click();
+        if(id !== '' && id !== '#' && id.match(/#\/.*/) === null){
+            if($('.tabs > li#'+id.replace('#', '')).length){
+                $('.tabs > li#'+id.replace('#', '')).click();
+            }
         }
     };
 
-    mr.tabs.documentReady = documentReady;
-    mr.components.documentReady.push(documentReady);
+    mr.components.documentReady.push(mr.tabs.documentReady);
     return mr;
 
 }(mr, jQuery, window, document));
@@ -2653,44 +2708,42 @@ mr = (function (mr, $, window, document){
 //////////////// Toggle Class
 mr = (function (mr, $, window, document){
     "use strict";
-
-    var documentReady = function($){
+    
+    mr.toggleClass = mr.toggleClass || {};
+    
+    mr.toggleClass.documentReady = function($){
         $('[data-toggle-class]').each(function(){
-          var element = $(this),
+        	var element = $(this),
                 data    = element.attr('data-toggle-class').split("|");
-
+        		
 
             $(data).each(function(){
                 var candidate     = element,
                     dataArray     = [],
-                  toggleClass   = '',
-                  toggleElement = '',
+            	    toggleClass   = '',
+            	    toggleElement = '',
                     dataArray = this.split(";");
 
-              if(dataArray.length === 2){
-                toggleElement = dataArray[0];
-                toggleClass   = dataArray[1];
-                $(candidate).on('click',function(){
+            	if(dataArray.length === 2){
+            		toggleElement = dataArray[0];
+            		toggleClass   = dataArray[1];
+            		$(candidate).on('click',function(){
                         if(!candidate.hasClass('toggled-class')){
                             candidate.toggleClass('toggled-class');
                         }else{
                             candidate.removeClass('toggled-class');
                         }
-                  $(toggleElement).toggleClass(toggleClass);
-                  return false;
-                });
-              }else{
-                console.log('Error in [data-toggle-class] attribute. This attribute accepts an element, or comma separated elements terminated witha ";" followed by a class name to toggle');
-              }
+            			$(toggleElement).toggleClass(toggleClass);
+            			return false;
+            		});
+            	}else{
+            		console.log('Error in [data-toggle-class] attribute. This attribute accepts an element, or comma separated elements terminated witha ";" followed by a class name to toggle');
+            	}
             });
         });
     };
 
-    mr.toggleClass = {
-        documentReady : documentReady
-    };
-
-    mr.components.documentReady.push(documentReady);
+    mr.components.documentReady.push(mr.toggleClass.documentReady);
     return mr;
 
 }(mr, jQuery, window, document));
@@ -2698,25 +2751,29 @@ mr = (function (mr, $, window, document){
 //////////////// Typed Headline Effect
 mr = (function (mr, $, window, document){
     "use strict";
+    
+    mr.typed = mr.typed || {};
+    
 
-    var documentReady = function($){
+    mr.typed.documentReady = function($){
         $('.typed-text').each(function(){
             var text = $(this);
-            var strings = text.attr("data-typed-strings") ? text.attr("data-typed-strings").split(",") : [];
-            $(text).typed({
-                strings: strings,
-                typeSpeed: 100,
-                loop: true,
-                showCursor: false
-            });
+            var strings = text.attr("data-typed-strings") ? text.attr("data-typed-strings").split(",") : [],
+                themeDefaults = {
+                    strings: [],
+                    typeSpeed: 100,
+                    loop: true,
+                    showCursor: false
+                }, ao = {};
+
+            ao.strings = text.attr("data-typed-strings") ? text.attr("data-typed-strings").split(",") : undefined;
+
+            $(text).typed(jQuery.extend({}, themeDefaults, mr.typed.options, ao));
+            
         });
     };
 
-    mr.typed = {
-        documentReady : documentReady
-    };
-
-    mr.components.documentReady.push(documentReady);
+    mr.components.documentReady.push(mr.typed.documentReady);
     return mr;
 
 }(mr, jQuery, window, document));
@@ -2724,15 +2781,19 @@ mr = (function (mr, $, window, document){
 //////////////// Twitter Feeds
 mr = (function (mr, $, window, document){
     "use strict";
+    
+    mr.twitter = mr.twitter || {};
+    mr.twitter.options = mr.twitter.options || {};
 
-    var documentReady = function($){
+    mr.twitter.documentReady = function($){
         $('.tweets-feed').each(function(index) {
             $(this).attr('id', 'tweets-' + index);
         }).each(function(index) {
             var element = $('#tweets-' + index);
+            
             var TweetConfig = {
                "domId": '',
-               "maxTweets": element.attr('data-amount'),
+               "maxTweets": 6,
                "enableLinks": true,
                "showUser": true,
                "showTime": true,
@@ -2741,13 +2802,21 @@ mr = (function (mr, $, window, document){
                "customCallback": handleTweets
             };
 
+            TweetConfig = jQuery.extend(TweetConfig, mr.twitter.options);
+           
+
+
             if(typeof element.attr('data-widget-id') !== typeof undefined){
                 TweetConfig.id = element.attr('data-widget-id');
             }else if(typeof element.attr('data-feed-name') !== typeof undefined && element.attr('data-feed-name') !== ""){
                 TweetConfig.profile = {"screenName": element.attr('data-feed-name').replace('@', '')};
+            }else if(typeof mr.twitter.options.profile !== typeof undefined){
+                TweetConfig.profile = {"screenName": mr.twitter.options.profile.replace('@', '')};
             }else{
                 TweetConfig.profile = {"screenName": 'twitter'};
             }
+
+            TweetConfig.maxTweets = element.attr('data-amount') ? element.attr('data-amount'): TweetConfig.maxTweets; 
 
             if(element.closest('.twitter-feed--slider').length){
                 element.addClass('slider');
@@ -2763,11 +2832,11 @@ mr = (function (mr, $, window, document){
                 }
                 html += '</ul>';
                 element.html(html);
-
+                
                 // Initialize twitter feed slider
                 if(element.closest('.slider').length){
                     mr.sliders.documentReady(mr.setContext());
-
+                     
                     return html;
                 }
             }
@@ -2775,12 +2844,7 @@ mr = (function (mr, $, window, document){
         });
     };
 
-    mr.twitter = {
-        documentReady : documentReady
-    };
-
-    mr.components.documentReady.push(documentReady);
-
+    mr.components.documentReady.push(mr.twitter.documentReady);
     return mr;
 
 }(mr, jQuery, window, document));
@@ -2788,93 +2852,107 @@ mr = (function (mr, $, window, document){
 //////////////// Video
 mr = (function (mr, $, window, document){
     "use strict";
+    
+    mr.video = mr.video || {};
+    mr.video.options = mr.video.options || {};
+    mr.video.options.ytplayer = mr.video.options.ytplayer || {};
+    
+	  mr.video.documentReady = function($){
+	      
+			//////////////// Youtube Background
 
-    var documentReady = function($){
+			if($('.youtube-background').length){
+				$('.youtube-background').each(function(){
 
-      //////////////// Youtube Background
 
-      if($('.youtube-background').length){
-        $('.youtube-background').each(function(){
-          var player = $(this);
-          var vidURL = $(this).attr('data-video-url');
-          var startAt = $(this).attr('data-start-at');
-          player.attr('data-property','{videoURL:"'+vidURL+'",containment:"self",autoPlay:true, mute:true, startAt:'+startAt+', opacity:1}');
-          player.closest('.videobg').append('<div class="loading-indicator"></div>');
-          player.YTPlayer();
-          player.on("YTPStart",function(){
-              player.closest('.videobg').addClass('video-active');
-          });
-        });
-      }
+					var player = $(this),
+					
+					themeDefaults = {
+						containment: "self",
+						autoPlay: true,
+						mute: true,
+						opacity: 1
+					}, ao = {};
 
-      if($('.videobg').find('video').length){
-        $('.videobg').find('video').closest('.videobg').addClass('video-active');
-      }
+          // Attribute overrides - provides overrides to the global options on a per-video basis
+					ao.videoURL = $(this).attr('data-video-url');
+					ao.startAt = $(this).attr('data-start-at')? parseInt($(this).attr('data-start-at'), 10): undefined;
 
-      //////////////// Video Cover Play Icons
 
-      $('.video-cover').each(function(){
-          var videoCover = $(this);
-          if(videoCover.find('iframe[src]').length){
-              videoCover.find('iframe').attr('data-src', videoCover.find('iframe').attr('src'));
-              videoCover.find('iframe').attr('src','');
-          }
-      });
+					player.closest('.videobg').append('<div class="loading-indicator"></div>');
+					player.YTPlayer(jQuery.extend({}, themeDefaults, mr.video.options.ytplayer, ao));
+					player.on("YTPStart",function(){
+				  		player.closest('.videobg').addClass('video-active');
+					});	
 
-      $('.video-cover .video-play-icon').on("click", function(){
-          var playIcon = $(this);
-          var videoCover = playIcon.closest('.video-cover');
-          if(videoCover.find('video').length){
-              var video = videoCover.find('video').get(0);
-              videoCover.addClass('reveal-video');
-              video.play();
-              return false;
-          }else if(videoCover.find('iframe').length){
-              var iframe = videoCover.find('iframe');
-              iframe.attr('src',iframe.attr('data-src'));
-              videoCover.addClass('reveal-video');
-              return false;
-          }
-      });
-    };
+				});
+			}
 
-    mr.video = {
-        documentReady : documentReady
-    };
+			if($('.videobg').find('video').length){
+				$('.videobg').find('video').closest('.videobg').addClass('video-active');
+			} 
 
-    mr.components.documentReady.push(documentReady);
-    return mr;
+			//////////////// Video Cover Play Icons
+
+			$('.video-cover').each(function(){
+			    var videoCover = $(this);
+			    if(videoCover.find('iframe[src]').length){
+			        videoCover.find('iframe').attr('data-src', videoCover.find('iframe').attr('src'));
+			        videoCover.find('iframe').attr('src','');
+			    }
+			});
+
+			$('.video-cover .video-play-icon').on("click", function(){
+			    var playIcon = $(this);
+			    var videoCover = playIcon.closest('.video-cover');
+			    if(videoCover.find('video').length){
+			        var video = videoCover.find('video').get(0);
+			        videoCover.addClass('reveal-video');
+			        video.play();
+			        return false;
+			    }else if(videoCover.find('iframe').length){
+			        var iframe = videoCover.find('iframe');
+			        iframe.attr('src',iframe.attr('data-src'));
+			        videoCover.addClass('reveal-video');
+			        return false;
+			    }
+			});
+	  };
+
+	  mr.components.documentReady.push(mr.video.documentReady);
+	  return mr;
 
 }(mr, jQuery, window, document));
 
 //////////////// Wizard
 mr = (function (mr, $, window, document){
     "use strict";
+    
+    mr.wizard = mr.wizard || {};
 
-    var documentReady = function($){
+	  mr.wizard.documentReady = function($){
 
-      $('.wizard').each(function(){
-        var wizard = jQuery(this);
+			$('.wizard').each(function(){
+				var wizard = jQuery(this), themeDefaults = {};
+ 
+        themeDefaults = {
+					headerTag: "h5",
+				  bodyTag: "section",
+					transitionEffect: "slideLeft",
+					autoFocus: true
+				}      
+				
 
-        if(!wizard.is('[role="application"][id^="steps-uid"]')){
-            wizard.steps({
-              headerTag: "h5",
-              bodyTag: "section",
-              transitionEffect: "slideLeft",
-              autoFocus: true
-            });
+				if(!wizard.is('[role="application"][id^="steps-uid"]')){  	
+						wizard.steps(jQuery.extend({}, themeDefaults, mr.wizard.options));
+		
+		   	    wizard.addClass('active');
+		    }
+				
+		  });
+		};
 
-             wizard.addClass('active');
-        }
-
-      });
-    };
-
-    mr.wizard = {
-        documentReady : documentReady
-    };
-
-    mr.components.documentReady.push(documentReady);
-    return mr;
+	  mr.components.documentReady.push(mr.wizard.documentReady);
+	  return mr;
 
 }(mr, jQuery, window, document));
