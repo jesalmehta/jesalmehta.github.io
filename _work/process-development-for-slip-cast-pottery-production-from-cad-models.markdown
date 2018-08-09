@@ -3,14 +3,14 @@ title: Process development for Slip Cast pottery production from CAD models
 date: 2018-07-03 14:53:00 +05:30
 position: 0
 square featured image: "/uploads/IMG_20171221_170210510%20edit.jpg"
-wide featured image:
+wide featured image: 
 client: Bhumi Pottery
 year: 2017-2018
 services:
--
+- 
 images:
-- image:
-  caption:
+- image: 
+  caption: 
 ---
 
 Brief : To setup a workflow enabling pottery production with designs originating in CAD models, bypassing traditional limitations in complexity and accuracy, eventually leading to ceramic products integrated with electronics and other add-ons.
