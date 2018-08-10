@@ -2,9 +2,19 @@
 title: Fundus Camera
 date: 2018-07-03 22:55:00 +05:30
 position: 3
-square featured image: "/uploads/2016_0322_182613-Edit.jpg"
+square featured image: "/uploads/Fundus%20camera%20retina.jpg"
+wide featured image: "/uploads/Fundus%20camera%20retina.jpg"
 client: Dr Rohit Modi & Maker's Asylum
 year: 2016
+images:
+- image: "/uploads/Fundus%20Camera%20testing-Edit.jpg"
+  caption: 
+- image: "/uploads/2016_0322_182613-Edit.jpg"
+  caption: 
+- image: "/uploads/Fundus%20camera%202.jpg"
+  caption: 
+- image: "/uploads/Fundus%20camera%202.jpg"
+  caption: 
 ---
 
 Brief :
@@ -25,5 +35,3 @@ lasercutting
 Status :
 Proof of concept and further refinements successful.
 Client handover complete.
-
-![2016_0404_110510.jpg](/uploads/2016_0404_110510.jpg)
