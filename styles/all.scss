@@ -14,3 +14,14 @@
 @import 'iconsmind';
 @import 'jquery.steps';
 @import 'theme';
+
+// custom
+// ------
+
+.project figure {
+  text-align: center;
+}
+
+.project figure img {
+  max-height: 508px;
+}
