@@ -59,16 +59,15 @@ layout: default
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <ul>
-            {% for image_object in page.images %}
-            <li>
-              <figure>
-                <img src="{{ image_object.image }}" />
-                <figcaption>{{ image_object.caption }}</figcaption>
-              </figure>
-            </li>
-            {% endfor %}
-          </ul>
+          <div class="masonry">
+            <div class="masonry__container">
+              {% for image_object in page.images %}
+                <div class="col-md-6 masonry__item">
+                  <img src="{{ image_object.image }}" />
+                </div>
+              {% endfor %}
+            </div>
+          </div>
         </div>
       </div>
       <!--end of row-->
