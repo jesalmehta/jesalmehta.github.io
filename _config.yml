@@ -23,20 +23,23 @@ defaults:
     type: explorations
   values:
     layout: exploration
+    featured image:
+      image:
+      size: ["full", "half", "half tall"]
 - scope:
     path: ''
     type: work
   values:
     layout: project
-    square featured image: 
-    wide featured image: 
-    client: 
-    year: 
+    square featured image:
+    wide featured image:
+    client:
+    year:
     services:
-    - 
+    -
     images:
-    - image: 
-      caption: 
+    - image:
+      caption:
 permalink: pretty
 exclude:
 - Gruntfile.js
