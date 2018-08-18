@@ -1,0 +1,23 @@
+---
+label: Exploration
+hide_body: false
+is_partial: false
+fields:
+- type: field_group
+  name: featured_image
+  label: Featured Image
+  fields:
+  - type: file
+    name: image
+    label: Image
+  - type: select
+    config:
+      source:
+        type: simple
+      required: true
+      options:
+      - half
+      - full
+      - half tall
+    label: Image Size
+    name: image_size
