@@ -28,15 +28,15 @@ defaults:
     type: work
   values:
     layout: project
-    square featured image:
-    wide featured image:
-    client:
-    year:
+    square featured image: 
+    wide featured image: 
+    client: 
+    year: 
     services:
-    -
+    - 
     images:
-    - image:
-      caption:
+    - image: 
+      caption: 
 permalink: pretty
 exclude:
 - Gruntfile.js
