@@ -22,23 +22,21 @@ defaults:
     path: ''
     type: explorations
   values:
-    layout: project
-    thumbnail: 
-    description: 
+    layout: exploration
 - scope:
     path: ''
     type: work
   values:
     layout: project
-    square featured image: 
-    wide featured image: 
-    client: 
-    year: 
+    square featured image:
+    wide featured image:
+    client:
+    year:
     services:
-    - 
+    -
     images:
-    - image: 
-      caption: 
+    - image:
+      caption:
 permalink: pretty
 exclude:
 - Gruntfile.js
