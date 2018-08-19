@@ -35,6 +35,8 @@ sections:
   label: Explorations
   create: all
   match: "**/*"
+  templates:
+  - post
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
