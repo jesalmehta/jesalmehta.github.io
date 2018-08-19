@@ -7,3 +7,5 @@ fields:
   template: curiosity
   label: Featured Image
   name: featured_image
+pages:
+- _explorations/origami-b.md
