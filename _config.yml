@@ -17,6 +17,9 @@ collections:
   work:
     title: Work
     output: true
+  curiosities:
+    title: Cabinet Of Curiosities
+    output: true
 defaults:
 - scope:
     path: ''
@@ -24,7 +27,7 @@ defaults:
   values:
     layout: exploration
     featured image:
-      image: 
+      image:
       size:
       - full
       - half
@@ -34,15 +37,15 @@ defaults:
     type: work
   values:
     layout: project
-    square featured image: 
-    wide featured image: 
-    client: 
-    year: 
+    square featured image:
+    wide featured image:
+    client:
+    year:
     services:
-    - 
+    -
     images:
-    - image: 
-      caption: 
+    - image:
+      caption:
 permalink: pretty
 exclude:
 - Gruntfile.js
