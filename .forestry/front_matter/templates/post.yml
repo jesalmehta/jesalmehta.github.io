@@ -2,4 +2,8 @@
 label: Exploration
 hide_body: false
 is_partial: false
-fields: []
+fields:
+- type: include
+  template: curiosity
+  label: Featured Image
+  name: featured_image
