@@ -8,7 +8,7 @@ fields:
   label: Featured Image
   name: featured_image
 pages:
-- _explorations/circle-packing-in-processing.md
+- _explorations/Chaikin Curves in Processing.md
 - _curiosities/box-lanterns.md
 - _curiosities/tardis-bookshelf.md
 - _curiosities/illuminated-illusions.md
