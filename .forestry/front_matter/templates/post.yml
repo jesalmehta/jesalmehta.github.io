@@ -8,5 +8,6 @@ fields:
   label: Featured Image
   name: featured_image
 pages:
+- _curiosities/box-lanterns.md
 - _curiosities/tardis-bookshelf.md
 - _curiosities/illuminated-illusions.md
