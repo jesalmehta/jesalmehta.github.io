@@ -7,6 +7,10 @@ fields:
   template: curiosity
   label: Featured Image
   name: featured_image
+- type: include
+  name: image_gallery
+  label: Image Gallery
+  template: masonry-image-gallery
 pages:
 - _explorations/emergence-algorithms-in-processing.md
 - _curiosities/box-lanterns.md
