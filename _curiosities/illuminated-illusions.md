@@ -2,9 +2,11 @@
 title: Illuminated Illusions
 date: 2018-08-21 08:14:28 +0000
 featured_image:
-  image: "/uploads/2016_0311_143106.jpg"
+  image: "/uploads/2018_0619_180336.jpg"
   size: half
 images:
+- image: "/uploads/2018_0619_180336.jpg"
+  caption: Hakuna Matata, from the Lion King (Original by Disney)
 - image: "/uploads/2015_0505_014128.jpg"
   caption: Totoro, from My Neighbour Totoro (Original by Studio Ghibli)
 - image: "/uploads/2015_0505_014221.jpg"
