@@ -21,4 +21,4 @@ images:
   caption: The White Tree of Gondor, Lord of the Rings (Original by JRR Tolkien)
 
 ---
-![](/uploads/2015_0505_013448.jpg)![](/uploads/2015_0505_013600.jpg)![](/uploads/2016_0311_143106.jpg)![](/uploads/2015_0505_014035.jpg)![](/uploads/2015_0505_014128.jpg)![](/uploads/2018_0619_180336.jpg)
+Illuminated Illusions : Night lights and small lamps based on derived artwork and pop-culture fandoms.
