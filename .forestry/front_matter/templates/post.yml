@@ -12,6 +12,7 @@ fields:
   label: Image Gallery
   template: masonry-image-gallery
 pages:
+- _curiosities/illuminated-illusions-original-artwork.md
 - _curiosities/illuminated-illusions.md
 - _explorations/emergence-algorithms-in-processing.md
 - _curiosities/box-lanterns.md
