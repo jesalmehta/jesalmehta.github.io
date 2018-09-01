@@ -5,7 +5,14 @@ featured_image:
   image: "/uploads/2017_0217_165039.jpg"
   size: full
 images:
+- image: "/uploads/2017_0217_165039.jpg"
+  caption: Voronoi patterned cutouts on table lamp. Lasercut ply and acrylic paint.
+- image: "/uploads/2017_0217_165406.jpg"
+  caption: Voronoi lamp, hanging variant. Plywood and acrylic paint.
 - image: "/uploads/2016_1025_211127.jpg"
+  caption: Pendant lamp with jali cutouts.
+- image: "/uploads/2016_1009_132455.jpg"
+  caption: Hanging lamp with hexagonal jali work. Plywood and acrylic paint.
 
 ---
-![](/uploads/2016_1014_223406.jpg)![](/uploads/2016_1025_211127.jpg)
+Box lanterns, hanging or table-top, that throw patterned shadows. Based on ethnic patterns or mathematically generated. Or both.
