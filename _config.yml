@@ -46,6 +46,12 @@ defaults:
     images:
     - image:
       caption:
+- scope:
+    path: ''
+    type: curiosities
+  values:
+    layout: curiosity
+    permalink: /cabinet-of-curiosities/:title
 permalink: pretty
 exclude:
 - Gruntfile.js

@@ -1,0 +1,76 @@
+---
+layout: default
+---
+
+<section class="space--sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="masonry masonry-blog-magazine">
+          <div class="masonry-filter-container d-flex align-items-center">
+            <span>Category:</span>
+            <div class="masonry-filter-holder">
+                <div class="masonry__filters" data-filter-all-text="All Categories"></div>
+            </div>
+          </div>
+          <div class="masonry__container row">
+            <div class="masonry__item col-md-6"></div>
+            {% for curiosity in site.curiosities %}
+              {% if curiosity.featured_image.size == "full" %}
+                <div class="masonry__item col-md-12 col-12 h" data-masonry-filter="Marketing">
+                  <a class="block" href="{{ curiosity.url }}">
+                    <article class="imagebg border--round" data-scrim-bottom="8">
+                      <div class="background-image-holder">
+                        <img alt="background" src="{{ curiosity.featured_image.image }}" />
+                      </div>
+                      <div class="article__title">
+                        <span>{{ curiosity.date | date_to_string }}</span>
+                        <h4>{{ curiosity.title }}</h4>
+                      </div>
+                    </article>
+                  </a>
+                </div>
+                <!--end item-->
+              {% endif %}
+              {% if curiosity.featured_image.size == "half" %}
+                <div class="masonry__item col-md-6 col-12" data-masonry-filter="Marketing">
+                  <a class="block" href="{{ curiosity.url }}">
+                    <article class="imagebg border--round" data-scrim-bottom="8">
+                      <div class="background-image-holder">
+                        <img alt="background" src="{{ curiosity.featured_image.image }} />
+                      </div>
+                      <div class="article__title">
+                        <span>{{ curiosity.date | date_to_string }}</span>
+                        <h4>{{ curiosity.title }}</h4>
+                      </div>
+                    </article>
+                  </a>
+                </div>
+                <!--end item-->
+              {% endif %}
+              {% if curiosity.featured_image.size == "half tall" %}
+                <div class="masonry__item col-md-12 col-lg-6 col-12" data-masonry-filter="Inspiration">
+                  <a class="block" href="{{ curiosity.url }}">
+                    <article class="imagebg border--round height--tall" data-scrim-bottom="8">
+                      <div class="background-image-holder">
+                        <img alt="background" src="{{ curiosity.featured_image.image }}" />
+                      </div>
+                      <div class="article__title">
+                        <span>{{ curiosity.date | date_to_string }}</span>
+                        <h4>{{ curiosity.title }}</h4>
+                      </div>
+                    </article>
+                  </a>
+                </div>
+                <!--end item-->
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+        <!--end masonry-->
+      </div>
+    </div>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>
