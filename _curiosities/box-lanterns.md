@@ -3,7 +3,7 @@ title: Box Lanterns
 date: 2018-08-21 09:43:39 +0000
 featured_image:
   image: "/uploads/2017_0217_165039.jpg"
-  size: full
+  size: half tall
 images:
 - image: "/uploads/2017_0217_165039.jpg"
   caption: Voronoi patterned cutouts on table lamp. Lasercut ply and acrylic paint.
