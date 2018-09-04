@@ -7,13 +7,9 @@ fields:
   template: curiosity
   label: Featured Image
   name: featured_image
-- type: include
-  name: image_gallery
-  label: Image Gallery
-  template: masonry-image-gallery
 pages:
-- _curiosities/illuminated-illusions-original-artwork.md
-- _curiosities/illuminated-illusions.md
-- _explorations/emergence-algorithms-in-processing.md
 - _curiosities/box-lanterns.md
+- _curiosities/illuminated-illusions.md
 - _curiosities/tardis-bookshelf.md
+- _curiosities/illuminated-illusions-original-artwork.md
+- _explorations/emergence-algorithms-in-processing.md
