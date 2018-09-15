@@ -1,0 +1,12 @@
+---
+label: Featured Image
+hide_body: false
+is_partial: true
+display_field: square_featured_image
+fields:
+- type: file
+  name: square_featured_image
+  label: Square featured image
+- type: file
+  name: wide_featured_image
+  label: Wide featured image
