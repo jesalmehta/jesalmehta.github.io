@@ -10,7 +10,7 @@ sections:
   create: all
   match: "**/*"
   templates:
-  - curiosity-829d784f-9267-41b5-8255-afb497d9b7b7
+  - curiosity
 - type: jekyll-pages
   label: Pages
   create: all
