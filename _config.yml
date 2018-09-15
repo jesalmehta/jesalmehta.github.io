@@ -67,3 +67,4 @@ plugins:
 sass:
   sass_dir: styles/
   style: compressed
+logo: '/uploads/logo.png'
