@@ -1,0 +1,22 @@
+---
+label: Work
+hide_body: false
+is_partial: false
+fields:
+- type: include
+  template: featured-image
+  label: Featured image
+  name: featured_image
+- type: text
+  name: client
+  label: Client
+- type: text
+  name: project_year
+  label: Project year
+- type: tag_list
+  name: services_rendered
+  label: Services rendered
+- type: include
+  template: masonry-image-gallery
+  label: Images
+  name: images
