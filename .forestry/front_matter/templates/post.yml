@@ -1,0 +1,15 @@
+---
+label: Exploration
+hide_body: false
+is_partial: false
+fields:
+- type: include
+  template: curiosity
+  label: Featured Image
+  name: featured_image
+pages:
+- _curiosities/illuminated-illusions-original-artwork.md
+- _curiosities/box-lanterns.md
+- _curiosities/illuminated-illusions.md
+- _curiosities/tardis-bookshelf.md
+- _explorations/emergence-algorithms-in-processing.md
