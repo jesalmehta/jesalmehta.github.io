@@ -20,6 +20,8 @@ sections:
   label: Work
   create: all
   match: "**/*"
+  templates:
+  - work
 - type: directory
   path: _services
   label: Services
