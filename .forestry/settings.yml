@@ -7,14 +7,6 @@ sections:
 - type: document
   path: index.html
   label: Homepage
-- type: directory
-  path: _curiosities
-  label: Curiosities
-  create: all
-  match: "**/*"
-  templates:
-  - magazine-featured-image
-  - masonry-image-gallery
 - type: jekyll-pages
   label: Pages
   create: all
@@ -26,6 +18,21 @@ sections:
   templates:
   - work
 - type: directory
+  path: _curiosities
+  label: Curiosities
+  create: all
+  match: "**/*"
+  templates:
+  - magazine-featured-image
+  - masonry-image-gallery
+- type: directory
+  path: _explorations
+  label: Explorations
+  create: all
+  match: "**/*"
+  templates:
+  - exploration
+- type: directory
   path: _services
   label: Services
   create: all
@@ -33,11 +40,6 @@ sections:
 - type: jekyll-posts
   label: Posts
   create: all
-- type: directory
-  path: _explorations
-  label: Explorations
-  create: all
-  match: "**/*"
 upload_dir: _uploads
 public_path: "/uploads"
 front_matter_path: ''
