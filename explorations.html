@@ -1,0 +1,57 @@
+---
+title: Explorations
+layout: default
+permalink: /explorations/
+---
+
+<section class="text-center space--even">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10 col-md-8">
+        <h2>Explorations</h2>
+        {% if page.description %}
+        <p class="lead">
+          {{ page.description }}
+        </p>
+        {% endif %}
+      </div>
+    </div>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>
+
+<section class="space--sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="masonry">
+                    <div class="masonry__container row">
+                        <div class="masonry__item col-lg-4 col-md-6"></div>
+                        {% for exploration in site.explorations %}
+                          <div class="masonry__item col-lg-4 col-md-6">
+                              <article class="feature feature-1">
+                                  <a href="#" class="block">
+                                      <img alt="{{ exploration.title }}" src="{{ exploration.image }}" />
+                                  </a>
+                                  <div class="feature__body boxed boxed--border">
+                                      <span>{{ exploration.date | date_to_string }}</span>
+                                      <h5>{{ exploration.title }}</h5>
+                                      <a href="{{ exploration.url }}">
+                                          Read More
+                                      </a>
+                                  </div>
+                              </article>
+                          </div>
+                          <!--end item-->
+                        {% endfor %}
+                    </div>
+                    <!--end of masonry container-->
+                </div>
+                <!--end masonry-->
+            </div>
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
