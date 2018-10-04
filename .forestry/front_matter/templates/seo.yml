@@ -1,0 +1,11 @@
+---
+label: SEO
+hide_body: false
+is_partial: true
+fields:
+- type: textarea
+  name: description
+  label: Description
+- type: file
+  name: image
+  label: Image
