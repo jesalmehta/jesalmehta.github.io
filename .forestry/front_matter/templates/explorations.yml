@@ -5,3 +5,5 @@ is_partial: false
 fields:
 - type: include
   template: seo
+pages:
+- explorations.html
