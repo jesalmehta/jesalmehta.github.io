@@ -2,3 +2,39 @@
 layout: default
 ---
 
+<section>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-8">
+                <article>
+                    <div class="article__title text-center">
+                        <h1 class="h2">{{ page.title }}</h1>
+                        <span>{{ page.date | date_to_string }}</span>
+                    </div>
+                    <!--end article title-->
+                    <div class="article__body">
+                        <img alt="{{ page.title }}" src="{{ page.image }}" class="w-100" />
+                        {{ page.content }}
+                    </div>
+                    <div class="article__share text-center">
+                        <a class="btn bg--facebook btn--icon" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ site.baseurl }}{{ page.url }}">
+                            <span class="btn__text">
+                                <i class="socicon socicon-facebook"></i>
+                                Share on Facebook
+                            </span>
+                        </a>
+                        <a class="btn bg--twitter btn--icon" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ site.baseurl }}{{ page.url }}">
+                            <span class="btn__text">
+                                <i class="socicon socicon-twitter"></i>
+                                Share on Twitter
+                            </span>
+                        </a>
+                    </div>
+                </article>
+                <!--end item-->
+            </div>
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
