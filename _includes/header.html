@@ -19,7 +19,11 @@
     <!--end of container-->
   </div>
   <!--end bar-->
-  <nav id="menu1" class="bar bar--sm bar-1 hidden-xs ">
+  {% if page.layout == 'about' %}
+    <nav id="menu1" class="bar bar--sm bar-1 hidden-xs bar--transparent bar--absolute">
+  {% else %}
+    <nav id="menu1" class="bar bar--sm bar-1 hidden-xs">
+  {% endif %}
     <div class="container">
       <div class="row">
         <div class="col-md-1 col-sm-2 hidden-xs">
