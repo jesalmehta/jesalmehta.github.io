@@ -2,44 +2,57 @@
 layout: default
 ---
 
-<section>
+<section class="text-center space--xs unpad--bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10 col-md-8">
+        <h2>Work</h2>
+        {% if page.description %}
+        <p class="lead">
+          {{ page.description }}
+        </p>
+        {% endif %}
+      </div>
+    </div>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>
+<section class="space--xxs space-bottom--sm">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
         <div class="masonry">
-          <div class="masonry-filter-container text-center">
+          <div class="masonry-filter-container text-center row justify-content-center align-items-center">
             <span>Category:</span>
             <div class="masonry-filter-holder">
               <div class="masonry__filters" data-filter-all-text="All Categories"></div>
             </div>
           </div>
           <hr>
-          <div class="row">
-            <div class="masonry__container">
-              {% for project in site.work %}
-              <div class="masonry__item col-md-4 col-sm-6 col-xs-12" data-masonry-filter="{{ project.categories | join: ', ' }}">
-                <div class="project-thumb hover-element border--round hover--active">
-                  <a href="#">
-                    <div class="hover-element__initial">
-                      <div class="background-image-holder">
-                        <img alt="background" src="{{ project.thumbnail }}" />
-                      </div>
+          <div class="masonry__container row">
+            {% for project in site.work %}
+            <div class="masonry__item col-lg-4 col-md-6 col-12" data-masonry-filter="{{ project.categories | join: ', ' }}">
+              <div class="project-thumb hover-element border--round hover--active">
+                <a href="{{ project.url }}">
+                  <div class="hover-element__initial">
+                    <div class="background-image-holder">
+                      <img alt="background" src="{{ project['square featured image'] }}" />
                     </div>
-                    <div class="hover-element__reveal" data-scrim-top="5">
-                      <div class="project-thumb__title">
-                        <h4>{{ project.title }}</h4>
-                        <span>{{ project.categories | join: ' &amp; ' }}</span>
-                      </div>
+                  </div>
+                  <div class="hover-element__reveal" data-scrim-top="5">
+                    <div class="project-thumb__title">
+                      <h4>{{ project.title }}</h4>
+                      <span>{{ project.categories | join: ' &amp; ' }}</span>
                     </div>
-                  </a>
-                </div>
+                  </div>
+                </a>
               </div>
-              {% endfor %}
-              <!--end item-->
             </div>
-            <!--end of masonry container-->
+            {% endfor %}
+            <!--end item-->
           </div>
-          <!--end row-->
+          <!--end of masonry container-->
         </div>
         <!--end masonry-->
       </div>

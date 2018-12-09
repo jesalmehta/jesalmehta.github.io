@@ -17,7 +17,6 @@ brief text: A solar-charging battery pack, with 10000 mAh Lithium polymer batter
 services:
 - Concept
 - Research
-- 
 'Brief :': A powerbank for Renata Lighting's existing and future lamps
 ---
 

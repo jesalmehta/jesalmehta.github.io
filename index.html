@@ -1,9 +1,23 @@
 ---
 title: Jesal Mehta - Product Designer
 layout: default
-
 ---
-<section class="text-center space--even">
+
+<section class="cover height-60">
+  <div class="container pos-vertical-center">
+    <div class="row">
+      <div class="col-md-11 col-lg-8">
+        <span class="h2">
+          <span class="color--primary">Hi, I am {{ site.title }}</span>
+          {{ page.intro }}
+        </span>
+      </div>
+    </div>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>
+<section class="text-center space--xxs unpad--bottom">
   <div class="container">
     <div class="row">
       <div class="col-sm-10 col-md-8">
@@ -19,14 +33,13 @@ layout: default
   </div>
   <!--end of container-->
 </section>
-<section>
+<section class="space--xxs space-bottom--sm">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
         <div class="masonry">
           <div class="masonry__container row">
-            {% assign sorted_projects = site.work | sort: "position" %}
-            {% for project in sorted_projects %}
+            {% for project in site.work limit: 3 %}
               <div class="masonry__item col-lg-4 col-md-6 col-12">
                 <div class="project-thumb hover-element border--round hover--active">
                   <a href="{{ project.url }}">
@@ -53,6 +66,155 @@ layout: default
       </div>
     </div>
     <!--end of row-->
+    <div class="text-center">
+      <a class="btn btn--primary" href="/work/">
+        <span class="btn__text">View More</span>
+      </a>
+    </div>
+  </div>
+  <!--end of container-->
+</section>
+<section class="text-center space--xxs unpad--bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10 col-md-8">
+        <h2>Explorations</h2>
+        {% if page.description %}
+        <p class="lead">
+          {{ page.description }}
+        </p>
+        {% endif %}
+      </div>
+    </div>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>
+<section class="space--xxs space-bottom--sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="masonry">
+          <div class="masonry__container row">
+            <div class="masonry__item col-lg-4 col-md-6"></div>
+            {% for exploration in site.explorations limit: 3 %}
+            <div class="masonry__item col-lg-4 col-md-6">
+              <article class="feature feature-1">
+                <a href="#" class="block">
+                  <img alt="{{ exploration.title }}" src="{{ exploration.image }}" />
+                </a>
+                <div class="feature__body boxed boxed--border">
+                  <span>{{ exploration.date | date_to_string }}</span>
+                  <h5>{{ exploration.title }}</h5>
+                  <a href="{{ exploration.url }}">
+                    Read More
+                  </a>
+                </div>
+              </article>
+            </div>
+            <!--end item-->
+            {% endfor %}
+          </div>
+          <!--end of masonry container-->
+        </div>
+        <!--end masonry-->
+      </div>
+    </div>
+    <!--end of row-->
+    {% if site.explorations.size > 3  %}
+      <div class="text-center">
+        <a class="btn btn--primary" href="/explorations/">
+          <span class="btn__text">View More</span>
+        </a>
+      </div>
+    {% endif %}
+  </div>
+  <!--end of container-->
+</section>
+<section class="text-center space--xxs unpad--bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10 col-md-8">
+        <h2>Cabinet Of Curiosities</h2>
+        {% if page.description %}
+        <p class="lead">
+          {{ page.description }}
+        </p>
+        {% endif %}
+      </div>
+    </div>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>
+<section class="space--xxs space-bottom--sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="masonry masonry-blog-magazine">
+          <div class="masonry__container row">
+            <div class="masonry__item col-md-6"></div>
+            {% for curiosity in site.curiosities limit: 2 %}
+              {% if curiosity.featured_image.size == "full" %}
+                <div class="masonry__item col-md-12 col-12 h">
+                  <a class="block" href="{{ curiosity.url }}">
+                    <article class="imagebg border--round" data-scrim-bottom="8">
+                      <div class="background-image-holder">
+                        <img alt="background" src="{{ curiosity.featured_image.image }}" />
+                      </div>
+                      <div class="article__title">
+                        <span>{{ curiosity.date | date_to_string }}</span>
+                        <h4>{{ curiosity.title }}</h4>
+                      </div>
+                    </article>
+                  </a>
+                </div>
+                <!--end item-->
+              {% endif %}
+              {% if curiosity.featured_image.size == "half" %}
+                <div class="masonry__item col-md-6 col-12">
+                  <a class="block" href="{{ curiosity.url }}">
+                    <article class="imagebg border--round" data-scrim-bottom="8">
+                      <div class="background-image-holder">
+                        <img alt="background" src="{{ curiosity.featured_image.image }}" />
+                      </div>
+                      <div class="article__title">
+                        <span>{{ curiosity.date | date_to_string }}</span>
+                        <h4>{{ curiosity.title }}</h4>
+                      </div>
+                    </article>
+                  </a>
+                </div>
+                <!--end item-->
+              {% endif %}
+              {% if curiosity.featured_image.size == "half tall" %}
+                <div class="masonry__item col-md-12 col-lg-6 col-12">
+                  <a class="block" href="{{ curiosity.url }}">
+                    <article class="imagebg border--round height--tall" data-scrim-bottom="8">
+                      <div class="background-image-holder">
+                        <img alt="background" src="{{ curiosity.featured_image.image }}" />
+                      </div>
+                      <div class="article__title">
+                        <span>{{ curiosity.date | date_to_string }}</span>
+                        <h4>{{ curiosity.title }}</h4>
+                      </div>
+                    </article>
+                  </a>
+                </div>
+                <!--end item-->
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+        <!--end masonry-->
+      </div>
+    </div>
+    <!--end of row-->
+    <div class="text-center">
+      <a class="btn btn--primary" href="/cabinet-of-curiosities/">
+        <span class="btn__text">View More</span>
+      </a>
+    </div>
   </div>
   <!--end of container-->
 </section>
