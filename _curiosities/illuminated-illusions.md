@@ -3,7 +3,7 @@ title: Illuminated Illusions
 date: 2018-08-21 08:14:28 +0000
 featured_image:
   image: "/uploads/2018_0619_180336.jpg"
-  size: half
+  size: full
 images:
 - image: "/uploads/2018_0619_180336.jpg"
   caption: Hakuna Matata, from the Lion King (Original by Disney)
