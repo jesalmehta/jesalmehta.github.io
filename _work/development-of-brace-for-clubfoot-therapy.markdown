@@ -1,6 +1,6 @@
 ---
 title: Development of Brace for Clubfoot therapy
-date: 2018-07-03 16:48:00 +05:30
+date: 2018-07-03 11:18:00 +0000
 position: 1
 square featured image: "/uploads/2018_0706_040259.jpg"
 wide featured image: "/uploads/2018_0706_040259.jpg"
@@ -13,8 +13,11 @@ images:
   caption: 
 - image: "/uploads/Clubfoot%20beta%201.3%20v1_6.jpg"
   caption: 
----
+services_rendered:
+- 3D Modelling
+- Process Development
 
+---
 Brief : To create parametric models of infant lower leg and foot to be able to generate individualized braces based on key measurements
 To streamline key measurement requirements
 To speed up the workflow and improve scalability
