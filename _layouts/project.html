@@ -41,11 +41,11 @@ layout: default
           </div>
         </div>
         <div class="col-md-4 col-lg-3">
-          {% if page.services.first == '' %}
+          {% if page.services_rendered and page.services_rendered.first != '' %}
             <div class="text-block">
               <span class="h5">Services rendered:</span>
               <ul class="bullets">
-                {% for service in page.services %}
+                {% for service in page.services_rendered %}
                   <li>{{ service }}</li>
                 {% endfor %}
               </ul>
