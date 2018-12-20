@@ -1,6 +1,6 @@
 ---
 title: BasketLyte
-date: 2017-07-21 22:55:00 +05:30
+date: 2017-07-21 17:25:00 +0000
 categories:
 - Lighting
 tags:
@@ -10,6 +10,9 @@ square featured image: "/uploads/BasketLyte-thumb.jpg"
 client: Renata Lighting
 year: 2015
 brief text: A metal lantern with LED light source, AC powered.
----
+project_year: 2016
+images:
+- image: "/uploads/_DSC3686 (2) _crop_lite.jpg"
+  caption: Product in operation
 
-![_DSC3686 (2) _crop_lite.jpg](/uploads/_DSC3686%20(2)%20_crop_lite.jpg)
+---
