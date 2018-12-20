@@ -23,5 +23,13 @@ images:
   caption: Working Prototype
 - image: "/uploads/solyte final v3.276-28867e.jpg"
   caption: Concept Render
+services_rendered:
+- Conceptualization
+- Development
+- Engineering Design
+- Product Design
+- Manufacturability
+- Prototyping
+project_year: 2013
 
 ---
