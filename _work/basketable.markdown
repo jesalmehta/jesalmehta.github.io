@@ -19,4 +19,3 @@ images:
   caption: Working Prototype
 
 ---
-![2018_0723_143021.jpg](/uploads/2018_0723_143021.jpg)
