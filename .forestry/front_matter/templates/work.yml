@@ -16,6 +16,9 @@ fields:
 - type: tag_list
   name: services_rendered
   label: Services rendered
+- type: boolean
+  name: categories
+  label: Categories
 - type: include
   template: masonry-image-gallery
   label: Images
