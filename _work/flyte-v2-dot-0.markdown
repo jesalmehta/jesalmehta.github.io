@@ -8,6 +8,8 @@ Client: Renata Lighting
 Project link: 
 Brief text: A series of USB lights for kids
 images:
+- image: "/uploads/Flyte-2-thumb.jpg"
+  caption: Flyte prototypes
 - image: "/uploads/2014_1007_114735_lite.jpg"
   caption: Flyte prototypes
 
