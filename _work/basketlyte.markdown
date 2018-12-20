@@ -6,13 +6,14 @@ categories:
 tags:
 - LED
 position: 5
-square featured image: "/uploads/BasketLyte-thumb.jpg"
+square_featured_image: "/uploads/BasketLyte-thumb.jpg"
 client: Renata Lighting
 year: 2015
-brief text: A metal lantern with LED light source, AC powered.
 project_year: 2016
 images:
 - image: "/uploads/_DSC3686 (2) _crop_lite.jpg"
   caption: Product in operation
 
 ---
+
+A metal lantern with LED light source, AC powered.

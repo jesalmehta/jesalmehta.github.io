@@ -31,13 +31,14 @@ layout: default
           </div>
           <hr>
           <div class="masonry__container row">
-            {% for project in site.work %}
+            {% assign work = site.work | sort: "position" %}
+            {% for project in work %}
             <div class="masonry__item col-lg-4 col-md-6 col-12" data-masonry-filter="{{ project.categories | join: ', ' }}">
               <div class="project-thumb hover-element border--round hover--active">
                 <a href="{{ project.url }}">
                   <div class="hover-element__initial">
                     <div class="background-image-holder">
-                      <img alt="background" src="{{ project['square featured image'] }}" />
+                      <img alt="background" src="{{ project.square_featured_image }}" />
                     </div>
                   </div>
                   <div class="hover-element__reveal" data-scrim-top="5">

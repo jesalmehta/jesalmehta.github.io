@@ -2,14 +2,14 @@
 title: Ceiling unit for Pendant Lights
 date: 2017-07-22 01:11:00 +05:30
 position: 12
-square featured image: "/uploads/Ceiling-Unit-thumb.jpg"
+square_featured_image: "/uploads/Ceiling-Unit-thumb.jpg"
 client: Renata Lighting
 year: 2014
-brief text: |
-  Modular ceiling unit for hanging or pendant fixtures for multiple lamp series.
-  Method of production : Injection molding
+images:
+- image: "/uploads/untitled.432.jpg"
+- image: "/uploads/untitled.431.jpg"
+- image: "/uploads/2018_0706_042621.jpg"
 ---
 
-![untitled.432.jpg](/uploads/untitled.432.jpg)![untitled.431.jpg](/uploads/untitled.431.jpg)
-
-![2018_0706_042621.jpg](/uploads/2018_0706_042621.jpg)
+Modular ceiling unit for hanging or pendant fixtures for multiple lamp series.
+Method of production : Injection molding

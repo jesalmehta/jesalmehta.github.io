@@ -2,8 +2,8 @@
 title: Fundus Camera
 date: 2018-07-03 22:55:00 +05:30
 position: 3
-square featured image: "/uploads/Fundus%20camera%20retina.jpg"
-wide featured image: "/uploads/Fundus%20camera%20retina.jpg"
+square_featured_image: "/uploads/Fundus%20camera%20retina.jpg"
+wide_featured_image: "/uploads/Fundus%20camera%20retina.jpg"
 client: Dr Rohit Modi & Maker's Asylum
 year: 2016
 images:

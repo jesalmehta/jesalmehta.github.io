@@ -6,11 +6,13 @@ categories:
 tags:
 - injection molding
 position: 6
-square featured image: "/uploads/2018_0706_043302.jpg"
+square_featured_image: "/uploads/2018_0706_043302.jpg"
 client: Renata Lighting
 year: 2016
-brief text: LED USB Table Lamp
+images:
+- image: "/uploads/flatlyte%20render.31.jpg"
+- image: "/uploads/flatlyte%20render.37.jpg"
+- image: "/uploads/flatlyte%20render.34.jpg"
 ---
 
-![flatlyte render.31.jpg](/uploads/flatlyte%20render.31.jpg)![flatlyte render.37.jpg](/uploads/flatlyte%20render.37.jpg)
-![flatlyte render.34.jpg](/uploads/flatlyte%20render.34.jpg)
+LED USB Table Lamp

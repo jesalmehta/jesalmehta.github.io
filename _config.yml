@@ -8,9 +8,6 @@ collections:
   posts:
     title: Posts
     output: true
-  services:
-    title: Services
-    output: true
   uploads:
     title: Uploads
     output: true
@@ -26,26 +23,11 @@ defaults:
     type: explorations
   values:
     layout: exploration
-    featured image:
-      image:
-      size:
-      - full
-      - half
-      - half tall
 - scope:
     path: ''
     type: work
   values:
     layout: project
-    square featured image:
-    wide featured image:
-    client:
-    year:
-    services:
-    -
-    images:
-    - image:
-      caption:
 - scope:
     path: ''
     type: curiosities

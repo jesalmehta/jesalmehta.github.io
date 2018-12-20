@@ -2,7 +2,7 @@
 title: Touch switches for Home Automation
 date: 2018-07-03 16:57:00 +0000
 position: 2
-square featured image: "/uploads/basic%20render.13-Edit%20glow.jpg"
+square_featured_image: "/uploads/basic%20render.13-Edit%20glow.jpg"
 client: Nuos
 year: 2017-2018
 services_rendered:
