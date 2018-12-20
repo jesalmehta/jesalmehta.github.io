@@ -50,3 +50,4 @@ sass:
   sass_dir: styles/
   style: compressed
 logo: '/uploads/logo.png'
+logo_white: '/uploads/logo-white.png'

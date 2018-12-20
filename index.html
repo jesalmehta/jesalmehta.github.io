@@ -1,6 +1,7 @@
 ---
 title: Jesal Mehta - Product Designer
 layout: default
+intro: a Mumbai-based industrial designer, digital fabrication artist, and teacher.
 ---
 
 <section class="cover height-60">
@@ -22,9 +23,10 @@ layout: default
     <div class="row">
       <div class="col-sm-10 col-md-8">
         <h2>Work</h2>
-        {% if page.description %}
+        {% assign work_page = site.pages | where: "title", "Work" %}
+        {% if work_page[0].description %}
         <p class="lead">
-          {{ page.description }}
+          {{ work_page[0].description }}
         </p>
         {% endif %}
       </div>
@@ -79,9 +81,10 @@ layout: default
     <div class="row">
       <div class="col-sm-10 col-md-8">
         <h2>Explorations</h2>
-        {% if page.description %}
+        {% assign explorations_page = site.pages | where: "title", "Explorations" %}
+        {% if explorations_page[0].description %}
         <p class="lead">
-          {{ page.description }}
+          {{ explorations_page[0].description }}
         </p>
         {% endif %}
       </div>
@@ -136,9 +139,10 @@ layout: default
     <div class="row">
       <div class="col-sm-10 col-md-8">
         <h2>Cabinet Of Curiosities</h2>
-        {% if page.description %}
+        {% assign curiosities_page = site.pages | where: "title", "Cabinet of Curiosities" %}
+        {% if curiosities_page[0].description %}
         <p class="lead">
-          {{ page.description }}
+          {{ curiosities_page[0].description }}
         </p>
         {% endif %}
       </div>
