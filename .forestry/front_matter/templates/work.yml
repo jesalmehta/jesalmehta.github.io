@@ -16,7 +16,7 @@ fields:
 - type: tag_list
   name: services_rendered
   label: Services rendered
-- type: boolean
+- type: tag_list
   name: categories
   label: Categories
 - type: include
