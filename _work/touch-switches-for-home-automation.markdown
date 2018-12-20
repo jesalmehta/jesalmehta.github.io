@@ -14,11 +14,18 @@ services_rendered:
 - Product Optimization
 - Graphic Design
 - Package Design
+images:
+- image: "/uploads/basic render.13-Edit glow.jpg"
+  caption: Product visualization
+- image: "/uploads/Legrand.8.jpg"
+  caption: Product visualization
+- image: "/uploads/Legrand.9.jpg"
+  caption: Product visualization
 
 ---
 Brief : To develop switches that can be retrofit into existing standard panels
 
-Areas of work : 
+Areas of work :
 Multiple parts for support of touch panel and associated electronics
 Enclosure part for electronics
 Design of various switch icons
@@ -31,10 +38,8 @@ Short run production for initial deployment
 All of the above for two families of panels
 
 Toolset :
-CAD modelling, 3D printing, 
+CAD modelling, 3D printing,
 CorelDraw, Lasercutting
 
 Status :
-In market and deployed on-site. 
-
-![Legrand.9.jpg](/uploads/Legrand.9.jpg)![Legrand.8.jpg](/uploads/Legrand.8.jpg)
+In market and deployed on-site.
