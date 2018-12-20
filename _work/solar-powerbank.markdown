@@ -1,6 +1,6 @@
 ---
 title: Solar Powerbank
-date: 2017-07-21 21:26:00 +05:30
+date: 2017-07-21 15:56:00 +0000
 categories:
 - Lighting
 - Solar
@@ -18,10 +18,10 @@ services:
 - Concept
 - Research
 'Brief :': A powerbank for Renata Lighting's existing and future lamps
+images:
+- image: "/uploads/2018_0706_041544.jpg"
+  caption: Working Prototype
+- image: "/uploads/solyte final v3.276-28867e.jpg"
+  caption: Concept Render
+
 ---
-
-![solyte final v3.276-28867e.jpg](/uploads/solyte%20final%20v3.276-28867e.jpg)
-
-![solyte final v3.276_2.jpg](/uploads/solyte%20final%20v3.276_2.jpg)
-
-![2018_0706_041544.jpg](/uploads/2018_0706_041544.jpg)
