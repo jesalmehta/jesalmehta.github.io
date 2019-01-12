@@ -23,3 +23,6 @@ fields:
   template: masonry-image-gallery
   label: Images
   name: images
+- type: datetime
+  name: date
+  label: Date
