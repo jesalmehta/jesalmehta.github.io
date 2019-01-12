@@ -31,7 +31,7 @@ layout: default
           </div>
           <hr>
           <div class="masonry__container row">
-            {% assign work = site.work | sort: "position" %}
+            {% assign work = site.work | sort: "date" | reverse %}
             {% for project in work %}
             <div class="masonry__item col-lg-4 col-md-6 col-12" data-masonry-filter="{{ project.categories | join: ', ' }}">
               <div class="project-thumb hover-element border--round hover--active">

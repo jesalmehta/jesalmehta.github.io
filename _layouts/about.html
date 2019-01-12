@@ -8,36 +8,31 @@ layout: default
   </div>
   <div class="container pos-vertical-center">
     <div class="row">
-      <div class="col-md-8 col-lg-5">
+      <div class="col-md-10">
         <h1>
           {{ site.title }}
         </h1>
         <ul class="social-list list-inline list--hover">
           <li>
-            <a href="#">
-              <i class="socicon socicon-twitter icon icon--xs"></i>
+            <a href="{{ site.data.social.hackaday }}" target="_blank">
+              Hackaday
             </a>
           </li>
           <li>
-            <a href="#">
-              <i class="socicon socicon-linkedin icon icon--xs"></i>
+            <a href="{{ site.data.social.coroflot }}" target="_blank">
+              Coroflot
             </a>
           </li>
           <li>
-            <a href="#">
-              <i class="socicon socicon-medium icon icon--xs"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="socicon socicon-instagram icon icon--xs"></i>
+            <a href="{{ site.data.social.nmims }}" target="_blank">
+              NMIMS
             </a>
           </li>
         </ul>
-        <p class="lead">
-          {{ page.content }}
-        </p>
-        <a class="btn btn--primary type--uppercase" href="#">
+
+        {{ page.content | markdownify }}
+
+        <a class="btn btn--primary type--uppercase" href="mailto:{{ site.data.social.email }}">
           <span class="btn__text">
             Get In Touch
           </span>
