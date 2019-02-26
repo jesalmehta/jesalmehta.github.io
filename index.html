@@ -30,9 +30,9 @@ NMIMS School of Design, Mumbai."
       <div class="col-sm-10 col-md-8">
         <h2>Work</h2>
         {% assign work_page = site.pages | where: "title", "Work" %}
-        {% if work_page[0].description %}
+        {% if work_page.first.description %}
         <p class="lead">
-          {{ work_page[0].description }}
+          {{ work_page.first.description }}
         </p>
         {% endif %}
       </div>
@@ -92,9 +92,9 @@ NMIMS School of Design, Mumbai."
       <div class="col-sm-10 col-md-8">
         <h2>Explorations</h2>
         {% assign explorations_page = site.pages | where: "title", "Explorations" %}
-        {% if explorations_page[0].description %}
+        {% if explorations_page.first.description %}
         <p class="lead">
-          {{ explorations_page[0].description }}
+          {{ explorations_page.first.description }}
         </p>
         {% endif %}
       </div>
@@ -154,9 +154,9 @@ NMIMS School of Design, Mumbai."
       <div class="col-sm-10 col-md-8">
         <h2>Cabinet Of Curiosities</h2>
         {% assign curiosities_page = site.pages | where: "title", "Cabinet of Curiosities" %}
-        {% if curiosities_page[0].description %}
+        {% if curiosities_page.first.description %}
         <p class="lead">
-          {{ curiosities_page[0].description }}
+          {{ curiosities_page.first.description }}
         </p>
         {% endif %}
       </div>
