@@ -20,21 +20,21 @@ sections:
 - type: directory
   path: _curiosities
   label: Curiosities
-  create: all
+  create: documents
   match: "**/*"
   templates:
   - curiosity
 - type: directory
   path: _explorations
   label: Explorations
-  create: all
+  create: documents
   match: "**/*"
   templates:
   - exploration
 - type: directory
   path: _services
   label: Services
-  create: all
+  create: documents
   match: "**/*"
 - type: jekyll-posts
   label: Posts
