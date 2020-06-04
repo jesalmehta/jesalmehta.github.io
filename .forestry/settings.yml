@@ -13,7 +13,7 @@ sections:
 - type: directory
   path: _work
   label: Work
-  create: all
+  create: documents
   match: "**/*"
   templates:
   - work
