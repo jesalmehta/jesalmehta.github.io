@@ -2,6 +2,11 @@
 label: Curiosity
 hide_body: true
 fields:
+- name: seo
+  type: include
+  config: {}
+  template: seo
+  label: SEO
 - type: include
   name: images
   label: Images
