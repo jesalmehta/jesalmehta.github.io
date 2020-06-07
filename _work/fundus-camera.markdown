@@ -1,6 +1,6 @@
 ---
 title: Fundus Camera
-date: 2018-07-03 22:55:00 +05:30
+date: 2018-07-03T17:25:00.000+00:00
 position: 3
 square_featured_image: "/uploads/Fundus%20camera%20retina.jpg"
 wide_featured_image: "/uploads/Fundus%20camera%20retina.jpg"
@@ -8,15 +8,16 @@ client: Dr Rohit Modi & Maker's Asylum
 year: 2016
 images:
 - image: "/uploads/Fundus%20Camera%20testing-Edit.jpg"
-  caption: 
+  caption: Trial using a slit-lamp frame to locate and aim
 - image: "/uploads/2016_0322_182613-Edit.jpg"
-  caption: 
+  caption: Ring-light source developed for even illumination and prevent irregular
+    reflection
+- image: "/uploads/Fundus%20camera%202.jpg"
+  caption: Render of Phone Mount for modular Fundus Camera
 - image: "/uploads/Fundus%20camera%202.jpg"
   caption: 
-- image: "/uploads/Fundus%20camera%202.jpg"
-  caption: 
----
 
+---
 Brief :
 Phase 1: Guide initial development of retinal imaging solution as mentor for graduation project
 Phase 2 : Continue development and further testing of Smartphone-based retinal imaging aka Fundus camera
