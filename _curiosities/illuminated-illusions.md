@@ -1,6 +1,6 @@
 ---
 title: Illuminated Illusions
-date: 2018-08-21 08:14:28 +0000
+date: '2018-08-21T08:14:28.000+00:00'
 featured_image:
   image: "/uploads/2018_0619_180336.jpg"
   size: full
@@ -19,6 +19,7 @@ images:
   caption: Gates of Moria, Lord of the Rings (original by JRR Tolkien)
 - image: "/uploads/2015_0505_013448.jpg"
   caption: The White Tree of Gondor, Lord of the Rings (Original by JRR Tolkien)
+description: Lamps based on fandom artwork inspired by various pop-culture entities
 
 ---
 Illuminated Illusions : Night lights and small lamps based on derived artwork and pop-culture fandoms.
