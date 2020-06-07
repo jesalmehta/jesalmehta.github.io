@@ -1,11 +1,11 @@
 ---
 title: Basketable
-date: 2017-07-21 17:41:00 +0000
-position: 8
+date: 2017-07-21T17:41:00.000+00:00
+position: 4
 square_featured_image: "/uploads/2016_1124_205824.jpg"
 client: Renata Lighting
 year: 2015
-project_year: 2016
+project_year: "2016"
 services_rendered:
 - Conceptualization
 - Product Design
@@ -18,5 +18,4 @@ images:
   caption: Working Prototype
 
 ---
-
 A table-top, battery powered decorative LED light.
