@@ -19,7 +19,7 @@ images:
   caption: Gates of Moria, Lord of the Rings (original by JRR Tolkien)
 - image: "/uploads/2015_0505_013448.jpg"
   caption: The White Tree of Gondor, Lord of the Rings (Original by JRR Tolkien)
-description: Lamps based on fandom artwork inspired by various pop-culture entities
+description: Lamps based on derivative artwork from various pop-culture entities
 
 ---
 Illuminated Illusions : Night lights and small lamps based on derived artwork and pop-culture fandoms.
