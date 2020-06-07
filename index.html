@@ -2,11 +2,13 @@
 title: Jesal Mehta - Product Designer
 layout: default
 intro: a Mumbai-based industrial designer, digital fabrication artist, and teacher.
-intro_description: "I am interested in exploring the intersection of mathematics, code and art. I currently teach at the
-NMIMS School of Design, Mumbai."
----
+intro_description: I am interested in exploring the intersection of mathematics, code
+  and art. I currently teach at the NMIMS School of Design, Mumbai.
+description: ''
+image: "/uploads/emergence-banner-2.jpg"
 
-<section class="bg--secondary cover height-80">
+---
+<img src="/uploads/emergence-banner-2.jpg"><section class="bg--secondary cover height-80">
   <div class="container pos-vertical-center">
     <div class="row">
       <div class="col-lg-7 col-md-9 col-12">
@@ -48,8 +50,7 @@ NMIMS School of Design, Mumbai."
       <div class="col-sm-12">
         <div class="masonry">
           <div class="masonry__container row">
-            {% assign projects = site.work | sort: "position" %}
-            {% for project in projects limit: 3 %}
+            {% for project in site.work limit: 3 %}
               <div class="masonry__item col-lg-4 col-md-6 col-12">
                 <div class="project-thumb hover-element border--round hover--active">
                   <a href="{{ project.url }}">
