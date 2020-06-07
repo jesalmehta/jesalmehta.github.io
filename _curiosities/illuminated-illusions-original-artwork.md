@@ -12,7 +12,7 @@ images:
 - image: "/uploads/2016_0311_143106.jpg"
   caption: The Raven Volante (inspired by the book, "Jonathan Strange and Mr Norell"
     by Susanna Clarke)
-description: Lamps based on original artwork inspired by various pop-culture entities
+description: Lamps using original artwork inspired by various pop-culture entities
 
 ---
 A series of lamps inspired by books or other sources, or abstract graphics.
