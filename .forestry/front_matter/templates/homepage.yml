@@ -3,8 +3,8 @@ label: Homepage
 hide_body: true
 fields:
 - type: include
-  name: ''
-  label: ''
+  name: seo
+  label: SEO
   template: seo
 pages:
 - index.html
