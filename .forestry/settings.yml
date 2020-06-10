@@ -32,7 +32,7 @@ sections:
   templates:
   - exploration
 - type: document
-  path: services.yml
+  path: _data/services.yml
   label: Services
 - type: jekyll-posts
   label: Posts
