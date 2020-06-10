@@ -4,3 +4,5 @@ hide_body: false
 fields:
 - type: include
   template: seo
+  name: seo
+  label: SEO
