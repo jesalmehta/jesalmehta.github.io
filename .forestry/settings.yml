@@ -31,6 +31,9 @@ sections:
   match: "**/*"
   templates:
   - exploration
+- type: document
+  path: _data/services.yml
+  label: Services
 - type: jekyll-posts
   label: Posts
   create: all
