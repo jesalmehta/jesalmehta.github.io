@@ -9,3 +9,5 @@ fields:
     min: 
     max: 
   label: Services
+pages:
+- _data/services.yml
