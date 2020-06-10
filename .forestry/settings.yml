@@ -5,6 +5,10 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: document
+  path: services.yml
+  label: Services
+  match: "**/*"
+- type: document
   path: index.html
   label: Homepage
 - type: jekyll-pages
