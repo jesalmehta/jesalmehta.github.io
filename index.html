@@ -114,22 +114,23 @@ image: "/uploads/emergence-banner-2.jpg"
         <div class="masonry">
           <div class="masonry__container row">
             <div class="masonry__item col-lg-4 col-md-6"></div>
-            {% for exploration in site.explorations limit: 3 %}
-            <div class="masonry__item col-lg-4 col-md-6">
-              <article class="feature feature-1">
-                <a href="#" class="block">
-                  <img alt="{{ exploration.title }}" src="{{ exploration.image }}" />
-                </a>
-                <div class="feature__body boxed boxed--border">
-                  <span>{{ exploration.date | date_to_string }}</span>
-                  <h5>{{ exploration.title }}</h5>
-                  <a href="{{ exploration.url }}">
-                    Read More
+            {% assign explorations = site.explorations | sort: "position" %}
+            {% for exploration in explorations limit: 3 %}
+              <div class="masonry__item col-lg-4 col-md-6">
+                <article class="feature feature-1">
+                  <a href="#" class="block">
+                    <img alt="{{ exploration.title }}" src="{{ exploration.image }}" />
                   </a>
-                </div>
-              </article>
-            </div>
-            <!--end item-->
+                  <div class="feature__body boxed boxed--border">
+                    <span>{{ exploration.date | date_to_string }}</span>
+                    <h5>{{ exploration.title }}</h5>
+                    <a href="{{ exploration.url }}">
+                      Read More
+                    </a>
+                  </div>
+                </article>
+              </div>
+              <!--end item-->
             {% endfor %}
           </div>
           <!--end of masonry container-->
@@ -175,7 +176,8 @@ image: "/uploads/emergence-banner-2.jpg"
         <div class="masonry masonry-blog-magazine">
           <div class="masonry__container row">
             <div class="masonry__item col-md-6"></div>
-            {% for curiosity in site.curiosities limit: 2 %}
+            {% assign curiosities = site.curiosities | sort: "position" %}
+            {% for curiosity in curiosities limit: 2 %}
               {% if curiosity.featured_image.size == "full" %}
                 <div class="masonry__item col-md-12 col-12 h">
                   <a class="block" href="{{ curiosity.url }}">

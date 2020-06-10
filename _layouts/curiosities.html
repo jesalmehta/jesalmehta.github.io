@@ -25,7 +25,8 @@ layout: default
         <div class="masonry masonry-blog-magazine">
           <div class="masonry__container row">
             <div class="masonry__item col-md-6"></div>
-            {% for curiosity in site.curiosities %}
+            {% assign curiosities = site.curiosities | sort: "position" %}
+            {% for curiosity in curiosities %}
               {% if curiosity.featured_image.size == "full" %}
                 <div class="masonry__item col-md-12 col-12 h">
                   <a class="block" href="{{ curiosity.url }}">

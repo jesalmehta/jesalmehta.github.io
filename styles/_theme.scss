@@ -2229,7 +2229,6 @@ section.slider .flickity-page-dots {
 }
 /**! 24. Notifications **/
 .notification {
-  max-width: 100%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   position: fixed;
   z-index: 99;
@@ -5499,7 +5498,21 @@ body.dropdowns--hover .nav-sidebar-column .dropdown:hover > .dropdown__container
 }
 .dropdown__container > .container {
   width: 100vw;
-  max-width: 1140px;
+}
+@media all and (min-width: 768px) {
+  .dropdown__container > .container {
+    max-width: 720px;
+  }
+}
+@media all and (min-width: 992px) {
+  .dropdown__container > .container {
+    max-width: 960px;
+  }
+}
+@media all and (min-width: 1200px) {
+  .dropdown__container > .container {
+    max-width: 1140px;
+  }
 }
 @media all and (max-width: 990px) {
   .menu-vertical .dropdown.dropdown--active:after {
@@ -6844,8 +6857,6 @@ a.block:hover > .feature {
 }
 /*! -- Stack Notifications -- */
 .notification {
-  max-width: inherit;
-  margin: 1.85714286em;
   box-shadow: none;
 }
 .notification:not([class*='bg--']) {
@@ -6857,6 +6868,12 @@ a.block:hover > .feature {
 .notification > .feature,
 .notification .feature__body {
   margin-bottom: 0;
+}
+.notification[class*='col-'] {
+  margin: 0;
+}
+.notification[class*='col-'] .boxed {
+  border-radius: 0;
 }
 .search-box {
   width: 100%;
@@ -7321,6 +7338,13 @@ span + .typed-text.h1 {
   }
 }
 /*! -- Stack Forms -- */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select,
+  textarea,
+  input {
+    font-size: 16px;
+  }
+}
 form:before,
 form:after {
   content: '';
