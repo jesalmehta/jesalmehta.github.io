@@ -12,9 +12,6 @@ position: 7
 square_featured_image: "/uploads/2018_0706_041441.jpg"
 client: Renata Lighting
 year: 2013
-services_rendered:
-- Concept
-- Research
 images:
 - image: "/uploads/2018_0706_041544.jpg"
   caption: Working Prototype
