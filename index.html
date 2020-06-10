@@ -50,7 +50,8 @@ image: "/uploads/emergence-banner-2.jpg"
       <div class="col-sm-12">
         <div class="masonry">
           <div class="masonry__container row">
-            {% for project in site.work limit: 3 %}
+            {% assign work = site.work | sort: "position" %}
+            {% for project in work limit: 3 %}
               <div class="masonry__item col-lg-4 col-md-6 col-12">
                 <div class="project-thumb hover-element border--round hover--active">
                   <a href="{{ project.url }}">
