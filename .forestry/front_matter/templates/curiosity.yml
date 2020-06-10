@@ -11,3 +11,13 @@ fields:
   name: images
   label: Images
   template: masonry-image-gallery
+- name: position
+  type: number
+  label: Position
+  description: ''
+  default: -99
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
