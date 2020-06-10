@@ -11,5 +11,10 @@ fields:
   config:
     required: false
   label: Intro
+- name: intro_description
+  type: text
+  config:
+    required: false
+  label: Intro description
 pages:
 - index.html
