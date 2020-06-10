@@ -6,5 +6,10 @@ fields:
   name: seo
   label: SEO
   template: seo
+- name: intro
+  type: text
+  config:
+    required: false
+  label: Intro
 pages:
 - index.html
