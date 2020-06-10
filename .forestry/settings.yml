@@ -31,11 +31,6 @@ sections:
   match: "**/*"
   templates:
   - exploration
-- type: directory
-  path: _services
-  label: Services
-  create: documents
-  match: "**/*"
 - type: jekyll-posts
   label: Posts
   create: all
