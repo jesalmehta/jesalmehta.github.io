@@ -10,6 +10,7 @@ images:
 - image: "/uploads/2018_0817_153915-Edit.jpg"
 - image: "/uploads/2018_0817_153853.jpg"
 description: A bookshelf inspired by the TARDIS from Doctor Who
+position: 3
 
 ---
 Lasercut Bookshelf, based on the TARDIS, from Doctor Who.
