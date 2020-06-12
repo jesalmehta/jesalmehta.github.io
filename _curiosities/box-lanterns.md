@@ -13,7 +13,7 @@ images:
   caption: Pendant lamp with jali cutouts.
 - image: "/uploads/2016_1009_132455.jpg"
   caption: Hanging lamp with hexagonal jali work. Plywood and acrylic paint.
-position: 4
+position: 2
 
 ---
 Box lanterns, hanging or table-top, that throw patterned shadows. Based on ethnic patterns or mathematically generated. Or both.
