@@ -1,6 +1,6 @@
 ---
 title: Box Lanterns
-date: 2018-08-21 09:43:39 +0000
+date: '2018-08-21T09:43:39.000+00:00'
 featured_image:
   image: "/uploads/2017_0217_165039.jpg"
   size: half tall
@@ -13,6 +13,7 @@ images:
   caption: Pendant lamp with jali cutouts.
 - image: "/uploads/2016_1009_132455.jpg"
   caption: Hanging lamp with hexagonal jali work. Plywood and acrylic paint.
+position: 4
 
 ---
 Box lanterns, hanging or table-top, that throw patterned shadows. Based on ethnic patterns or mathematically generated. Or both.
