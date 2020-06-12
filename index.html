@@ -3,7 +3,8 @@ title: Jesal Mehta - Product Designer
 layout: default
 intro: a Mumbai-based industrial designer, digital fabrication artist, and teacher.
 intro_description: I am interested in exploring the intersection of mathematics, code
-  and art. I currently teach at the NMIMS School of Design, Mumbai.
+  and art. Sometimes I overlay data-viz and history. I currently teach at the NMIMS
+  School of Design, Mumbai.
 description: ''
 image: "/uploads/emergence-banner-2.jpg"
 
@@ -114,23 +115,22 @@ image: "/uploads/emergence-banner-2.jpg"
         <div class="masonry">
           <div class="masonry__container row">
             <div class="masonry__item col-lg-4 col-md-6"></div>
-            {% assign explorations = site.explorations | sort: "position" %}
-            {% for exploration in explorations limit: 3 %}
-              <div class="masonry__item col-lg-4 col-md-6">
-                <article class="feature feature-1">
-                  <a href="#" class="block">
-                    <img alt="{{ exploration.title }}" src="{{ exploration.image }}" />
+            {% for exploration in site.explorations limit: 3 %}
+            <div class="masonry__item col-lg-4 col-md-6">
+              <article class="feature feature-1">
+                <a href="#" class="block">
+                  <img alt="{{ exploration.title }}" src="{{ exploration.image }}" />
+                </a>
+                <div class="feature__body boxed boxed--border">
+                  <span>{{ exploration.date | date_to_string }}</span>
+                  <h5>{{ exploration.title }}</h5>
+                  <a href="{{ exploration.url }}">
+                    Read More
                   </a>
-                  <div class="feature__body boxed boxed--border">
-                    <span>{{ exploration.date | date_to_string }}</span>
-                    <h5>{{ exploration.title }}</h5>
-                    <a href="{{ exploration.url }}">
-                      Read More
-                    </a>
-                  </div>
-                </article>
-              </div>
-              <!--end item-->
+                </div>
+              </article>
+            </div>
+            <!--end item-->
             {% endfor %}
           </div>
           <!--end of masonry container-->
@@ -176,8 +176,7 @@ image: "/uploads/emergence-banner-2.jpg"
         <div class="masonry masonry-blog-magazine">
           <div class="masonry__container row">
             <div class="masonry__item col-md-6"></div>
-            {% assign curiosities = site.curiosities | sort: "position" %}
-            {% for curiosity in curiosities limit: 2 %}
+            {% for curiosity in site.curiosities limit: 2 %}
               {% if curiosity.featured_image.size == "full" %}
                 <div class="masonry__item col-md-12 col-12 h">
                   <a class="block" href="{{ curiosity.url }}">
