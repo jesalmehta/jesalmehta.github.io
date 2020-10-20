@@ -4,6 +4,8 @@ title: Notebook Covers
 description: Notebook covers using creative coding and digital fabrication
 image: "/uploads/reaction-diffusion-book-cover.jpg"
 images:
+- image: "/uploads/2020-10-19_21-32-25.jpg"
+  caption: Probabilistic pattern generation, lasercut on card paper
 - image: "/uploads/2020-10-19_21-30-21.jpg"
   caption: Reaction Diffusion system, 3D printed in multiple filaments
 - image: "/uploads/2020-10-19_21-30-42.jpg"
