@@ -6,14 +6,75 @@ description: ''
 published: false
 
 ---
-Jesal Mehta is a Mumbai-based industrial designer, digital fabrication artist, and teacher.
+Assistant Professor, NMIMS School of Design (2018 – present)  
+Visiting Faculty, NMIMS School of Design (2018)  
+Independent Teaching at MakersAsylum (2015-2019)
 
-He teaches and develops curriculum for Human-centred Design, mainly in the areas of Technology, Design Thinking, Interactivity and Form Studies, at NMIMS School of Design
+## Modules (Curriculum Development and Teaching)
 
-He has worked primarily on Lighting and Healthcare products, but has also done Installations, Consumer electronics and other areas. He does Product and Process Development, and consults on production and manufacturing as well.
+### Product Design and Technology
 
-Being closely involved in digital fabrication, he has a line of everyday objects created where mathematics, art, pop-culture, and tech overlap, under his line The Cabinet of Curiosities.
+Connected Experiences (Project : Design Solutions based on IOT Systems)
 
-He takes workshops on Design Thinking, Digital Fabrication, as well as creative coding in Processing and Grasshopper. He has been part of organizing and mentoring at various design competitions and hackathons as well.
+Simple Product Design (Project)
 
-He is interested in exploring the intersection of mathematics, code and art on the one hand, and the effects of history and culture on behaviour, on the other, and wonders if the two could come together.
+### New Media
+
+Data and Data Visualization
+
+Physical Computing
+
+Creative Coding
+
+Interaction Design (Project)
+
+### Design Fundamentals
+
+Ideation and Prototyping (Project)
+
+Form Explorations
+
+Design Theory
+
+CAD Basics
+
+### Faculty Incharge
+
+Electronics Prototyping Lab
+
+Digital Fabrication Lab
+
+Workshop
+
+Library  
+ Staff Training | CAD and Digital Fabrication, Electronics Prototyping, Coding
+
+## 
+
+## Independent Teaching
+
+### Digital Fabrication and Design
+
+Workshops on 3D modelling at Maker's Asylum (2014 – 2019)
+
+\- Autodesk Inventor
+
+\- Fusion 360
+
+Workshops on various verticals of Lasercutting at Maker's Asylum (2015 – 2019)
+
+\- Lasercutting for Prototyping
+
+\- Origami with Lasercutting
+
+\- Lasercut Lights and Lamps
+
+\- Jewellery design and production
+
+\- Paper prototyping and packaging design for the lasercutter
+
+Mentor at STEAM School
+
+\- 2016, 2017 and 2018, at Maker’s Asylum
+
+\- Volunteer Lab Lead for Laser Cutting at Maker's Asylum (2016 – 2018)
