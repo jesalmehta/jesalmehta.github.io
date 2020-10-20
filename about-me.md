@@ -2,6 +2,7 @@
 title: About Me
 layout: about
 image: "/uploads/about_me_cover.jpg"
+description: ''
 
 ---
 Jesal Mehta is a Mumbai-based industrial designer, digital fabrication artist, and teacher.

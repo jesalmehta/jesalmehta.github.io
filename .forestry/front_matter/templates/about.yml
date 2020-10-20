@@ -12,3 +12,5 @@ fields:
   config:
     required: false
   label: Layout
+pages:
+- about-me.md
