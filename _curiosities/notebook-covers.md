@@ -18,6 +18,5 @@ images:
   caption: Detail, Circle packing algorithm on tree silhouette, lasercut in plywood
 - image: "/uploads/tree.jpg"
   caption: Generated vector drawing, Circle packing algorithm on tree silhouette
-published: false
 
 ---
