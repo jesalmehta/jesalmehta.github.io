@@ -1,7 +1,7 @@
 ---
 title: Teaching
 layout: about
-image: "/uploads/about_me_cover.jpg"
+image: "/uploads/shapes-200.png"
 description: ''
 published: false
 
