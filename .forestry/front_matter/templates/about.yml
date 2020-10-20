@@ -13,4 +13,5 @@ fields:
     required: false
   label: Layout
 pages:
+- "./teaching-1.md"
 - about-me.md
