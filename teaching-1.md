@@ -6,31 +6,34 @@ description: ''
 published: false
 
 ---
+#### Teaching Experience :
+
 Assistant Professor, NMIMS School of Design (2018 – present)  
-Visiting Faculty, NMIMS School of Design (2018)  
-Independent Teaching at MakersAsylum (2015-2019)
+ Visiting Faculty, NMIMS School of Design (2018)  
+ Independent Teaching at Makers Asylum (2015-2019)  
+ Talks, Workshops and Mentoring
 
-# Assistant Professor, -NMIMS School of Design (2018 – present)
+#### Assistant Professor, NMIMS School of Design (2018 – present)
 
-## Duties :
+##### Duties :
 
 Curriculum development  
-Faculty incharge :  
-Labs : Digital Fabrication Lab | Workshop | Electronics Prototyping Lab
+ Faculty incharge :  
+ Labs : Digital Fabrication Lab | Workshop | Electronics Prototyping Lab
 
 Lab Staff Training : CAD Modelling, Digital Fabrication, Electronics Prototyping, Coding
 
 Library liason
 
-## Modules :
+##### Modules :
 
-### Product Design and Technology
+###### Product Design and Technology
 
 Connected Experiences (Project : Design Solutions based on IOT Systems)
 
 Simple Product Design (Project)
 
-### New Media
+###### New Media
 
 Data and Data Visualization
 
@@ -40,7 +43,7 @@ Creative Coding
 
 Interaction Design (Project)
 
-### Design Fundamentals
+###### Design Fundamentals
 
 Ideation and Prototyping (Project)
 
@@ -50,28 +53,25 @@ Design Theory
 
 CAD Basics
 
-### Faculty Incharge
+#### Talks, Workshops And Mentoring :
 
-Electronics Prototyping Lab
+##### Product Design and Design Thinking
 
-Digital Fabrication Lab
+###### NEXT Eduthon by MakeShift EDC (Jun-July 2020)
 
-Workshop
+\- Talk on Design Thinking
 
-Library  
- Staff Training | CAD and Digital Fabrication, Electronics Prototyping, Coding
+\- Workshop on The Design Process
 
-# Independent Teaching
+##### Digital Fabrication and Design
 
-## Digital Fabrication and Design
-
-### Workshops on 3D modelling at Maker's Asylum (2014 – 2019)
+###### Workshops on 3D modelling at Maker's Asylum (2014 – 2019)
 
 \- Autodesk Inventor
 
 \- Fusion 360
 
-### Workshops on various verticals of Lasercutting at Maker's Asylum (2015 – 2019)
+###### Workshops on various verticals of Lasercutting at Maker's Asylum (2015 – 2019)
 
 \- Lasercutting for Prototyping
 
@@ -83,20 +83,10 @@ Library
 
 \- Paper prototyping and packaging design for the lasercutter
 
-### Mentor at STEAM School, Maker’s Asylum
+###### Mentor at STEAM School, Maker’s Asylum
 
 \- STEAM 2016, STEAM 2017 and STEAM 2018
 
 \- STEAM Fabrikarium, 2018
 
 \- Volunteer Lab Lead for Laser Cutting at Maker's Asylum (2016 – 2018)
-
-# Talks, Workshops And Mentoring :
-
-## Product Design and Design Thinking
-
-### NEXT Eduthon by MakeShift EDC (Jun-July 2020)
-
-Talk on Design Thinking
-
-Workshop on The Design Process
