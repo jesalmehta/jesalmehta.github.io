@@ -1,5 +1,5 @@
 ---
-position: 6
+position: 3
 title: Notebook Covers
 description: Notebook covers using creative coding and digital fabrication
 image: "/uploads/reaction-diffusion-book-cover.jpg"
