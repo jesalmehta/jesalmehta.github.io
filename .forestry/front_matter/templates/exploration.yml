@@ -17,4 +17,5 @@ fields:
     max: 
     step: 
 pages:
+- _explorations/3d-printed-flexures.md
 - _explorations/the-buddha-at-kamakura.md
