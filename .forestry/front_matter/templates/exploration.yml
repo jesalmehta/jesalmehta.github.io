@@ -16,3 +16,5 @@ fields:
     min: 
     max: 
     step: 
+pages:
+- _explorations/the-buddha-at-kamakura.md
