@@ -32,4 +32,4 @@ All of this was - I need hardly say - not as linear and straightforward as I mak
 
 The wiring and LED positions also had to be redone once since the light wasn't right for various reasons, or the wire was too stiff in the narrow confines, and some dimensions had to be rethought.
 
-But finally, over a few days, it came together. The text is still not the clearest, though it has had the most number of trials, but it looks rather good, all in all, and I'm taking my learnings on the light and ink effects on clear prints.
+But finally, over a few days, it came together. The text is still not the clearest, though it has had the most number of trials, but the whole looks rather good, all in all, and I'm taking my learnings on the light and ink effects on clear prints.
