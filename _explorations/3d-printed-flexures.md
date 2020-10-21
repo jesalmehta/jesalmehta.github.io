@@ -3,7 +3,6 @@ position: -99
 title: 3D printed flexures
 description: ''
 image: "/uploads/dsc_0037.jpg"
-published: false
 
 ---
 # 3D printed flexures
