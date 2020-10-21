@@ -8,9 +8,9 @@ published: false
 ---
 # The Buddha at Kamakura
 
-_And whoso will, from Pride released,   
-Contemning neither creed nor priest,   
-May feel the Soul of all the East   
+_And whoso will, from Pride released,  
+Contemning neither creed nor priest,  
+May feel the Soul of all the East  
 About him at Kamakura._
 
 Kipling's poem on the Buddha at Kamakura has long fascinated me, since the days I encountered it among the chapter titles of his wonderful book, Kim.
@@ -29,7 +29,7 @@ The last thing I did was wire it up, run the wire through the slots and notches 
 
 All of this was - I need hardly say - not as linear and straightforward as I make it out to be. The paint was applied, removed, peeled off, and generally ruined multiple times, before I figured the correct approach and a second figure was printed.
 
-![](/uploads/img_20200530_020328838.jpg)111111111111111111111111111111
+![](/uploads/img_20200530_020328838.jpg)
 
 The wiring and LED positions also had to be redone once since the light wasn't right for various reasons, or the wire was too stiff in the narrow confines, and some dimensions had to be rethought.
 
