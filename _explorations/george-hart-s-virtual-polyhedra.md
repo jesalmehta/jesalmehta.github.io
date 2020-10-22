@@ -3,7 +3,6 @@ position: -99
 title: Modular unit assemblies
 description: The many ways for many to become one
 image: "/uploads/dsc_0018.jpg"
-published: false
 
 ---
 A series of solids and structures that come together by assembling modular units based on slotted joints.
