@@ -21,3 +21,8 @@ main:
     external_link: ''
     sub_items: []
     type: Internal
+  - label: Teaching
+    internal_link: teaching-1.md
+    external_link: ''
+    sub_items: []
+    type: Internal
