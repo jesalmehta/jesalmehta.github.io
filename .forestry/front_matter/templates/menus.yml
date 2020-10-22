@@ -111,3 +111,5 @@ fields:
       labelField: 
     label: Items
   label: Main
+pages:
+- _data/menus.yml
