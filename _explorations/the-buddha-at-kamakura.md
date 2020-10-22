@@ -5,8 +5,6 @@ description: Light and colour in 3D prints
 image: "/uploads/2020-10-19_23-13-00.jpg"
 
 ---
-# The Buddha at Kamakura
-
 _And whoso will, from Pride released,  
 Contemning neither creed nor priest,  
 May feel the Soul of all the East  
