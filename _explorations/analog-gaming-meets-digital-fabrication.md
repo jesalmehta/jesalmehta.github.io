@@ -3,7 +3,6 @@ position: -99
 title: Analog Gaming meets Digital Fabrication
 description: Classic Puzzles and Boardgames on the Lasercutter
 image: "/uploads/img_20200622_235605068_hdr.jpg"
-published: false
 
 ---
 # Simple Boardgames
