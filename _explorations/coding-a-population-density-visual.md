@@ -9,7 +9,7 @@ In a recent semester III Data Visualisation class, a student presented [this](ht
 
 So I took it up as a challenge to show them it could be done.
 
-<iframe src="[https://editor.p5js.org/jesmehta/embed/tkp-5Pe9L](https://editor.p5js.org/jesmehta/embed/tkp-5Pe9L "Population Density")"></iframe>
+    <iframe src="https://editor.p5js.org/jesmehta/embed/tkp-5Pe9L"></iframe>
 
 Find my
 
