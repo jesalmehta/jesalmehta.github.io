@@ -3,7 +3,6 @@ title: Teaching
 layout: about
 image: "/uploads/bkg.png"
 description: ''
-published: false
 
 ---
 #### Teaching
