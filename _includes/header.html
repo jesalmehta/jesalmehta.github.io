@@ -42,18 +42,19 @@
         <div class="col-md-11 col-sm-12 text-right text-left-xs text-left-sm">
           <div class="bar__module">
             <ul class="menu-horizontal text-left">
-              <li>
-                <a href="/work/">Work</a>
-              </li>
-              <li>
-                <a href="/explorations/">Explorations</a>
-              </li>
-              <li>
-                <a href="/cabinet-of-curiosities/">Cabinet of Curiosities</a>
-              </li>
-              <li>
-                <a href="/about-me/">About Me</a>
-              </li>
+              {% assign all_pages = site.documents | concat: site.pages %}
+
+              {% for item in site.data.menus.main.items %}
+                {% if item.type == 'Internal' %}
+                  {% assign page_object = all_pages | where: "path", item.internal_link | first %}
+                  {% assign item_url = page_object.url %}
+                {% else %}
+                  {% assign item_url = item.external_link %}
+                {% endif %}
+                <li>
+                  <a href="{{ item_url }}">{{ item.label }}</a>
+                </li>
+              {% endfor %}
             </ul>
           </div>
           <!--end module-->
