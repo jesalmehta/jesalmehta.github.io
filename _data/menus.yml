@@ -11,3 +11,13 @@ main:
     external_link: ''
     sub_items: []
     type: Internal
+  - label: Cabinet of Curiosities
+    internal_link: curiosities.md
+    external_link: ''
+    sub_items: []
+    type: Internal
+  - label: About Me
+    internal_link: about-me.md
+    external_link: ''
+    sub_items: []
+    type: Internal
