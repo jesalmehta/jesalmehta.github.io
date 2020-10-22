@@ -33,3 +33,5 @@ Pentago is another actual game being manufactured, but I had a DIY bug, plus the
 The fun part was to figure out the sliding+rotating mechanism and how to replicate it in the layered lasercut construction. I used brass screws to go with the overall look.
 
 ![](/uploads/dsc_0823.jpg)
+
+Next up, I might try to recreate the original Moksha Patam - Snakes and Ladders - but I am not that big a fan of moral lessons. Let's see.
