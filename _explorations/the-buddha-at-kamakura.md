@@ -1,7 +1,7 @@
 ---
 position: -99
 title: The Buddha at Kamakura
-description: ''
+description: Light and colour in 3D prints
 image: "/uploads/2020-10-19_23-13-00.jpg"
 
 ---
