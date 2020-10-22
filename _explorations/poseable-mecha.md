@@ -19,6 +19,8 @@ And then to make it stand in various stances, change weaponry, and otherwise sta
 
 ![](/uploads/img_20200524_100933104_hdr.jpg)
 
-Fun times ! The mechanics were figured out easily enough. The first cut 3D prints here came together well. But what I realised was that I am not a character designer. So someone else will have to come and collaborate with me on this.
+![](/uploads/fusion360_2020-10-22_18-27-07.jpg)
+
+Fun times ! The mechanics were figured out easily enough. The parts modelled in Fusion 360. The first cut 3D prints here came together well. But what I realised was that I am not a character designer. So someone else will have to come and collaborate with me on this.
 
 But who wouldn't want a deadly mecha warrior posing like a toddler on their desk ?
