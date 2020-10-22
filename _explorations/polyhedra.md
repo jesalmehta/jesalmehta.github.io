@@ -3,7 +3,6 @@ position: -99
 title: Polyhedra
 description: Modular solid assemblies
 image: "/uploads/dsc_0004.jpg"
-published: false
 
 ---
 The Platonic, Archimedean and other polyhedra are a fascinating study, and a fertile base to start creating various forms from.
