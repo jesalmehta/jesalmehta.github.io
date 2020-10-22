@@ -37,6 +37,10 @@ sections:
 - type: jekyll-posts
   label: Posts
   create: all
+- type: document
+  path: _data/menus.yml
+  label: Menus
+  match: "**/*"
 upload_dir: _uploads
 public_path: "/uploads"
 front_matter_path: ''
