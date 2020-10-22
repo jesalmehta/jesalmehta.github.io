@@ -5,8 +5,6 @@ description: Classic Puzzles and Boardgames on the Lasercutter
 image: "/uploads/img_20200622_235605068_hdr.jpg"
 
 ---
-# Simple Boardgames
-
 While I have always been fascinated by puzzles and boardgames, the commercial cardboard and plastic versions do not hold as much appeal as wood (or plywood, in this case)
 
 Over the years, I have replicated several puzzles in plywood for their warm, classic appeal (and just to see if I could, even more than to play them.)
