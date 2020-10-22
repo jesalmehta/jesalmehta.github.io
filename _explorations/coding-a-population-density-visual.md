@@ -10,7 +10,7 @@ In a recent semester III Data Visualisation class, a student presented [this](ht
 So I took it up as a challenge to show them it could be done.
 
 Find my coded version [here](https://editor.p5js.org/jesmehta/present/tkp-5Pe9L).  
-Find the code [here](https://editor.p5js.org/jesmehta/present/tkp-5Pe9L).
+Find the code [here](https://editor.p5js.org/jesmehta/sketches/tkp-5Pe9L).
 
 The process :
 
@@ -28,6 +28,6 @@ I tried a polar coordinate based random generation but it clusters heavily aroun
 
 The population circle is even simpler. The size of the population of each country is scaled down and used to decide the diameter of the circle.  However, some basic calculations are done to align it's base with the Density circle base. A horizontal line connects the two to give it a visual link.
 
-A lot of tweaking was done to get the positions and alignments right, mainly because - as usual with code - I'd made some very basic calculation and variable name gaffes that took me an inordinately long time to discover. 
+A lot of tweaking was done to get the positions and alignments right, mainly because I'd made some very basic calculation and variable name gaffes that - as usual with code - took me an inordinately long time to discover.
 
 A colour scheme was applied later to go from stark black-and-white which is my usual output to a slightly more lively appearance.
