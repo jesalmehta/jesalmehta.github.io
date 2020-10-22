@@ -1,3 +1,13 @@
 ---
 main:
-  items: []
+  items:
+  - label: Work
+    internal_link: work.md
+    external_link: ''
+    sub_items: []
+    type: Internal
+  - label: Explorations
+    internal_link: explorations.md
+    external_link: ''
+    sub_items: []
+    type: Internal
