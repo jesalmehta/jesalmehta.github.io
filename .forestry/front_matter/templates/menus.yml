@@ -1,0 +1,208 @@
+---
+label: Menus
+hide_body: true
+fields:
+- name: main
+  type: field_group
+  config: {}
+  fields:
+  - name: items
+    type: field_group_list
+    fields:
+    - name: label
+      type: text
+      config:
+        required: false
+      label: Label
+    - name: type
+      type: select
+      default: []
+      config:
+        required: false
+        options:
+        - Internal
+        - External
+        - Dropdown
+        source:
+          type: simple
+          section: 
+          file: 
+          path: 
+      label: Type
+    - name: internal_link
+      type: select
+      default: []
+      config:
+        required: false
+        options: []
+        source:
+          type: pages
+          section: 
+          file: 
+          path: 
+      label: Internal link
+      showOnly:
+        field: type
+        value: Internal
+    - name: external_link
+      type: text
+      config:
+        required: false
+      label: External link
+      showOnly:
+        field: type
+        value: External
+    - name: sub_items
+      type: field_group_list
+      fields:
+      - name: label
+        type: text
+        config:
+          required: false
+        label: Label
+      - name: type
+        type: select
+        default: []
+        config:
+          required: false
+          options:
+          - Internal
+          - External
+          source:
+            type: simple
+            section: 
+            file: 
+            path: 
+        label: Type
+      - name: internal_link
+        type: select
+        default: []
+        config:
+          required: false
+          options: []
+          source:
+            type: pages
+            section: 
+            file: 
+            path: 
+        label: Internal link
+        showOnly:
+          field: type
+          value: Internal
+      - name: external_link
+        type: text
+        config:
+          required: false
+        label: External link
+        showOnly:
+          field: type
+          value: External
+      config:
+        min: 
+        max: 
+        labelField: 
+      label: Sub items
+      showOnly:
+        field: type
+        value: Dropdown
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Items
+  label: Main
+- name: footer
+  type: field_group
+  config: {}
+  fields:
+  - name: social_media
+    type: field_group
+    config: {}
+    fields:
+    - name: instagram
+      type: text
+      config:
+        required: false
+      label: Instagram
+    - name: facebook
+      type: text
+      config:
+        required: false
+      label: Facebook
+    - name: youtube
+      type: text
+      config:
+        required: false
+      label: YouTube
+    - name: linkedin
+      type: text
+      config:
+        required: false
+      label: LinkedIn
+    label: Social media
+  - name: columns
+    type: field_group_list
+    fields:
+    - name: heading
+      type: text
+      config:
+        required: false
+      label: Heading
+    - name: items
+      type: field_group_list
+      fields:
+      - name: label
+        type: text
+        config:
+          required: false
+        label: Label
+      - name: type
+        type: select
+        default: []
+        config:
+          required: false
+          options:
+          - Internal
+          - External
+          source:
+            type: simple
+            section: 
+            file: 
+            path: 
+        label: Type
+      - name: internal_link
+        type: select
+        default: []
+        config:
+          required: false
+          options: []
+          source:
+            type: pages
+            section: 
+            file: 
+            path: 
+        label: Internal link
+        showOnly:
+          field: type
+          value: Internal
+      - name: external_link
+        type: text
+        config:
+          required: false
+        label: External link
+        showOnly:
+          field: type
+          value: External
+      config:
+        min: 
+        max: 
+        labelField: 
+      label: Items
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Columns
+  label: Footer
+pages:
+- _data/menus.yml
