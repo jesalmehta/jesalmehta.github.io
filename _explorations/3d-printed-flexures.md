@@ -1,7 +1,7 @@
 ---
 position: -99
 title: 3D printed flexures
-description: ''
+description: Flexagons and other flexibles
 image: "/uploads/dsc_0037.jpg"
 
 ---
@@ -21,7 +21,7 @@ One version was a slender linkage that allowed the unit to not just flex in it's
 
 ![](/uploads/2020-10-19_20-54-11.jpg)
 
-Following that, I created in-between links to prevent out-of-plane twisting but keep the in-plane bending, to have a more controlled flexion.
+Following that, I created in-between links to prevent out-of-plane twisting but keep the in-plane bending, to have a more controlled flexion. This is close to the typical live-hinges used in lasercutting as well.
 
 ![](/uploads/fusion360_2020-10-22_03-24-51.jpg)Six of these come together to form a flexagon that can rotate around its common centre.
 
