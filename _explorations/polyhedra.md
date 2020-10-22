@@ -12,10 +12,19 @@ By their very properties, they lend themselves to being modular - identical face
 
 At the same time, 3D printing the entire solid is time consuming and wasteful. So I turned back to lasercutting principles, and 3D printed flat units that assemble into larger solids. This also limits the waste and damage arising form errors or misprints, since only a small unit is unusable rather than an entire print.
 
-For the first trial, I printed two kinds of square units - with and without an internal structure.
+The Dodecahedron was my first attempt. I modeled the face unit as well as the spiky joint unit in Fusion. 
 
-![](/uploads/img_20200528_222454246.jpg)This allowed me to try various square configurations, virtual cubes, hexagonal voids, planes structures, etc.
+![](/uploads/fusion360_2020-10-22_20-22-36.jpg)
 
-![](/uploads/dsc_0018.jpg)![](/uploads/dsc_0017.jpg)
+After printing a million of these - ok, 12 pentagons and 30 spikes, but it felt like a million (I love my 3D printer, but sometimes, what you really want is a lasercutter), I started to assemble them.
 
-Moving to Icosahedr
+![](/uploads/img_20200530_223518464.jpg)
+
+![](/uploads/img_20201019_193915453.jpg)
+
+A spiky polyhedral Coronavirus abstraction if there ever was one.
+
+Next, I decided to step beyond the flat-unit lasercutter-replacement paradigm and create something using a 3D unit. Based on an octahedron's structure, each face has curvilinear forms rising out of the base. 
+
+![](/uploads/dsc_0025.jpg)  
+The curves are meant to match and flow across the edges as well, and they do, but the effect of the tessellating continuity falls short on an octahedron since the faces meet too sharply. On a dodecahedron or icosahedron, with more obtuse face angles, this would have a better effect.
