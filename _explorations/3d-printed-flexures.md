@@ -5,8 +5,6 @@ description: Flexagons and other flexibles
 image: "/uploads/dsc_0037.jpg"
 
 ---
-# 3D printed flexures
-
 I have long been fascinated by Flexagons - paper constructions that can rotate infinitely upon themselves, revealing a new side of the solid with every turn.
 
 While I used to make them out of paper earlier, I have since  made some lasercut versions that used tape as the flexing material as well as live hinges cut into the material itself.
