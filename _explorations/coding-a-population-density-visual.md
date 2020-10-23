@@ -31,3 +31,5 @@ The population circle is even simpler. The size of the population of each countr
 A lot of tweaking was done to get the positions and alignments right, mainly because I'd made some very basic calculation and variable name gaffes that - as usual with code - took me an inordinately long time to discover.
 
 A colour scheme was applied later to go from stark black-and-white which is my usual output to a slightly more lively appearance.
+
+The last update I made was to include the display code within the draw() loop instead of just the setup(), resulting in a chaotically animated density visual rather than a static image.
