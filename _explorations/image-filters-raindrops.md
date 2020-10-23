@@ -11,7 +11,7 @@ Variants include using circles, polygons or other shapes, varying the size and s
 
 The basic stippling effect :
 
-<iframe src="https://editor.p5js.org/jesalmehta/embed/Ys1MGU0J-" width="100%" height="500"></iframe>
+<iframe src="https://editor.p5js.org/jesalmehta/embed/Ys1MGU0J-" width="100%" height="450"></iframe>
 
 _Move mouse left-right to vary size, click to restart._
 
