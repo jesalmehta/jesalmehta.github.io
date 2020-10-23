@@ -9,9 +9,7 @@ In a recent semester III Data Visualisation class, a student presented [this](ht
 
 So I took it up as a challenge to show them it could be done.
 
-Live version :
-
-<iframe src="https://editor.p5js.org/jesmehta/embed/tkp-5Pe9L" width="550" height="800"></iframe>
+<iframe src="https://editor.p5js.org/jesmehta/embed/tkp-5Pe9L" width="100%" height="800"></iframe>
 
 Find my coded version [here](https://editor.p5js.org/jesmehta/present/tkp-5Pe9L).  
 Find the code [here](https://editor.p5js.org/jesmehta/sketches/tkp-5Pe9L).
