@@ -3,7 +3,6 @@ position: -99
 title: Albers meets Mondrian
 description: Coding a mix of Josef Albers and Piet Mondrian
 image: "/uploads/amm-2.png"
-published: false
 
 ---
 <iframe src="https://editor.p5js.org/jesalmehta/embed/g8OFWz3py"></iframe>
