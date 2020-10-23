@@ -5,7 +5,7 @@ description: Coding a mix of Josef Albers and Piet Mondrian
 image: "/uploads/amm-2.png"
 
 ---
-<iframe src="https://editor.p5js.org/jesalmehta/embed/g8OFWz3py"></iframe>
+<iframe src="https://editor.p5js.org/jesalmehta/embed/g8OFWz3py" width="100%" height="800"></iframe>
 
 An early sketch, moving out of Processing to p5.js. While there are libraries in Processing that allow GUI control elements, I usually hooked up variables to mouse positions or similar varying interactions.
 
