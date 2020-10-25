@@ -22,3 +22,5 @@ Selectively, the amplitude or wavelength, one can be kept constant while the oth
 The final output is a vector file, which I eventually would like to laser-etch - on wood, for the regular dark on light, or an inverse on acrylic, for light on clear.
 
 Other variants to code - changing the wave form. The current version has a simple zig-zag triangle wave, but square waves, sine waves if not too computationally intense, and more need to be tried !
+
+![](/uploads/rf-scl8-sclv1-sclh1-j2.jpg)
