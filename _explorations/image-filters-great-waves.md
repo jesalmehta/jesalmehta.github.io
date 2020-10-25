@@ -3,7 +3,6 @@ position: -99
 title: 'Image Filters : Great Waves'
 description: Images by varying the wavelength and frequency
 image: "/uploads/rf-scl5-sclv0-4-sclh1.jpg"
-published: false
 
 ---
 Yet another Image Filter ! This one is meant to come out into the real world.
