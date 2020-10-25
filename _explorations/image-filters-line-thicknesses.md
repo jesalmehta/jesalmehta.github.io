@@ -9,7 +9,7 @@ A whole riot of image filters resulting from just one single property - the thic
 
 The fun lies in figuring out different ways of generating lines.
 
-<iframe src="https://editor.p5js.org/jesalmehta/embed/n4Bf3rQCO" width="100%" height="500"></iframe>
+<iframe src="https://editor.p5js.org/jesalmehta/embed/X8RciQbfn" width="100%" height="500"></iframe>
 
 Here, horizontal and vertical lines traverse the image, with the thickness varying accordingly.
 
