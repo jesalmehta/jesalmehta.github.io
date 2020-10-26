@@ -28,5 +28,8 @@ images:
   caption: Detail, Circle packing algorithm on tree silhouette, lasercut in plywood
 - image: "/uploads/tree.jpg"
   caption: Generated vector drawing, Circle packing algorithm on tree silhouette
+featured_image:
+  image: "/uploads/reaction-diffusion-book-cover.jpg"
+  size: half tall
 
 ---
