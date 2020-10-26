@@ -30,6 +30,6 @@ images:
   caption: Generated vector drawing, Circle packing algorithm on tree silhouette
 featured_image:
   image: "/uploads/reaction-diffusion-book-cover.jpg"
-  size: half tall
+  size: half
 
 ---
