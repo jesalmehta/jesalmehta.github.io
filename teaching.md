@@ -1,6 +1,6 @@
 ---
 title: Teaching
-layout: about
+layout: page
 image: "/uploads/bkg.png"
 description: ''
 
