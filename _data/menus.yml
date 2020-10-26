@@ -22,7 +22,7 @@ main:
     sub_items: []
     type: Internal
   - label: Teaching
-    internal_link: teaching-1.md
+    internal_link: teaching.md
     external_link: ''
     sub_items: []
     type: Internal

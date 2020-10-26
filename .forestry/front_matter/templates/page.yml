@@ -1,5 +1,5 @@
 ---
-label: About
+label: Page
 hide_body: false
 fields:
 - name: seo
@@ -7,10 +7,17 @@ fields:
   config: {}
   template: seo
   label: SEO
+- name: background_image
+  type: file
+  config:
+    maxSize: 64
+  label: Background image
 - name: layout
   type: text
   config:
     required: false
   label: Layout
+  hidden: true
+  default: page
 pages:
-- about-me.md
+- teaching.md
