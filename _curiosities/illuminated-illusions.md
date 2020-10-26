@@ -20,7 +20,7 @@ images:
 - image: "/uploads/2015_0505_013448.jpg"
   caption: The White Tree of Gondor, Lord of the Rings (Original by JRR Tolkien)
 description: Lamps based on derivative artwork from various pop-culture entities
-position: 2
+position: 3
 
 ---
 Illuminated Illusions : Night lights and small lamps based on derived artwork and pop-culture fandoms.

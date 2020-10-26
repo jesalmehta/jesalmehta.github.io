@@ -1,7 +1,7 @@
 ---
 position: -99
 title: 'Image Filters : Great Waves'
-description: Images by varying the wavelength and frequency
+description: Images in waveforms, varying the wavelength and frequency
 image: "/uploads/rf-scl5-sclv0-4-sclh1.jpg"
 
 ---
