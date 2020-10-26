@@ -7,6 +7,31 @@ fields:
   config: {}
   template: seo
   label: SEO
+- name: featured_image
+  type: field_group
+  config: {}
+  fields:
+  - name: image
+    type: file
+    config:
+      maxSize: 64
+    label: Image
+  - name: size
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - full
+      - half
+      - half tall
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Size
+  label: Featured image
 - type: include
   name: images
   label: Images
