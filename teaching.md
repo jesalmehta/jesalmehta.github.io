@@ -6,8 +6,6 @@ description: ''
 background_image: "/uploads/bkg.png"
 
 ---
-#### Teaching
-
 Assistant Professor, NMIMS School of Design (2018 – present)  
 Visiting Faculty, NMIMS School of Design (2018)  
 Talks, Workshops and Mentoring
@@ -16,34 +14,31 @@ Talks, Workshops and Mentoring
 
 ##### Duties :
 
-Curriculum development  
-Faculty incharge :  
-Labs : Digital Fabrication Lab | Workshop | Electronics Prototyping Lab
-
-Lab Staff Training : CAD Modelling, Digital Fabrication, Electronics Prototyping, Coding
-
-Library liason
+* Curriculum development
+* Lab Incharge : Digital Fabrication Lab | Workshop | Electronics Prototyping Lab
+* Lab Staff Training : CAD Modelling, Digital Fabrication, Electronics Prototyping, Coding
+* Library liason
 
 ##### Modules :
 
 ###### Product Design and Technology
 
-* Connected Experiences (Project : Design Solutions based on IOT Systems)
-* Simple Product Design (Project)
+* Connected Experiences (Project : Design Solutions based on IOT Systems) (Year 3)
+* Simple Product Design (Project) (Year 2)
 
 ###### New Media
 
-* Data and Data Visualization
-* Physical Computing
-* Creative Coding
-* Interaction Design (Project)
+* Data and Data Visualization (Year 2)
+* Physical Computing (Year 2)
+* Creative Coding (Year 1)
+* Interaction Design (Project) (Year 2)
 
 ###### Design Fundamentals
 
-* Ideation and Prototyping (Project)
-* Form Explorations
-* Design Theory
-* CAD Basics
+* Ideation and Prototyping (Project) (Year 2)
+* Form Explorations (Year 1)
+* Design Theory (Year 1)
+* CAD Basics (Year 2)
 
 #### Talks, Workshops And Mentoring :
 
