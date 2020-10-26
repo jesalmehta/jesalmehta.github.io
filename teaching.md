@@ -1,8 +1,9 @@
 ---
 title: Teaching
-layout: about
+layout: page
 image: "/uploads/bkg.png"
 description: ''
+background_image: "/uploads/bkg.png"
 
 ---
 #### Teaching
