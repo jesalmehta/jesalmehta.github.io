@@ -3,7 +3,6 @@ position: -99
 title: Interactive Wordplay
 description: All words are made up words
 image: "/uploads/canvas.jpg"
-published: false
 
 ---
 Interactive WordPlay
