@@ -15,7 +15,7 @@ Talks, Workshops and Mentoring
 ##### Duties :
 
 * Curriculum development
-* Lab Incharge : Digital Fabrication Lab | Workshop | Electronics Prototyping Lab
+* Lab Incharge : Digital Fabrication Lab, Workshop, Electronics Prototyping Lab
 * Lab Staff Training : CAD Modelling, Digital Fabrication, Electronics Prototyping, Coding
 * Library liason
 
