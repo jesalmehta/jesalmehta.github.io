@@ -15,6 +15,6 @@ Maintaining correct radiant heat exposure
 Ease of use by patient in terms of deployment, operation and storage  
 Low cost
 
-**Open source project, find full details and instructions here :**
+**Open source project, find full details and instructions on the** [**Hackaday page**](https://hackaday.io/project/160189-radiant-heat-device-for-filariasis-therapy)
 
 https://hackaday.io/project/160189-radiant-heat-device-for-filariasis-therapy
