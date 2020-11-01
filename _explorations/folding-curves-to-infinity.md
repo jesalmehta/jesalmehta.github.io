@@ -1,7 +1,7 @@
 ---
 position: -99
 title: Folding curves to infinity
-description: Paperfolding meets curves
+description: Paperfolding meets curved lines and a lasercutter
 image: "/uploads/2019_0803_175728-3.jpg"
 published: false
 
