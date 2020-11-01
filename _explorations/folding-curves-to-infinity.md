@@ -3,7 +3,6 @@ position: -99
 title: Folding curves to infinite loops
 description: Paperfolding meets curved lines and a lasercutter
 image: "/uploads/2019_0803_175728-3.jpg"
-published: false
 
 ---
 Paperfolding and Origami have been long time interests. At some point I stumbled onto curve-folding, with some nudging from one of my professors. Since then I have been playing with smaller pieces and following the work of masters like Erik and Martin Demaine on curved-crease sculpture, and of late, Richard Sweeney's work.
