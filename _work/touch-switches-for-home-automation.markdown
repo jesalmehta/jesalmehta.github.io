@@ -1,6 +1,6 @@
 ---
 title: Touch switches for Home Automation
-date: 2018-07-03 16:57:00 +0000
+date: 2018-07-03T16:57:00.000+00:00
 position: 2
 square_featured_image: "/uploads/basic%20render.13-Edit%20glow.jpg"
 client: Nuos
@@ -23,16 +23,26 @@ images:
   caption: Product visualization
 
 ---
-Brief : To develop switches that can be retrofit into existing standard panels
+Brief : 
+
+To develop switches that can be retrofit into existing standard panels
 
 Areas of work :
-Multiple parts for support of touch panel and associated electronics
-Enclosure part for electronics
-Design of various switch icons
-Backlight effect of switch icons
-Additional parts to support various sensors
-Starter kit package design
-Prototyping and testing
+
+Multiple parts for support of touch panel and associated electronics 
+
+Enclosure design for electronics 
+
+Design of various switch icons 
+
+Backlight effect of switch icons 
+
+Additional parts to support various sensors 
+
+Starter kit package design 
+
+Prototyping and testing 
+
 Short run production for initial deployment
 
 All of the above for two families of panels
