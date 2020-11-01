@@ -3,7 +3,6 @@ position: -99
 title: 'Furnace frolic : 1'
 description: Got my hands on a furnace
 image: "/uploads/2019_0831_232308.jpg"
-published: false
 
 ---
 A while ago, V (from V for Wood) and I picked up a muffle furnace from a neighbour of his who was moving countries. An actual, melt-your-brains (and a lot more) furnace. It's a small enough chamber, but goes to about 1100 C, and is good for a lot.

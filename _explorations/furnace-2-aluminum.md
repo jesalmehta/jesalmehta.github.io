@@ -3,7 +3,6 @@ position: -99
 title: 'Furnace 2 : Aluminum'
 description: Melting aluminum in my living room
 image: "/uploads/2019_0831_210841.jpg"
-published: false
 
 ---
 The story begins here.
