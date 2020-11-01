@@ -5,6 +5,9 @@ featured_image:
   image: "/uploads/2018_0619_180336.jpg"
   size: full
 images:
+- image: "/uploads/2018_0914_233947-2.jpg"
+  caption: Detail of the Craigh na Dun lamp, based on the Outlander series. Lasercut
+    acrylic, multipiece assembly.
 - image: "/uploads/2018_0914_233931.jpg"
   caption: Craigh na Dun, from the opening credits of the Outlander series. Lasercut
     acrylic, multipiece assembly.
