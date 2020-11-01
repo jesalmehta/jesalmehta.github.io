@@ -1,6 +1,6 @@
 ---
 position: -99
-title: Folding curves to infinity
+title: Folding curves to infinite loops
 description: Paperfolding meets curved lines and a lasercutter
 image: "/uploads/2019_0803_175728-3.jpg"
 published: false
