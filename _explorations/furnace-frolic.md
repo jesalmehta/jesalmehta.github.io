@@ -8,9 +8,9 @@ published: false
 ---
 A while ago, V (from V for Wood) and I picked up a muffle furnace from a neighbour of his who was moving countries. An actual, melt-your-brains (and a lot more) furnace. It's a small enough chamber, but goes to about 1100 C, and is good for a lot.
 
-We brought it home first, intending to shift it to the studio soon, but the damn thing is heavy, and is now a long-time resident of my living room.
+We brought it home first, intending to shift it to the studio soon, but the damned thing is heavy, and now a long-time resident of my living room.
 
-Over the next few weeks, I made a higher-grade extension box to power it from the nearest 16 A source, did some reading, convinced the original manufacturer for advice, and, long story short, finally we got it running.
+Over the next few weeks, I made a higher-grade extension box to power it from the nearest 16 A source, did some reading, convinced the original manufacturer to talk to me and give some advice, and, long story short, finally we got it running.
 
 Since I had no particular molds and whatnots to work with, the first few trials were just slumping glass in terracotta and earthenware from the local kumbharwada. Surprisingly, it worked, but the clay items would crack after a few cycles.
 
@@ -30,7 +30,7 @@ Well, it worked, kinda ! We took the temperature to 800+ C, so the glass would s
 
 ![](/uploads/2019_0902_131317.jpg)
 
-This is the upper side of the whole piece, and the aluminum texture looks wild. The glass layer is visible as the black patch, so the glass was still viscous enough to maintain it's uneven thickness as it was slumping. 
+This is the upper side of the whole piece, and the aluminum texture looks wild. The glass layer is visible as the black patch, so the glass was still viscous enough to maintain it's uneven thickness as it was slumping.
 
 ![](/uploads/2019_0902_150137.jpg)
 
