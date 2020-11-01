@@ -5,6 +5,9 @@ featured_image:
   image: "/uploads/2018_0619_180336.jpg"
   size: full
 images:
+- image: "/uploads/2018_0914_233931.jpg"
+  caption: Craigh na Dun, from the opening credits of the Outlander series. Lasercut
+    acrylic, multipiece assembly.
 - image: "/uploads/2018_0619_180336.jpg"
   caption: Hakuna Matata, from the Lion King (Original by Disney)
 - image: "/uploads/2015_0505_014128.jpg"
