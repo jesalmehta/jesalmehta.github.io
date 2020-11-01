@@ -19,22 +19,22 @@ images:
 position: 4
 
 ---
-Brief : To setup a workflow enabling pottery production with designs originating in CAD models, bypassing traditional limitations in complexity and accuracy, eventually leading to ceramic products integrated with electronics and other add-ons.
+To setup a workflow enabling pottery production with designs originating in CAD models, bypassing traditional limitations in complexity and accuracy, eventually leading to ceramic products integrated with electronics and other add-ons.
 
-Areas of work:
-Mold and mother-mold design
-Generative design
+**Areas of work:**
+
+Mold and mother-mold design   
+Generative design   
 Study of the effects of various parameters on casting in alginate, plaster and clay
 
+**Toolset :** 
 
+Fusion 360 and Grasshopper for modelling   
+3D printing   
+Alginate and Plaster casting for molds  
+Slip casting for clay
 
+**Status :** 
 
-Toolset :
-Fusion 360 and Grasshopper for modelling
-3D printing
-Alginate and Plaster casting
-Slip casting
-
-Status :
-Phase 1 : Proof of concept delivered
+Phase 1 : Proof of concept delivered  
 Refinement iterations pending
