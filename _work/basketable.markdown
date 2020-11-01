@@ -18,4 +18,4 @@ images:
   caption: Working Prototype
 
 ---
-A table-top, battery powered decorative LED light.
+A battery powered, table-top decorative LED light.
