@@ -6,7 +6,7 @@ image: "/uploads/2019_0902_140948.jpg"
 published: false
 
 ---
-The story begins here, and then here.
+The story begins [here](https://www.jesalmehta.com/explorations/furnace-frolic/), and then [here](https://www.jesalmehta.com/explorations/furnace-2-aluminum/).
 
 _But to summarize : I got my hands on a furnace, and melted some glass and aluminum. It was supposed to sit in my studio, but for reasons long-forgotten, we stopped over and now it's in my living room, to the overlapping amusement and chagrin of family, friends and assorted neighbours._
 
