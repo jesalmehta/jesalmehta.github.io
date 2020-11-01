@@ -32,7 +32,8 @@ services_rendered:
 
 **Toolset :**
 
-Fusion 360, Rhino3D + Grasshopper
+* Fusion 360
+* Rhino3D + Grasshopper
 
 **Status :**
 
