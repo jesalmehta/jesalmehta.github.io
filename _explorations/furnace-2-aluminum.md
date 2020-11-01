@@ -5,7 +5,7 @@ description: Melting aluminum in my living room
 image: "/uploads/2019_0831_210841.jpg"
 
 ---
-The story begins here.
+The story begins [here](https://www.jesalmehta.com/explorations/furnace-frolic/).
 
 _But to summarize : I got my hands on a furnace, and melted some glass and aluminum. It was supposed to sit in my studio, but for reasons long-forgotten, we stopped over and now it's in my living room, to the overlapping amusement and chagrin of family, friends and assorted neighbours._
 
