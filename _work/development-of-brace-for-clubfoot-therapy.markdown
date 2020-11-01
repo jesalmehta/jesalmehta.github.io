@@ -19,8 +19,6 @@ services_rendered:
 - Product Optimization
 
 ---
-**Brief** :
-
 To create parametric models of infant lower leg and foot to be able to generate individualized braces based on key measurements
 
 To streamline key measurement requirements
