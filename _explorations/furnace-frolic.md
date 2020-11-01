@@ -1,6 +1,6 @@
 ---
 position: -99
-title: 'Furnace frolic : 1'
+title: 'Fireside tales : Furnace'
 description: Got my hands on a furnace
 image: "/uploads/2019_0831_232308.jpg"
 
