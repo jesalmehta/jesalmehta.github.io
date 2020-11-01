@@ -3,7 +3,6 @@ position: -99
 title: 'Fireside tales 3 : Just add water'
 description: Liquid metal meets liquid water, a photostudy
 image: "/uploads/2019_0902_140948.jpg"
-published: false
 
 ---
 The story begins [here](https://www.jesalmehta.com/explorations/furnace-frolic/), and then [here](https://www.jesalmehta.com/explorations/furnace-2-aluminum/).
