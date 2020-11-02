@@ -5,6 +5,7 @@ position: 14
 square_featured_image: "/uploads/2012_0426_171725%20crop%20lite.jpg"
 client: Patient for Dr Kumkum Khadalia, Plastic surgeon
 year: 2012
+wide_featured_image: "/uploads/2012_0426_171725 crop lite.jpg"
 
 ---
 A patient who had undergone surgical reconstruction due to cleft palate suffered from a contracted nasal passage due to buildup of scar tissue. An expander that applied a continuous dynamic force against the contraction was developed to help increase the passage diameter.
