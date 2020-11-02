@@ -16,6 +16,7 @@ images:
   caption: Product in operation
 - image: "/uploads/2018_0723_143021.jpg"
   caption: Working Prototype
+wide_featured_image: "/uploads/2016_1124_205824.jpg"
 
 ---
 A battery powered, table-top decorative LED light.
