@@ -34,6 +34,7 @@ images:
 - image: "/uploads/Legrand.9.jpg"
   caption: Product visualization
 project_year: "2017"
+wide_featured_image: "/uploads/2018_0707_222950.jpg"
 
 ---
 To develop switches that can be retrofit into existing standard panels
