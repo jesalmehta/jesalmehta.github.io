@@ -18,7 +18,7 @@ images:
   caption: Maze paths
 - image: "/uploads/2018_0829_024350-edit.jpg"
   caption: Sci-fi Circularity
-wide_featured_image: "/uploads/2018_0829_030144-edit.jpg"
+wide_featured_image: "/uploads/2018_0829_024905-edit.jpg"
 client: Renata Lightinng
 
 ---
