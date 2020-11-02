@@ -12,7 +12,7 @@ services_rendered:
 images:
 - image: "/uploads/I03 - Varun Patra FB edit.jpg"
 - image: "/uploads/I01 - HG FB no edit.jpg"
-wide_featured_image: "/uploads/I01 - HG FB no edit.jpg"
+wide_featured_image: "/uploads/hg-fb-16804036_1289004031179043_170346350033718194_o.jpg"
 
 ---
 [V02 - Makers FB.mp4](/uploads/V02%20-%20Makers%20FB.mp4) 
