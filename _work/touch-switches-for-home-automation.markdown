@@ -15,12 +15,25 @@ services_rendered:
 - Graphic Design
 - Package Design
 images:
+- image: "/uploads/2018_0918_111449-edit.jpg"
+  caption: Mounted on 6x panel
+- image: "/uploads/2018_0915_144812-edit-edit.jpg"
+  caption: Lit switches on 4x panel
+- image: "/uploads/2018_0915_144751.jpg"
+  caption: Lit switches in the dark
+- image: "/uploads/2018_0707_223152.jpg"
+  caption: Enclosure B snap-off detail
+- image: "/uploads/2018_0707_222950.jpg"
+  caption: Enclosure B and panel outer
+- image: "/uploads/2018_0707_222401.jpg"
+  caption: Enclosure A
 - image: "/uploads/basic render.13-Edit glow.jpg"
   caption: Product visualization
 - image: "/uploads/Legrand.8.jpg"
   caption: Product visualization
 - image: "/uploads/Legrand.9.jpg"
   caption: Product visualization
+project_year: "2017"
 
 ---
 To develop switches that can be retrofit into existing standard panels
