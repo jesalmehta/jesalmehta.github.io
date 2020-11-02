@@ -27,7 +27,7 @@ images:
 - image: "/uploads/solyte final v3.276-28867e.jpg"
   caption: Concept Render
 project_year: "2013"
-wide_featured_image: "/uploads/2018_0706_040922.jpg"
+wide_featured_image: "/uploads/2018_0706_040922-2.jpg"
 
 ---
 A solar-charging battery pack, with 10000 mAh Lithium polymer battery, USB charging, and 2 W solar cell.
