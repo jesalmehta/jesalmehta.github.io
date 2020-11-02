@@ -1,16 +1,11 @@
 ---
 title: Flyte v2.0
-date: 2017-07-21 18:47:00 +0000
+date: 2017-07-21T18:47:00.000+00:00
 position: 11
-square_featured_image: "/uploads/Flyte-2-thumb.jpg"
+square_featured_image: "/uploads/2018_0829_030144-edit.jpg"
 year: 2014
 Client: Renata Lighting
-images:
-- image: "/uploads/Flyte-2-thumb.jpg"
-  caption: Flyte prototypes
-- image: "/uploads/2014_1007_114735_lite.jpg"
-  caption: Flyte prototypes
-- image: "/uploads/2014_1007_114711_lite.jpg"
----
+images: []
 
+---
 A series of USB lights for kids
