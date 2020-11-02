@@ -14,7 +14,7 @@ images:
   caption: Render, side view
 - image: "/uploads/untitled-49.jpg"
   caption: Render, top view
-wide_featured_image: "/uploads/2018_0723_151600-Edit-2.jpg"
+wide_featured_image: "/uploads/2018_0723_150828-1.jpg"
 
 ---
 An LED based diya
