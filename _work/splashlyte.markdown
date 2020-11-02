@@ -11,6 +11,12 @@ services_rendered:
 - Engineering Design
 - Digital Fabrication
 - Production Planning
+wide_featured_image: "/uploads/untitled-43.jpg"
+images:
+- image: "/uploads/untitled-43.jpg"
+  caption: Sideview
+- image: "/uploads/2018_0723_145558-2.jpg"
+  caption: SplashLyte Detail
 
 ---
 A window-sill decorative that throws interesting light-shadow patterns.
