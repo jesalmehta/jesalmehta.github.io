@@ -13,8 +13,10 @@ services_rendered:
 - Production Planning
 wide_featured_image: "/uploads/untitled-43.jpg"
 images:
+- image: "/uploads/untitled-44.jpg"
+  caption: Top view, unlit, render
 - image: "/uploads/untitled-43.jpg"
-  caption: Sideview
+  caption: Sideview, unlit, render
 - image: "/uploads/2018_0723_145558-2.jpg"
   caption: SplashLyte Detail
 
