@@ -11,7 +11,7 @@ services_rendered:
 - Engineering Design
 - Digital Fabrication
 - Production Planning
-wide_featured_image: "/uploads/untitled-43.jpg"
+wide_featured_image: "/uploads/2018_0723_145558-2.jpg"
 images:
 - image: "/uploads/untitled-44.jpg"
   caption: Top view, unlit, render
