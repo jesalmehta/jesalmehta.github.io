@@ -1,6 +1,6 @@
 ---
 title: Box Lanterns
-date: '2018-08-21T09:43:39.000+00:00'
+date: '2016-10-09T09:43:39.000+00:00'
 featured_image:
   image: "/uploads/2017_0217_165039.jpg"
   size: half tall
