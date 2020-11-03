@@ -1,5 +1,5 @@
 ---
-position: 3
+position: 4
 title: Notebook Covers
 description: Notebook covers using creative coding and digital fabrication
 image: "/uploads/2020-10-19_21-30-42.jpg"
