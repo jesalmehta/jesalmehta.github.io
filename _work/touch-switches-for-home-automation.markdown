@@ -59,3 +59,7 @@ CAD modelling, 3D printing, CorelDraw, Lasercutting
 **Status :**
 
 In market and deployed on-site.
+
+[About Nuos.](https://www.nuos.in/ "About Nuos")
+
+[Nuos Products.](https://www.nuos.in/product-range/ "Nuos Products")
