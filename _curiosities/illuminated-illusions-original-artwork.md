@@ -1,6 +1,6 @@
 ---
 title: Illuminated Illusions (original artwork)
-date: '2015-08-31T14:41:48.000+00:00'
+date: '2018-08-31T14:41:48.000+00:00'
 featured_image:
   image: "/uploads/2018_0914_231237.jpg"
   size: half tall
@@ -13,6 +13,8 @@ images:
 - image: "/uploads/2016_0311_143106.jpg"
   caption: The Raven Volante (inspired by the book, "Jonathan Strange and Mr Norell"
     by Susanna Clarke)
+- image: "/uploads/2018_0914_231754.jpg"
+  caption: A single thread of light. Cycloidal pattern, lasercut on acrylic.
 description: Lamps using original artwork inspired by various pop-culture entities
 position: 1
 
