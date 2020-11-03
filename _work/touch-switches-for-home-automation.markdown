@@ -27,9 +27,15 @@ images:
   caption: Enclosure B and panel outer
 - image: "/uploads/2018_0707_222401.jpg"
   caption: Enclosure A
+- image: "/uploads/gateway-panel-isolated.jpg"
+  caption: Gateway control and Indicator
+- image: "/uploads/fan.jpg"
+  caption: Fan Control
+- image: "/uploads/4x-final.jpg"
+  caption: Multi Switch - 4x
+- image: "/uploads/6x-final.jpg"
+  caption: Scene Control - 6x
 - image: "/uploads/basic render.13-Edit glow.jpg"
-  caption: Product visualization
-- image: "/uploads/Legrand.8.jpg"
   caption: Product visualization
 - image: "/uploads/Legrand.9.jpg"
   caption: Product visualization
