@@ -2,7 +2,7 @@
 position: 3
 title: Notebook Covers
 description: Notebook covers using creative coding and digital fabrication
-image: "/uploads/reaction-diffusion-book-cover.jpg"
+image: "/uploads/2020-10-19_21-30-42.jpg"
 images:
 - image: "/uploads/2020-10-19_22-08-31.jpg"
   caption: Contour map generated using Perlin noise, lasercut on Plywood
