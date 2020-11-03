@@ -1,6 +1,6 @@
 ---
 title: Illuminated Illusions (original artwork)
-date: '2018-08-31T14:41:48.000+00:00'
+date: '2015-08-31T14:41:48.000+00:00'
 featured_image:
   image: "/uploads/2018_0914_231237.jpg"
   size: half tall
