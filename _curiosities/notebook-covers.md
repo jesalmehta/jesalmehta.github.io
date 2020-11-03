@@ -30,6 +30,6 @@ images:
   caption: Generated vector drawing, Circle packing algorithm on tree silhouette
 featured_image:
   image: "/uploads/2020-10-19_21-30-42.jpg"
-  size: full
+  size: half
 
 ---
