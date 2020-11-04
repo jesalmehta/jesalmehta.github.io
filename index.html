@@ -118,7 +118,7 @@ image: "/uploads/emergence-banner-2.jpg"
             {% for exploration in site.explorations limit: 3 %}
             <div class="masonry__item col-lg-4 col-md-6">
               <article class="feature feature-1">
-                <a href="#" class="block">
+                <a href="{{ exploration.url }}" class="block">
                   <img alt="{{ exploration.title }}" src="{{ exploration.image }}" />
                 </a>
                 <div class="feature__body boxed boxed--border">
