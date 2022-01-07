@@ -25,24 +25,27 @@ Talks, Workshops and Mentoring
 
 * Connected Experiences (Project : Design Solutions based on IOT Systems) (Year 3)
 * Simple Product Design (Project) (Year 2)
+* Interaction Design (Project) (Year 2)
 
 ###### New Media
 
 * Data and Data Visualization (Year 2)
 * Physical Computing (Year 2)
-* Creative Coding (Year 1)
-* Interaction Design (Project) (Year 2)
+* Creative Coding and Generative Art (Year 1)
 
 ###### Design Fundamentals
 
+* Design Theory (Year 1)
 * Ideation and Prototyping (Project) (Year 2)
 * Form Explorations (Year 1)
-* Design Theory (Year 1)
 * CAD Basics (Year 2)
 
 #### Talks, Workshops And Mentoring :
 
 ##### Product Design and Design Thinking
+
+###### Design Thinking Mentor at Vernacular Innovation Program, NITI Aayog   
+ (Dec 2021 – present)
 
 ###### NEXT Eduthon by MakeShift EDC (Jun-July 2020)
 
@@ -68,4 +71,5 @@ Talks, Workshops and Mentoring
 
 * STEAM 2016, STEAM 2017 and STEAM 2018
 * STEAM Fabrikarium, 2018
-* Volunteer Lab Lead for Laser Cutting at Maker's Asylum (2016 – 2018)
+
+###### Volunteer Lab Lead for Laser Cutting at Maker's Asylum (2016 – 2018)
