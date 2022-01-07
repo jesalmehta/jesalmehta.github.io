@@ -26,6 +26,7 @@ Talks, Workshops and Mentoring
 * Connected Experiences (Project : Design Solutions based on IOT Systems) (Year 3)
 * Simple Product Design (Project) (Year 2)
 * Interaction Design (Project) (Year 2)
+* Sensorial Design (Project) (Year 2)
 
 ###### New Media
 
