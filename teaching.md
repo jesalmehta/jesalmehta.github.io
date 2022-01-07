@@ -44,8 +44,9 @@ Talks, Workshops and Mentoring
 
 ##### Product Design and Design Thinking
 
-###### Design Thinking Mentor at Vernacular Innovation Program, NITI Aayog   
- (Dec 2021 – present)
+###### Design Thinking Mentor at Vernacular Innovation Program, NITI Aayog
+
+(Dec 2021 – present)
 
 ###### NEXT Eduthon by MakeShift EDC (Jun-July 2020)
 
@@ -54,12 +55,12 @@ Talks, Workshops and Mentoring
 
 ##### Digital Fabrication and Design
 
-###### Workshops on 3D modelling at Maker's Asylum (2014 – 2019)
+###### Workshops on 3D modelling and 3D printing at Maker's Asylum (2014 – 2019)
 
 * Autodesk Inventor
 * Fusion 360
 
-###### Workshops on various verticals of Lasercutting at Maker's Asylum (2015 – 2019)
+###### Workshops on Lasercutting with various applications at Maker's Asylum (2015 – 2019)
 
 * Lasercutting for Prototyping
 * Origami with Lasercutting
