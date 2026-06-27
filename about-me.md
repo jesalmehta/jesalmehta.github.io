@@ -5,9 +5,16 @@ image: "/uploads/about_me_cover.jpg"
 description: ''
 
 ---
-Jesal Mehta is a Mumbai-based industrial designer, digital fabrication artist, and teacher.
+Jesal Mehta is a Mumbai-based design educator, industrial designer, and digital fabrication artist.
 
-He teaches and develops curriculum for Human-centred Design, mainly in the areas of Technology, Design Thinking, Interactivity and Form Studies, at NMIMS School of Design
+He teaches and develops curriculum for design education, mainly in the areas of product design and interactivity, creative technologies, and material-led exploration. He currently teaches at the Somaiya School of Design, where he is part of the early faculty team and leads the Product Design and Technology verticals. 
+
+In 2026, he is currently pursuing [a Diploma](https://class.textile-academy.org/2026/jesal-mehta/) from the [Fabricademy, Textile and Technology Academy](https://textile-academy.org/).
+In 2023, he obtained [a Diploma in Digital Fabrication and Advanced Prototyping](https://fabacademy.org/2023/labs/riidl/students/jesal-mehta/) from the [FabAcademy](https://fabacademy.org/).
+
+You can find his sandbox of explorations and funhouse on the web at [The Cabinet of Curiosities](https://cabinetofcuriosities.in/)
+
+He frequently mentors and takes workshops on technology and design, at events like Virtual Creative Coding Fest, SECIP, and the Fab conferences.
 
 He has worked primarily on Lighting and Healthcare products, but has also done Installations, Consumer electronics and other areas. He does Product and Process Development, and consults on production and manufacturing as well.
 

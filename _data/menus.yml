@@ -6,8 +6,8 @@ main:
     external_link: ''
     sub_items: []
     type: Internal
-  - label: Explorations
-    internal_link: explorations.md
+  - label: Teaching
+    internal_link: teaching.md
     external_link: ''
     sub_items: []
     type: Internal
@@ -16,13 +16,14 @@ main:
     external_link: ''
     sub_items: []
     type: Internal
+  - label: Explorations
+    internal_link: explorations.md
+    external_link: ''
+    sub_items: []
+    type: Internal
   - label: About Me
     internal_link: about-me.md
     external_link: ''
     sub_items: []
     type: Internal
-  - label: Teaching
-    internal_link: teaching.md
-    external_link: ''
-    sub_items: []
-    type: Internal
+
