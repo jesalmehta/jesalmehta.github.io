@@ -5,36 +5,23 @@
         <img alt="Image" class="logo" src="{{ site.logo }}" />
       </div>
       <div class="col-6 text-right text-center-xs">
-        <ul class="social-list list-inline list--hover m-0">
-          {% if site.data.social.twitter %}
-            <li>
-              <a href="{{ site.data.social.twitter }}">
-                <i class="socicon socicon-twitter icon icon--xs"></i>
-              </a>
-            </li>
-          {% endif %}
-          {% if site.data.social.facebook %}
-            <li>
-              <a href="{{ site.data.social.facebook }}">
-                <i class="socicon socicon-facebook icon icon--xs"></i>
-              </a>
-            </li>
-          {% endif %}
-          {% if site.data.social.linkedin %}
-            <li>
-              <a href="{{ site.data.social.linkedin }}>
-              <i class="socicon socicon-linkedin icon icon--xs"></i>
-              </a>
-            </li>
-          {% endif %}
-          {% if site.data.social.instagram %}
-            <li>
-              <a href="{{ site.data.social.instagram }}">
-                <i class="socicon socicon-instagram icon icon--xs"></i>
-              </a>
-            </li>
-          {% endif %}
-        </ul>
+<ul class="social-list list-inline list--hover m-0">
+  {% if site.data.social.linkedin %}
+    <li>
+      <a href="{{ site.data.social.linkedin }}" title="LinkedIn">
+        <i class="socicon socicon-linkedin icon icon--xs"></i>
+      </a>
+    </li>
+  {% endif %}
+
+  {% if site.data.social.instagram %}
+    <li>
+      <a href="{{ site.data.social.instagram }}" title="Instagram">
+        <i class="socicon socicon-instagram icon icon--xs"></i>
+      </a>
+    </li>
+  {% endif %}
+</ul>
       </div>
     </div>
     <!--end of row-->
