@@ -6,6 +6,8 @@ description: ''
 background_image: "/uploads/bkg.png"
 
 ---
+#### Brief history
+
 Assistant Professor, Somaiya School of Design (2022 – present)  
 *Industrial Designer and Creative Technologist involved with Materials, Emerging Technologies and Product Design. Interested in Computationality, Materiality and History.*
 
@@ -14,6 +16,8 @@ Visiting Faculty, NMIMS School of Design (2022)
 Assistant Professor, NMIMS School of Design (2018 – 2022)   
 Visiting Faculty, NMIMS School of Design (2018)  
 Talks, Workshops and Mentoring  
+
+---
 
 #### Assistant Professor, Somaiya School of Design (2022 – present)
 
