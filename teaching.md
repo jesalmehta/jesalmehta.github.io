@@ -94,18 +94,18 @@ FabAcademy Instructor and FabAcademy Coordinator for SSD (2024 – present)
 #### Talks, Workshops And Mentoring :
 
 ##### SECIP (Monash University x Maker's Asylum)
-Mentor at SECIP 11.0 (Jan 2026)
-Mentor at SECIP 12.0 (Jun 2026)
+Mentor at SECIP 11.0 (Jan 2026)  
+Mentor at SECIP 12.0 (Jun 2026)  
 
 ##### Virtual Creative Coding Fest, Sep 2025 :
 
-Tracing the storyline - Generative Stories through code
-Closing the Circle - Making Generative Art Tangible
+Tracing the storyline - Generative Stories through code  
+Closing the Circle - Making Generative Art Tangible  
 
-##### FabConference Workshops : 
+##### FabConference Workshops :  
 
-From Prototype to Product: A Hands-on Workshop for Makers Entering the Market(Fab25 conference, Czech Republic, Aug 2025)
-Digital to Physical - Making generative art tangible (Fab24 conference, Mexico, Aug 2024 - proposal accepted)
+From Prototype to Product: A Hands-on Workshop for Makers Entering the Market(Fab25 conference, Czech Republic, Aug 2025)  
+Digital to Physical - Making generative art tangible (Fab24 conference, Mexico, Aug 2024 - proposal accepted)  
 
 ##### Product Design and Design Thinking
 
